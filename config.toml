@@ -49,12 +49,12 @@ paginate = 6
 
   [[menu.footer]]
     name = "Privacy Policy"
-    url = "/privacy-policy/"
+    url = "/privacy/"
     weight = 1
 
   [[menu.footer]]
     name = "Terms + Conditions"
-    url = "/terms-and-conditions/"
+    url = "/terms/"
     weight = 2
 
   [[menu.footer]]
