@@ -1,0 +1,33 @@
+{{ if .Site.Params.author_section.enable }}
+<!-- begin author -->
+<section class="section author animate">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="author__inner">
+
+          {{ if .Site.Params.author_section.author_section_image }}
+          <div class="author__image">
+            <img class="lazy" data-src="{{ .Site.Params.author_section.author_section_image }}" alt="{{ .Site.Params.author_section.author_section_image_alt }}">
+          </div>
+          {{ end }}
+
+          <div class="author__content">
+            {{ if .Site.Params.author_section.author_section_title }}
+            <h2 class="author__title">{{ .Site.Params.author_section.author_section_title | safeHTML }}</h2>
+            {{ end }}
+            {{ if .Site.Params.author_section.author_section_description }}
+            <p class="author__description">{{ .Site.Params.author_section.author_section_description | safeHTML }}</p>
+            {{ end }}
+            {{ if .Site.Params.author_section.author_section_button_text }}
+            <a href="{{ .Site.Params.author_section.author_section_button_link | relURL }}" class="author__button button">{{ .Site.Params.author_section.author_section_button_text }}</a>
+            {{ end }}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end author -->
+{{ end }}

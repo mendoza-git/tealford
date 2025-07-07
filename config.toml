@@ -1,0 +1,299 @@
+#-------------------------------
+# General Site Settings
+baseURL = "/"
+languageCode = "en-us"
+title = "Tealford Consulting"
+googleAnalytics = "" # Add your identifier. For example UA-99631805-1.
+paginate = 6
+
+
+#-------------------------------
+# Main Menu
+[menu]
+
+  [[menu.main]]
+    name = "News"
+    url = "/projects/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Services"
+    weight = 4
+    hasChildren = true
+
+  [[menu.main]]
+    parent = "Services"
+    name = "Websites"
+    url = "/websites/"
+    weight = 1
+
+  [[menu.main]]
+    parent = "Services"
+    name = "Social"
+    url = "/social/"
+    weight = 2
+
+  # [[menu.main]]
+  #   parent = "Services"
+  #   name = "Marketing"
+  #   url = "/marketing/"
+  #   weight = 3
+
+  [[menu.main]]
+  name = "About Us"
+  url = "/about/"
+  weight = 5
+  
+
+  # Footer Menu
+
+  [[menu.footer]]
+    name = "Privacy Policy"
+    url = "/privacy-policy/"
+    weight = 1
+
+  [[menu.footer]]
+    name = "Terms + Conditions"
+    url = "/terms-and-conditions/"
+    weight = 2
+
+  [[menu.footer]]
+    name = "About Us"
+    url = "/about/"
+    weight = 3
+
+  [[menu.footer]]
+    name = "Contact Us"
+    url = "/contact/"
+    weight = 4
+
+
+  # Call to action button
+  [params.cta_button]
+    enable = true
+    cta_button_link = "/contact/"
+    cta_button_text = "Get in touch"
+
+
+[params]
+  logo = "/images/tealford-logo.png" # You can add own logo. For example "/images/logo.png".
+  logo_dark = "/images/tealford-dark-logo.png"
+  description = "Gerous is a modern portfolio Hugo theme"
+  color_scheme = "auto" # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
+
+
+  #-------------------------------
+  # Author Settings
+  [params.author]
+    author_name = ""
+    author_avatar = "https://via.placeholder.com/100x100"
+
+
+  #-------------------------------
+  # Hero Settings
+  [params.hero]
+    enable = true
+    hero_firsttitle = "web & media"
+    hero_title = "consultants"
+    hero_description = "We help business owners and entrepreneurs build their online presence with a focus on web design, development, and digital marketing strategies."
+
+  [params.hero_logos]
+    enable = false
+
+  [[params.hero_logo_image]]
+    image_alt = "GG Logo"
+    image_url = "images/company-logos/gg-logo.png"
+
+  [[params.hero_logo_image]]
+    image_alt = "Adobe Logo"
+    image_url = "images/company-logos/jao-logo-alt.png"
+
+  [[params.hero_logo_image]]
+    image_alt = "HP Logo"
+    image_url = "images/company-logos/nbs-logo.png"
+
+  [[params.hero_logo_image]]
+    image_alt = "Netlify Logo"
+    image_url = "images/company-logos/wr-logo-dark-md.png"
+
+
+  #-------------------------------
+  # Slider Featured Settings
+  [params.featured]
+    enable = true
+    featured_title = "Selected Work"
+
+
+  #-------------------------------
+  # Projects Settings
+  [params.projects]
+    enable = true
+    projects_title= "News and Insights"
+    projects_description= ""
+
+
+  #-------------------------------
+  # Testimonials Section
+  [params.testimonials]
+    enable = true
+    testimonials_intro = "Don't take my word for it"
+    testimonials_title = "See what our happy clients say..."
+    testimonials_info = "Join over <b>10K+</b> Prefessionals"
+
+  [[params.testimonial_item]]
+    name = "Martin Vetrovs"
+    image = "https://via.placeholder.com/120x120"
+    designation = "Data Scientist"
+    title = "Incredible attention to detail"
+    content = "The incredible attention to detail displayed by this team is commendable. Every aspect of our project, no matter how small, was handled with precision and care. The result is a product that reflects their commitment to excellence."
+
+  [[params.testimonial_item]]
+    name = "Hanna Herwitz"
+    image = "https://via.placeholder.com/120x120"
+    designation = "UI/UX Designer"
+    title = "Collaborative partnership"
+    content = "Our partnership with this team was characterized by open communication and collaborative efforts. They took the time to understand our goals and delivered a solution that perfectly aligns with our business objectives. Looking forward to future collaborations."
+
+  [[params.testimonial_item]]
+    name = "Carter Curtis"
+    image = "https://via.placeholder.com/120x120"
+    designation = "DevOps Engineer"
+    title = "Creative brilliance unleashed"
+    content = "Working with this creative powerhouse was an enlightening experience. Their brilliance in design thinking and creative solutions brought our project to life in ways we hadn't imagined. The team's passion for innovation is truly infectious."
+
+  [[params.testimonial_item]]
+    name = "Marcus Vaccaro"
+    image = "https://via.placeholder.com/120x120"
+    designation = "Systems Analyst"
+    title = "Efficient problem solvers"
+    content = "This team proved to be efficient problem solvers throughout our project. When faced with challenges, they tackled them with creativity and resourcefulness. Their ability to overcome obstacles ensured a smooth and successful project delivery."
+
+
+  #-------------------------------
+  # Faq (Frequently asked questions) Settings
+  [params.faq]
+    enable = true
+    faq_intro = "Need some answers?"
+    faq_title = "Frequently asked questions"
+
+  [[params.faq_item]]
+    title = "What services does Tealford Consulting offer?"
+    description = "Tealford Consulting specializes in affordable, high-quality web design tailored to small businesses, startups, and professionals. We also provide strategic social media consultation to help you establish and grow your online presence effectively."
+
+  [[params.faq_item]]
+    title = "What makes your web design services “affordable” without compromising quality?"
+    description = "We structure our pricing to suit smaller budgets while maintaining a high standard of design, functionality, and user experience. Our streamlined processes, in-house expertise, and modular design approach allow us to deliver premium results efficiently."
+
+  [[params.faq_item]]
+    title = "Do you work with clients outside of Texas (or the U.S.)?"
+    description = "Absolutely. Our services are fully remote-ready. We collaborate with clients locally and internationally through virtual meetings, shared workspaces, and responsive communication tools."
+
+  [[params.faq_item]]
+    title = "What platforms do you design websites on?"
+    description = "We understand the convenience of popular website builders like WordPress or Squarespace; however, at Tealford Consulting, we take a different approach. We do not use templated platforms. Instead, we hand-code each website to ensure complete customization, performance, and long-term scalability. We understand this might not be the right fit for everyone, and we apologize if you were expecting a plug-and-play solution. Our focus is to provide you with clean, efficient code and then consult you on how to manage and maintain your own codebase moving forward. This gives you full ownership of your website—free from subscriptions or third-party restrictions."
+
+  [[params.faq_item]]
+    title = "How does your social media strategy consultation work?"
+    description = "Our strategy sessions are customized to your brand and industry. We analyze your current social media presence, identify growth opportunities, and develop content and engagement plans to align with your business objectives."
+
+  [[params.faq_item]]
+    title = "How long does it take to complete a web design project?"
+    description = "Timelines vary based on the project scope, but most websites are completed within 1 week. We provide a detailed project roadmap at the start so you always know what to expect."
+
+  [[params.faq_item]]
+    title = "Can you maintain or update my website after it’s built?"
+    description = "Yes. We offer ongoing maintenance packages, content updates, SEO enhancements, and analytics tracking to ensure your website stays secure, fast, and aligned with your goals over time."
+
+  #-------------------------------
+  # Blog Section
+  [params.blog]
+    enable = true
+    blog_intro = "What’s new?"
+    blog_title = "Latest from blog"
+
+
+  #-------------------------------
+  # Author Section Settings
+  [params.author_section]
+    enable = true
+    author_section_title = "Hi there 👋 Contact us today to schedule a free consultation."
+    author_section_description = "Ready to bring your vision to life? Reach out today for a free, no-obligation consultation—let’s talk about your goals, explore ideas, and see how Tealford Consulting can help you build something that truly fits."
+    author_section_image = "/images/consultation.jpg"
+    author_section_image_alt = "Daryl Mercer"
+    author_section_button_text = "Let's сonnect!"
+    author_section_button_link = "/contact"
+
+
+  #-------------------------------
+  # Footer Settings
+
+  # Social Links
+  # [[params.social]]
+  #   icon = "fa-brands fa-facebook-f"
+  #   name = "Facebook"
+  #   link = "https://facebook.com"
+
+  # [[params.social]]
+  #   icon = "fa-brands fa-x-twitter"
+  #   name = "Twitter"
+  #   link = "https://twitter.com"
+
+  # [[params.social]]
+  #   icon = "fa-brands fa-tiktok"
+  #   name = "Tiktok"
+  #   link = "https://www.tiktok.com/"
+
+  # [[params.social]]
+  #   icon = "fa-brands fa-instagram"
+  #   name = "Instagram"
+  #   link = "https://instagram.com"
+
+
+
+  # Example of adding a new link to the footer section:
+  # [[params.social]]
+  #   icon = "fa-brands fa-vimeo"
+  #   name = "Vimeo"
+  #   link = "https://vimeo.com"
+
+  # Other icons can be found at https://fontawesome.com/icons
+
+
+  # Newsletter
+  [params.mailchimp]
+    enable = true
+    mailchimp_title = "Stay Ahead with Tealford Insights 📬"
+    mailchimp_description = "Join our newsletter for expert tips, emerging tech trends, and practical strategies to keep your business sharp and your digital presence thriving."
+    mailchimp_identifier = "gmail.us21.list-manage.com/subscribe/post?u=8aeb9c31a5c97a3a5f9ff2740&amp;id=0e31fd7793&amp" # Add your MailChimp form identifier. For example - gmail.us21.list-manage.com/subscribe/post?u=8aeb9c31a5c97a3a5f9ff2740&amp;id=0e31fd7793&amp
+    mailchimp_input_text = "Your email address"
+
+
+  #-------------------------------
+  # Contact Settings
+  [params.contact]
+    email = "your@email.com" # Add your form_id
+
+    # NOTE
+    # Gerous comes with a built-in contact form, that you can use with Formspree service to handle up to 50 submissions per month for free. You could also easily switch to another contact form service if you want.
+
+  #-------------------------------
+  # Comment Section (Disqus)
+  [params.disqus]
+    enable = true
+    disqusShortname = "anvod-studio-test" # Add your shortname for Disqus Comment. For example anvod-studio-test
+
+
+[taxonomies]
+  tag = "tags"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  noClasses = false

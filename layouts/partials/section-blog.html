@@ -1,0 +1,31 @@
+{{ if .Site.Params.blog.enable }}
+<!-- begin blog -->
+<section class="section blog animate">
+  <div class="container">
+
+    <div class="section__info section__info__center">
+      <div class="section__head">
+        {{ if .Site.Params.blog.blog_intro }}
+        <span class="section__intro">{{ .Site.Params.blog.blog_intro }}</span>
+        {{ end }}
+        {{ if .Site.Params.blog.blog_title }}
+        <h2 class="section__title">{{ .Site.Params.blog.blog_title | safeHTML }}</h2>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="row">
+      {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts" | first 3 ) }}
+      {{ range $paginator.Pages }}
+        {{ partial "article.html" . }}
+      {{ end }}
+    </div>
+
+  </div>
+
+  <div class="section__navigation">
+    <a href="/posts" class="section__link">See all posts</a>
+  </div>
+</section>
+<!-- end blog -->
+{{ end }}

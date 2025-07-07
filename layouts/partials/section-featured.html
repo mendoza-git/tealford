@@ -1,0 +1,60 @@
+{{ if .Site.Params.featured.enable }}
+<!-- begin featured section -->
+<section class="section featured-section">
+  <div class="featured__slider">
+    <div class="container">
+      <div class="row">
+        <div class="col col-12">
+          <div class="featured__slider__inner splide">
+
+            <div class="featured__info">
+              <div class="featured__head">
+                {{ if .Site.Params.featured.featured_title }}
+                <h2 class="featured__title">{{ .Site.Params.featured.featured_title }}</h2>
+                {{ end }}
+                <div class="splide__arrows slider-controls">
+                  <button class="splide__arrow--prev prev">
+                    <i class="fa-solid fa-chevron-left"></i>
+                  </button>
+                  <button class="splide__arrow--next next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="splide__track animate">
+              <div class="splide__list">
+                {{ range (where (where .Site.RegularPages "Section" "projects") ".Params.featured" "=" true) }}
+                <article class="project col-4 col-d-6 col-t-12 splide__slide">
+                  <div class="project__content">
+                    <a href="{{ .RelPermalink }}" class="project__image">
+                      {{ if and (.Params.Image) (.Params.video_embed) }}
+                      <div class="video-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                          <polygon points="40,30 70,50 40,70"></polygon>
+                        </svg>
+                      </div>
+                      {{ end }}
+                      <img class="lazy" data-src="{{ .Params.Image | absURL }}" alt="{{ .Params.Title }}">
+                    </a>
+                    <div class="project__info">
+                      {{ if .Params.label }}
+                      <div class="project__label">{{ .Params.label }}</div>
+                      {{ end }}
+                      <h3 class="project__title"><a class="project__link" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h3>
+                    </div>
+                  </div>
+                </article>
+                {{ end }}
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- begin featured section -->
+{{ end }}

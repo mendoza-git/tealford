@@ -1,0 +1,55 @@
+<div class="article article__grid animate col col-4 col-d-6 col-t-12">
+  <div class="article__inner">
+
+    <div class="article__head">
+
+      {{ if .Params.Image }}
+      <a class="article__image" href="{{ .RelPermalink }}">
+        {{ if and (.Params.Image) (.Params.video_embed) }}
+        <div class="video-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+            <polygon points="40,30 70,50 40,70"></polygon>
+          </svg>
+        </div>
+        {{ end }}
+        <img class="lazy" data-src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
+      </a>
+      {{ end }}
+    </div>
+
+    <div class="article__content">
+
+      <div class="article__meta">
+        {{ if .Params.tags }}
+        <div class="article__tags">
+          {{ range ($.GetTerms "tags") }}
+            <a href="{{ .Permalink }}" class="article__tag">{{ .LinkTitle }}</a>
+          {{ end }}
+        </div>
+        {{ end }}
+        <span class="article__date">•<time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">{{ .Date.Format "2 Jan, 2006" }}</time></span>
+      </div>
+
+      <h2 class="article__title">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      </h2>
+
+      <p class="article__excerpt">{{ if .Description }}{{ .Description }}{{ else }}{{ truncate 250 .Summary | safeHTML }}{{ end }}</p>
+
+      {{ if or ( .Site.Params.author.author_avatar ) ( .Site.Params.author.author_name ) }}
+      <div class="article__info">
+        <a class="article__author" href="/about/">
+          {{ if .Site.Params.author.author_avatar }}
+            <img class="article__author__avatar lazy" data-src="{{ .Site.Params.author.author_avatar }}" alt="{{ .Site.Params.author.author_name }}" width="32" height="32">
+          {{ end }}
+          By
+          {{ if .Site.Params.author.author_name }}
+            <span class="article__author__name">{{ .Site.Params.author.author_name }}</span>
+          {{ end }}
+        </a>
+      </div>
+      {{ end }}
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+{{ define "main" }}
+
+<div class="container">
+  <div class="page-section-head">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ if .Description }}
+    <p class="page-description">{{ .Description }}</p>
+    {{ end }}
+  </div>
+</div>
+
+<!-- begin news -->
+<section class="section projects animate">
+  <div class="container">
+    <div class="container__inner">
+      <div class="row">
+        {{ range (where .Site.RegularPages "Section" "projects" ) }}
+        <article class="project col col-4 col-d-6 col-t-12">
+          <div class="project__content">
+            <a href="{{ .RelPermalink }}" class="project__image">
+              {{ if and (.Params.Image) (.Params.video_embed) }}
+              <div class="video-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <polygon points="40,30 70,50 40,70"></polygon>
+                </svg>
+              </div>
+              {{ end }}
+              <img class="lazy" data-src="{{ .Params.Image | absURL }}" alt="{{ .Params.Title }}">
+            </a>
+            <div class="project__info">
+              {{ if .Params.label }}
+              <div class="project__label">{{ .Params.label }}</div>
+              {{ end }}
+              <h3 class="project__title"><a class="project__link" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h3>
+            </div>
+          </div>
+        </article>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end news -->
+
+{{ partial "section-faq.html" . }}
+
+{{ partial "section-author.html" . }}
+
+{{ partial "section-subscribe.html" . }}
+
+{{ end }}

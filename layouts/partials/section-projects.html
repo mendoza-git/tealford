@@ -1,0 +1,48 @@
+{{ if .Site.Params.projects.enable }}
+<!-- begin projects -->
+<section class="section projects animate">
+  <div class="container">
+    <div class="container__inner">
+
+      <div class="section__info">
+        <div class="section__head">
+          <h2 class="section__title">{{ .Site.Params.projects.projects_title | safeHTML }}</h2>
+          <a class="section__link" href="/projects">View all <i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+        {{ if .Site.Params.projects.projects_description }}
+        <p class="section__description">{{ .Site.Params.projects.projects_description }}</p>
+        {{ end }}
+      </div>
+
+      <div class="row">
+        {{ $projects := where .Site.RegularPages "Section" "projects" }}
+        {{ $filteredprojects := where $projects "Params.featured" "!=" true | first 6 }}
+        {{ range $filteredprojects }}
+        <article class="project col col-4 col-d-6 col-t-12">
+          <div class="project__content">
+            <a href="{{ .RelPermalink }}" class="project__image">
+              {{ if and (.Params.Image) (.Params.video_embed) }}
+              <div class="video-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                  <polygon points="40,30 70,50 40,70"></polygon>
+                </svg>
+              </div>
+              {{ end }}
+              <img class="lazy" data-src="{{ .Params.Image | absURL }}" alt="{{ .Params.Title }}">
+            </a>
+            <div class="project__info">
+              {{ if .Params.label }}
+              <div class="project__label">{{ .Params.label }}</div>
+              {{ end }}
+              <h3 class="project__title"><a class="project__link" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h3>
+            </div>
+          </div>
+        </article>
+        {{ end }}
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- end projects -->
+{{ end }}

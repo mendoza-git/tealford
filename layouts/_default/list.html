@@ -1,0 +1,69 @@
+{{ define "main" }}
+
+{{ if (eq .Section "tags") }}
+
+<!-- begin tags -->
+<section class="section tags">
+  <div class="tags__inner">
+    <div class="container">
+      <div class="tag__info">
+        <h1 class="tag__title">{{ humanize .Title }} <span class="tag__counter">{{ len .Pages }}</span></h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+      {{ range .Data.Pages }}
+        {{ partial "article.html" . }}
+      {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end tags -->
+
+{{ partial "section-subscribe" . }}
+
+{{ else if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "latest") }}
+
+<!-- begin page-section-head -->
+<div class="container">
+  <div class="page-section-head">
+    <h1 class="page-title">{{ .Title }}</h1>
+    {{ if .Description }}
+    <p class="page-description">{{ .Description }}</p>
+    {{ end }}
+  </div>
+
+  <div class="explore-tags">
+    <h2>Explore:</h2>
+    <div class="tag-cloud">
+    {{ $tags := .Site.Taxonomies.tags }}
+    {{ range $name, $taxonomy := $tags }}
+    {{ with $.Site.GetPage (printf "/tags/%s" $name) }}
+      <a href="{{ .RelPermalink }}">{{ .Title }} <span>({{ $taxonomy.Count }})</span></a>
+    {{ end }}
+    {{ end }}
+    </div>
+  </div>
+</div>
+<!-- end page-section-head -->
+
+<section class="section">
+  <div class="container">
+    <div class="row grid">
+    {{ $paginator := .Paginate (where .Site.RegularPages "Type" "posts" ) }}
+    {{ range $paginator.Pages }}
+      {{ partial "article" . }}
+    {{ end }}
+    </div>
+  </div>
+  {{ partial "pagination.html" . }}
+</section>
+
+{{ partial "section-faq.html" . }}
+
+{{ partial "section-subscribe.html" . }}
+
+{{ end }}
+
+{{ end }}

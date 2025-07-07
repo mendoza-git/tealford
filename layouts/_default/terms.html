@@ -1,0 +1,27 @@
+{{ define "main" }}
+
+<!-- begin tags -->
+<section class="section tags">
+  <div class="tags__inner">
+    <div class="container">
+      <div class="tag__info">
+        <h1 class="tag__title">{{ .Title }}</h1>
+      </div>
+      <div class="row">
+        {{ range .Pages }}
+        <div class="col col-2 col-w-3 col-d-6 col-m-12">
+          <a href="{{ .RelPermalink }}" class="tag-image" title="{{ .Title }}">
+            <img class="lazy" {{ range .Data.Pages }}data-src="{{ .Params.Image | absURL }}" {{ end }} alt="{{ .Title }}">
+            <span class="tag-name">{{ .Title }}</span>
+          </a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end tags -->
+
+{{ partial "section-subscribe.html" . }}
+
+{{ end }}

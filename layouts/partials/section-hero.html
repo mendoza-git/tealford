@@ -1,0 +1,44 @@
+{{ if (.Site.Params.hero.enable) }}
+<!-- begin hero -->
+<section class="hero">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="hero__inner">
+          {{/*  {{ if .Site.Params.author.author_avatar }}
+          <div class="hero__avatar">
+            <img class="lazy" data-src="{{ .Site.Params.author.author_avatar }}" alt="{{ .Site.Params.author.author_name }}" width="48" height="48">
+          </div>
+          {{ end }}  */}}
+          {{ if .Site.Params.author.author_name }}
+          <span class="hero__author">{{ .Site.Params.author.author_name }}</span>
+          {{ end }}
+          {{ if .Site.Params.hero.hero_title }}
+          <div style="display: inline-flex; align-items: center; gap: 8px;">
+            <h1 class="hero__firsttitle">{{ .Site.Params.hero.hero_firsttitle }}</h1>
+            <h1 class="hero__title">{{ .Site.Params.hero.hero_title }}</h1>
+          </div>
+          {{ end }}
+          {{ if .Site.Params.hero.hero_description }}
+          <p class="hero__description">{{ .Site.Params.hero.hero_description }}</p>
+          {{ end }}
+          {{ if .Site.Params.hero_logos.enable }}
+          <div class="hero__logos splide">
+            <div class="splide__track">
+              <div class="hero__logos__inner splide__list">
+                {{ range .Site.Params.hero_logo_image }}
+                <div class="hero__logo__image splide__slide">
+                  <img src="{{ .image_url }}" alt="{{ .image_alt }}" loading="eager">
+                </div>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end hero -->
+{{ end }}

@@ -1,0 +1,61 @@
+<!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+
+        <div class="footer__inner">
+          <div class="row">
+            <div class="col col-12 col-d-12">
+              <div class="footer__info">
+                <div class="logo-footer">
+                  <a class="logo-footer__link" href="{{ .Site.BaseURL }}">
+                    {{ if or (.Site.Params.logo) (.Site.Params.logo_dark) }}
+                    <img class="logo-footer__image" src="{{ .Site.BaseURL }}{{ .Site.Params.logo }}"
+                      alt="{{ .Site.Title }}">
+                    <img class="logo-footer__image__dark" src="{{ .Site.BaseURL }}{{ .Site.Params.logo_dark }}"
+                      alt="{{ .Site.Title }}">
+                    {{ else }}
+                      {{ .Site.Title }}
+                    {{ end }}
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col col-12 col-d-12">
+              <div class="footer__navigation">
+                <ul class="footer__navigation__list list-reset">
+                  {{ range .Site.Menus.footer }}
+                  <li class="footer__navigation__item">
+                    <a href="{{ .URL }}" class="footer__navigation__link">{{ .Name }}</a>
+                  </li>
+                  {{ end }}
+                </ul>
+              </div>
+            </div>
+            <div class="col col-12 col-d-12">
+              {{ if .Site.Params.social }}
+                {{ with .Site.Params.social }}
+                <div class="footer__social">
+                  <ul class="footer__social__list list-reset">
+                    {{ range . }}
+                    <li class="footer__social__item">
+                      <a class="footer__social__link" href="{{ .link }}" target="_blank" rel="noopener" aria-label="{{ .name }} link"><i
+                          class="{{ .icon }}"></i></a>
+                    </li>
+                    {{ end }}
+                  </ul>
+                </div>
+                {{ end }}
+              {{ end }}
+            </div>
+          </div>
+        </div>
+
+        <div class="copyright">{{ dateFormat "2006" now }} &copy; <a href="/">{{ .Site.Title }}</a>. All Right Reserved.</div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->

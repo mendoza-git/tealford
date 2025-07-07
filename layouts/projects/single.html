@@ -1,0 +1,73 @@
+{{ define "main" }}
+
+<div class="container">
+
+  <div class="project-head">
+    {{ if .Params.video_embed }}
+    <div class="project-video">
+      <div class="project-video__wrap">
+        <iframe src="{{ .Params.video_embed }}" loading="lazy" width="640" height="360" frameborder="0"
+          webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+    </div>
+    {{ else }}
+    {{ if .Params.image }}
+    <div class="project-image">
+      <img class="lazy" data-src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
+    </div>
+    {{ end }}
+    {{ end }}
+  </div>
+
+  <div class="project-content">
+    <div class="project-info">
+      <div class="project-label">{{ .Params.label }}</div>
+      <h1 class="project-title">{{ .Title }}</h1>
+    </div>
+    {{ .Content }}
+
+    {{ partial "share-buttons.html" . }}
+  </div>
+
+  <section class="section section-related">
+    <div class="section__info section__info__center">
+      <div class="section__head">
+        <span class="section__intro">Unleash creativity...</span>
+        <h2 class="section__title">Explore more works</h2>
+      </div>
+    </div>
+
+    {{ $related_news := shuffle ( where (where site.RegularPages "Section" "news" ) "Permalink" "!=" .Permalink ) }}
+    <div class="row">
+      {{ range $related_news | first 3 }}
+      <article class="project col col-4 col-d-6 col-t-12">
+        <div class="project__content">
+          <a href="{{ .RelPermalink }}" class="project__image">
+            {{ if and (.Params.Image) (.Params.video_embed) }}
+            <div class="video-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <polygon points="40,30 70,50 40,70"></polygon>
+              </svg>
+            </div>
+            {{ end }}
+            <img class="lazy" data-src="{{ .Params.Image | absURL }}" alt="{{ .Params.Title }}">
+          </a>
+          <div class="project__info">
+            {{ if .Params.label }}
+            <div class="project__label">{{ .Params.label }}</div>
+            {{ end }}
+            <h3 class="project__title"><a class="project__link" href="{{ .RelPermalink }}">{{ .Params.title }}</a></h3>
+          </div>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+
+</div>
+
+{{ partial "section-faq.html" . }}
+
+{{ partial "section-subscribe.html" . }}
+
+{{ end }}
