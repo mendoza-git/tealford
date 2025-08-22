@@ -1,7 +1,7 @@
 ---
 title: Is Is Still Worth Learning How To Code In 2025? 
 date: 2024-06-19 10:01:35 +0300
-label: AI/VR
+label: Business
 image: '/images/articles/aA6/cover.jpg'
 featured:
 ---
