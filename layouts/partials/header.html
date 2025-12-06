@@ -32,12 +32,26 @@
               {{ if .HasChildren }}
               <li class="nav__item dropdown">
                 <span class="nav__link dropdown-toggle">{{ .Name }} <i class="fa-solid fa-chevron-down arrow-down"></i></span>
-                <div class="dropdown-menu">
+                <div class="dropdown-menu {{ if .Params.icon }}dropdown-menu--cards{{ end }}">
                   {{ range .Children }}
                   {{ $childURL := .URL | absLangURL }}
                   {{ $active := eq $childURL $pageURL }}
                   <a href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}"
-                    class="nav__link{{ if $active }} active-link{{ end }}">{{ .Name }}</a>
+                    class="nav__link{{ if $active }} active-link{{ end }}{{ if .Params.icon }} nav__link--card{{ end }}">
+                    {{ if .Params.icon }}
+                    <div class="nav__link-icon">
+                      <i class="{{ .Params.icon }}"></i>
+                    </div>
+                    <div class="nav__link-content">
+                      <div class="nav__link-title">{{ .Name }}</div>
+                      {{ if .Params.description }}
+                      <div class="nav__link-description">{{ .Params.description }}</div>
+                      {{ end }}
+                    </div>
+                    {{ else }}
+                    {{ .Name }}
+                    {{ end }}
+                  </a>
                   {{ end }}
                 </div>
               </li>

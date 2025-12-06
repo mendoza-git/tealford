@@ -17,32 +17,54 @@ paginate = 6
     weight = 2
 
   [[menu.main]]
-    name = "Services"
-    weight = 4
+    name = "Solutions"
+    weight = 3
     hasChildren = true
 
   [[menu.main]]
-    parent = "Services"
-    name = "Websites"
-    url = "/websites/"
+    parent = "Solutions"
+    name = "Enterprise"
+    url = "/solutions/enterprise/"
     weight = 1
+    identifier = "enterprise"
+    [menu.main.params]
+      icon = "fa-solid fa-building"
+      description = "Scalable solutions for large organizations and teams"
 
   [[menu.main]]
-    parent = "Services"
-    name = "Social"
-    url = "/social/"
+    parent = "Solutions"
+    name = "Startups"
+    url = "/solutions/startups/"
     weight = 2
-
-  # [[menu.main]]
-  #   parent = "Services"
-  #   name = "Marketing"
-  #   url = "/marketing/"
-  #   weight = 3
+    identifier = "startups"
+    [menu.main.params]
+      icon = "fa-solid fa-rocket"
+      description = "Launch fast with tools built for growing businesses"
 
   [[menu.main]]
-  name = "About Us"
-  url = "/about/"
-  weight = 5
+    parent = "Solutions"
+    name = "E-Commerce"
+    url = "/solutions/ecommerce/"
+    weight = 3
+    identifier = "ecommerce"
+    [menu.main.params]
+      icon = "fa-solid fa-cart-shopping"
+      description = "Complete online store solutions with payment integration"
+
+  [[menu.main]]
+    parent = "Solutions"
+    name = "Consulting"
+    url = "/solutions/consulting/"
+    weight = 4
+    identifier = "consulting"
+    [menu.main.params]
+      icon = "fa-solid fa-handshake"
+      description = "Strategic guidance for your digital transformation"
+
+  [[menu.main]]
+    name = "Services"
+    weight = 4
+    hasChildren = true
   
 
   # Footer Menu
