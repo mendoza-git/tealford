@@ -33,19 +33,19 @@ paginate = 6
   [[menu.main.params.productItems]]
     title = "E-Commerce Solutions"
     description = "Complete online store setup with payment integration"
-    url = "/solutions/ecommerce/"
+    url = "/ecommerce"
     icon = "fa-solid fa-cart-shopping"
 
-  [[menu.main.params.productItems]]
-    title = "Mobile Applications"
-    description = "Native and cross-platform mobile app development"
-    url = "/solutions/mobile-apps/"
-    icon = "fa-solid fa-mobile-screen"
+  # [[menu.main.params.productItems]]
+  #   title = "Mobile Applications"
+  #   description = "Native and cross-platform mobile app development"
+  #   url = "/solutions/mobile-apps/"
+  #   icon = "fa-solid fa-mobile-screen"
 
   [[menu.main.params.productItems]]
     title = "Digital Marketing"
     description = "SEO, content strategy, and growth marketing services"
-    url = "/solutions/digital-marketing/"
+    url = "/social/"
     icon = "fa-solid fa-chart-line"
 
   # Solutions - Feature Items
