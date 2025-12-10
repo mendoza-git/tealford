@@ -12,13 +12,8 @@ paginate = 6
 [menu]
 
   [[menu.main]]
-    name = "News"
-    url = "/projects/"
-    weight = 2
-
-  [[menu.main]]
     name = "Solutions"
-    weight = 3
+    weight = 2
     hasChildren = true
 
   # Solutions - Overview Items
@@ -32,7 +27,7 @@ paginate = 6
   [[menu.main.params.productItems]]
     title = "Web Design & Development"
     description = "Custom-coded websites built for performance and scalability"
-    url = "/solutions/web-design/"
+    url = "/websites"
     icon = "fa-solid fa-code"
 
   [[menu.main.params.productItems]]
@@ -86,7 +81,7 @@ paginate = 6
 
   [[menu.main]]
     name = "Resources"
-    weight = 4
+    weight = 3
     hasChildren = true
 
   # Resources - Overview Items
@@ -123,7 +118,7 @@ paginate = 6
 
   [[menu.main]]
     name = "Company"
-    weight = 5
+    weight = 4
     hasChildren = true
 
   # Company - Overview Items
@@ -151,6 +146,11 @@ paginate = 6
     description = "Get in touch with our team"
     url = "/contact/"
     icon = "fa-solid fa-envelope"
+
+  [[menu.main]]
+    name = "Pricing"
+    url = "/pricing/"
+    weight = 5
 
   [[menu.main]]
     name = "Services"
