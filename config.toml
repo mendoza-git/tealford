@@ -85,8 +85,45 @@ paginate = 6
     icon = "fa-solid fa-chart-pie"
 
   [[menu.main]]
-    name = "Services"
+    name = "Resources"
     weight = 4
+    hasChildren = true
+
+  # Resources - Overview Items
+  [[menu.main.params.overviewItems]]
+    title = "Knowledge Hub"
+    description = "Explore our collection of insights, guides, and resources to help you succeed."
+    url = "/resources/"
+    image = "/images/resources-overview.jpg"
+
+  # Resources - Link Items
+  [[menu.main.params.linkItems]]
+    title = "Blog"
+    description = "Latest insights and industry trends"
+    url = "/projects/"
+    icon = "fa-solid fa-newspaper"
+
+  [[menu.main.params.linkItems]]
+    title = "Case Studies"
+    description = "Real-world success stories from our clients"
+    url = "/case-studies/"
+    icon = "fa-solid fa-briefcase"
+
+  [[menu.main.params.linkItems]]
+    title = "Customer Support"
+    description = "Get help and find answers to your questions"
+    url = "/support/"
+    icon = "fa-solid fa-circle-question"
+
+  [[menu.main.params.linkItems]]
+    title = "Documentation"
+    description = "Comprehensive guides and tutorials"
+    url = "/docs/"
+    icon = "fa-solid fa-book"
+
+  [[menu.main]]
+    name = "Services"
+    weight = 5
     hasChildren = true
   
 
