@@ -533,6 +533,11 @@
   gap: 12px;
 }
 
+/* Company Menu - Two Column Layout */
+.mega-menu-column--company {
+  grid-column: 2 / -1;
+}
+
 .mega-menu-post {
   display: flex;
   gap: 12px;

@@ -132,6 +132,30 @@
                         </div>
                         {{ end }}
 
+                        <!-- Column 2: Company Links (for Company menu) -->
+                        {{ if .Params.companyItems }}
+                        <div class="mega-menu-column mega-menu-column--company">
+                          <h3 class="mega-menu-column-title">Company</h3>
+                          <div class="mega-menu-links">
+                            {{ range .Params.companyItems }}
+                            <a href="{{ .url }}" class="mega-menu-link">
+                              {{ if .icon }}
+                              <div class="mega-menu-link-icon">
+                                <i class="{{ .icon }}"></i>
+                              </div>
+                              {{ end }}
+                              <div class="mega-menu-link-content">
+                                <span class="mega-menu-link-title">{{ .title }}</span>
+                                {{ if .description }}
+                                <span class="mega-menu-link-description">{{ .description }}</span>
+                                {{ end }}
+                              </div>
+                            </a>
+                            {{ end }}
+                          </div>
+                        </div>
+                        {{ end }}
+
                         <!-- Column 3: Featured Posts (for Resources menu) -->
                         {{ if eq .Name "Resources" }}
                         <div class="mega-menu-column mega-menu-column--featured">
