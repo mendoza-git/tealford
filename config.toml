@@ -21,45 +21,68 @@ paginate = 6
     weight = 3
     hasChildren = true
 
-  [[menu.main]]
-    parent = "Solutions"
-    name = "Enterprise"
-    url = "/solutions/enterprise/"
-    weight = 1
-    identifier = "enterprise"
-    [menu.main.params]
-      icon = "fa-solid fa-building"
-      description = "Scalable solutions for large organizations and teams"
+  # Solutions - Overview Items
+  [[menu.main.params.overviewItems]]
+    title = "Complete Digital Solutions"
+    description = "End-to-end web and media services designed to transform your business presence online."
+    url = "/solutions/"
+    image = "/images/solutions-overview.jpg"
 
-  [[menu.main]]
-    parent = "Solutions"
-    name = "Startups"
-    url = "/solutions/startups/"
-    weight = 2
-    identifier = "startups"
-    [menu.main.params]
-      icon = "fa-solid fa-rocket"
-      description = "Launch fast with tools built for growing businesses"
+  # Solutions - Product Items  
+  [[menu.main.params.productItems]]
+    title = "Web Design & Development"
+    description = "Custom-coded websites built for performance and scalability"
+    url = "/solutions/web-design/"
+    icon = "fa-solid fa-code"
 
-  [[menu.main]]
-    parent = "Solutions"
-    name = "E-Commerce"
+  [[menu.main.params.productItems]]
+    title = "E-Commerce Solutions"
+    description = "Complete online store setup with payment integration"
     url = "/solutions/ecommerce/"
-    weight = 3
-    identifier = "ecommerce"
-    [menu.main.params]
-      icon = "fa-solid fa-cart-shopping"
-      description = "Complete online store solutions with payment integration"
+    icon = "fa-solid fa-cart-shopping"
 
-  [[menu.main]]
-    parent = "Solutions"
-    name = "Consulting"
-    url = "/solutions/consulting/"
-    weight = 4
-    identifier = "consulting"
-    [menu.main.params]
-      icon = "fa-solid fa-handshake"
-      description = "Strategic guidance for your digital transformation"
+  [[menu.main.params.productItems]]
+    title = "Mobile Applications"
+    description = "Native and cross-platform mobile app development"
+    url = "/solutions/mobile-apps/"
+    icon = "fa-solid fa-mobile-screen"
+
+  [[menu.main.params.productItems]]
+    title = "Digital Marketing"
+    description = "SEO, content strategy, and growth marketing services"
+    url = "/solutions/digital-marketing/"
+    icon = "fa-solid fa-chart-line"
+
+  # Solutions - Feature Items
+  [[menu.main.params.featureItems]]
+    title = "Custom Development"
+    description = "Hand-coded solutions tailored to your needs"
+    url = "/features/custom-development/"
+    icon = "fa-solid fa-laptop-code"
+
+  [[menu.main.params.featureItems]]
+    title = "Performance Optimization"
+    description = "Lightning-fast load times and SEO-ready"
+    url = "/features/performance/"
+    icon = "fa-solid fa-bolt"
+
+  [[menu.main.params.featureItems]]
+    title = "Scalable Architecture"
+    description = "Built to grow with your business"
+    url = "/features/scalability/"
+    icon = "fa-solid fa-layer-group"
+
+  [[menu.main.params.featureItems]]
+    title = "24/7 Support"
+    description = "Ongoing maintenance and dedicated support"
+    url = "/features/support/"
+    icon = "fa-solid fa-headset"
+
+  [[menu.main.params.featureItems]]
+    title = "Analytics & Insights"
+    description = "Data-driven decisions with comprehensive tracking"
+    url = "/features/analytics/"
+    icon = "fa-solid fa-chart-pie"
 
   [[menu.main]]
     name = "Services"

@@ -29,9 +29,91 @@
               {{ $pageURL:= $currentPage.Permalink | absLangURL }}
               {{ $active := eq $menuURL $pageURL }}
 
-              {{ if .HasChildren }}
-              <li class="nav__item dropdown">
+              {{ if or .HasChildren .Params.overviewItems }}
+              <li class="nav__item dropdown {{ if .Params.overviewItems }}mega-menu{{ end }}">
                 <span class="nav__link dropdown-toggle">{{ .Name }} <i class="fa-solid fa-chevron-down arrow-down"></i></span>
+                
+                {{ if .Params.overviewItems }}
+                <!-- Mega Menu -->
+                <div class="mega-menu-dropdown">
+                  <div class="mega-menu-content">
+                    <div class="container-big">
+                      <div class="mega-menu-grid">
+                        
+                        <!-- Column 1: Overview -->
+                        {{ if .Params.overviewItems }}
+                        <div class="mega-menu-column mega-menu-column--overview">
+                          <h3 class="mega-menu-column-title">Overview</h3>
+                          {{ range .Params.overviewItems }}
+                          <a href="{{ .url }}" class="mega-menu-overview-card">
+                            {{ if .image }}
+                            <div class="mega-menu-card-image">
+                              <img src="{{ .image }}" alt="{{ .title }}">
+                            </div>
+                            {{ end }}
+                            <div class="mega-menu-card-content">
+                              <h4 class="mega-menu-card-title">{{ .title }}</h4>
+                              <p class="mega-menu-card-description">{{ .description }}</p>
+                            </div>
+                          </a>
+                          {{ end }}
+                        </div>
+                        {{ end }}
+
+                        <!-- Column 2: Products -->
+                        {{ if .Params.productItems }}
+                        <div class="mega-menu-column mega-menu-column--products">
+                          <h3 class="mega-menu-column-title">Products</h3>
+                          <div class="mega-menu-links">
+                            {{ range .Params.productItems }}
+                            <a href="{{ .url }}" class="mega-menu-link">
+                              {{ if .icon }}
+                              <div class="mega-menu-link-icon">
+                                <i class="{{ .icon }}"></i>
+                              </div>
+                              {{ end }}
+                              <div class="mega-menu-link-content">
+                                <span class="mega-menu-link-title">{{ .title }}</span>
+                                {{ if .description }}
+                                <span class="mega-menu-link-description">{{ .description }}</span>
+                                {{ end }}
+                              </div>
+                            </a>
+                            {{ end }}
+                          </div>
+                        </div>
+                        {{ end }}
+
+                        <!-- Column 3: Features -->
+                        {{ if .Params.featureItems }}
+                        <div class="mega-menu-column mega-menu-column--features">
+                          <h3 class="mega-menu-column-title">Features</h3>
+                          <div class="mega-menu-links">
+                            {{ range .Params.featureItems }}
+                            <a href="{{ .url }}" class="mega-menu-link">
+                              {{ if .icon }}
+                              <div class="mega-menu-link-icon">
+                                <i class="{{ .icon }}"></i>
+                              </div>
+                              {{ end }}
+                              <div class="mega-menu-link-content">
+                                <span class="mega-menu-link-title">{{ .title }}</span>
+                                {{ if .description }}
+                                <span class="mega-menu-link-description">{{ .description }}</span>
+                                {{ end }}
+                              </div>
+                            </a>
+                            {{ end }}
+                          </div>
+                        </div>
+                        {{ end }}
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {{ else }}
+                <!-- Regular Dropdown -->
                 <div class="dropdown-menu {{ if .Params.icon }}dropdown-menu--cards{{ end }}">
                   {{ range .Children }}
                   {{ $childURL := .URL | absLangURL }}
@@ -54,6 +136,7 @@
                   </a>
                   {{ end }}
                 </div>
+                {{ end }}
               </li>
 
               {{ else }}

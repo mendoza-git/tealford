@@ -206,4 +206,27 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 
+
+  /* =================================
+  // Mega Menu - Close on Click Outside
+  ================================= */
+  const megaMenus = document.querySelectorAll('.mega-menu');
+  
+  megaMenus.forEach(menu => {
+    const dropdown = menu.querySelector('.mega-menu-dropdown');
+    
+    // Close mega menu when clicking outside
+    document.addEventListener('click', function(event) {
+      const isClickInsideMenu = menu.contains(event.target);
+      
+      if (!isClickInsideMenu && dropdown) {
+        // Remove hover state by temporarily removing pointer events
+        menu.style.pointerEvents = 'none';
+        setTimeout(() => {
+          menu.style.pointerEvents = '';
+        }, 10);
+      }
+    });
+  });
+
 });
