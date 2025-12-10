@@ -115,28 +115,37 @@ paginate = 6
   # Hero Settings
   [params.hero]
     enable = true
-    hero_firsttitle = "web & media"
-    hero_title = "consultants"
-    hero_description = "We help business owners and entrepreneurs build their online presence with a focus on web design, development, and digital marketing strategies."
+    hero_badge = "Trusted by 500+ businesses worldwide"
+    hero_title_part1 = "Transform Your Digital Presence with"
+    hero_title_highlight = "Expert Consulting"
+    hero_title_part2 = ""
+    hero_subtitle = "Web & Media Solutions That Drive Results"
+    hero_description = "We partner with business owners and entrepreneurs to build powerful online presences through cutting-edge web design, strategic development, and data-driven digital marketing."
+    
+    # Buttons
+    hero_buttons_enable = true
+    hero_button_primary_text = "Start Your Project"
+    hero_button_primary_link = "/contact/"
+    hero_button_secondary_text = "View Our Work"
+    hero_button_secondary_link = "/projects/"
+
+    # Stats
+    hero_stats_enable = true
+
+  [[params.hero_stat]]
+    number = "500+"
+    label = "Projects Delivered"
+
+  [[params.hero_stat]]
+    number = "98%"
+    label = "Client Satisfaction"
+
+  [[params.hero_stat]]
+    number = "10+"
+    label = "Years Experience"
 
   [params.hero_logos]
-    enable = false
-
-  [[params.hero_logo_image]]
-    image_alt = "GG Logo"
-    image_url = "images/company-logos/gg-logo.png"
-
-  [[params.hero_logo_image]]
-    image_alt = "Adobe Logo"
-    image_url = "images/company-logos/jao-logo-alt.png"
-
-  [[params.hero_logo_image]]
-    image_alt = "HP Logo"
-    image_url = "images/company-logos/nbs-logo.png"
-
-  [[params.hero_logo_image]]
-    image_alt = "Netlify Logo"
-    image_url = "images/company-logos/wr-logo-dark-md.png"
+    enable = true
 
 
   #-------------------------------

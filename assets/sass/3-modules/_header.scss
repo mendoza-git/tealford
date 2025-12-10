@@ -6,7 +6,8 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 20px $base-spacing-unit;
+    // padding: 20px $base-spacing-unit;
+    padding: 45px 120px;
   }
 }
 
@@ -144,6 +145,7 @@
       text-decoration: none;
       color: var(--link-color);
       transition: color 0.2s ease;
+      display: flex;
 
       &:hover {
         color: var(--primary-color);
@@ -192,12 +194,12 @@
     .dropdown-menu {
       position: absolute;
       top: calc(100% + 16px);
-      left: 50%;
+      left: -50%;
       transform: translate3d(-50%, 10px, 0);
       backface-visibility: hidden;
       z-index: 100;
-      min-width: 280px;
-      max-width: 360px;
+      min-width: 380px;
+      max-width: 420px;
       display: block;
       padding: 24px;
       opacity: 0;
@@ -215,31 +217,33 @@
         padding: 16px;
       }
 
-      &::before {
-        content: '';
-        position: absolute;
-        top: -8px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 0;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-bottom: 8px solid var(--border-color);
-      }
+      // Arrow on top of dropdown
 
-      &::after {
-        content: '';
-        position: absolute;
-        top: -7px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 0;
-        height: 0;
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-bottom: 8px solid var(--background-color);
-      }
+      // &::before {
+      //   content: '';
+      //   position: absolute;
+      //   top: -8px;
+      //   left: 30%;
+      //   transform: translateX(-50%);
+      //   width: 0;
+      //   height: 0;
+      //   border-left: 8px solid transparent;
+      //   border-right: 8px solid transparent;
+      //   border-bottom: 8px solid var(--border-color);
+      // }
+
+      // &::after {
+      //   content: '';
+      //   position: absolute;
+      //   top: -7px;
+      //   left: 30%;
+      //   transform: translateX(-50%);
+      //   width: 0;
+      //   height: 0;
+      //   border-left: 8px solid transparent;
+      //   border-right: 8px solid transparent;
+      //   border-bottom: 8px solid var(--background-color);
+      // }
 
       .nav__link {
         position: relative;

@@ -5,39 +5,75 @@
     <div class="row">
       <div class="col col-12">
         <div class="hero__inner">
-          {{/*  {{ if .Site.Params.author.author_avatar }}
-          <div class="hero__avatar">
-            <img class="lazy" data-src="{{ .Site.Params.author.author_avatar }}" alt="{{ .Site.Params.author.author_name }}" width="48" height="48">
+          
+          <!-- Badge -->
+          {{ if .Site.Params.hero.hero_badge }}
+          <div class="hero__badge">
+            <i class="fa-solid fa-bolt"></i>
+            {{ .Site.Params.hero.hero_badge }}
           </div>
-          {{ end }}  */}}
-          {{ if .Site.Params.author.author_name }}
-          <span class="hero__author">{{ .Site.Params.author.author_name }}</span>
           {{ end }}
+
+          <!-- Main Title -->
           {{ if .Site.Params.hero.hero_title }}
-          <div style="display: inline-flex; align-items: center; gap: 8px;">
-            <h1 class="hero__firsttitle">{{ .Site.Params.hero.hero_firsttitle }}</h1>
-            <h1 class="hero__title">{{ .Site.Params.hero.hero_title }}</h1>
+          <div class="hero__title-wrapper">
+            <h1 class="hero__title">
+              {{ .Site.Params.hero.hero_title_part1 }}
+              <span class="hero__title-highlight">{{ .Site.Params.hero.hero_title_highlight }}</span>
+              {{ .Site.Params.hero.hero_title_part2 }}
+            </h1>
           </div>
           {{ end }}
+
+          <!-- Subtitle -->
+          {{ if .Site.Params.hero.hero_subtitle }}
+          <p class="hero__subtitle">{{ .Site.Params.hero.hero_subtitle }}</p>
+          {{ end }}
+
+          <!-- Description -->
           {{ if .Site.Params.hero.hero_description }}
           <p class="hero__description">{{ .Site.Params.hero.hero_description }}</p>
           {{ end }}
-          {{ if .Site.Params.hero_logos.enable }}
-          <div class="hero__logos splide">
-            <div class="splide__track">
-              <div class="hero__logos__inner splide__list">
-                {{ range .Site.Params.hero_logo_image }}
-                <div class="hero__logo__image splide__slide">
-                  <img src="{{ .image_url }}" alt="{{ .image_alt }}" loading="eager">
-                </div>
-                {{ end }}
-              </div>
-            </div>
+
+          <!-- CTA Buttons -->
+          {{ if .Site.Params.hero.hero_buttons_enable }}
+          <div class="hero__buttons">
+            {{ if .Site.Params.hero.hero_button_primary_text }}
+            <a href="{{ .Site.Params.hero.hero_button_primary_link }}" class="hero__button hero__button--primary">
+              {{ .Site.Params.hero.hero_button_primary_text }}
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            {{ end }}
+            {{ if .Site.Params.hero.hero_button_secondary_text }}
+            <a href="{{ .Site.Params.hero.hero_button_secondary_link }}" class="hero__button hero__button--secondary">
+              <i class="fa-solid fa-play"></i>
+              {{ .Site.Params.hero.hero_button_secondary_text }}
+            </a>
+            {{ end }}
           </div>
           {{ end }}
+
+          <!-- Stats -->
+          {{ if .Site.Params.hero.hero_stats_enable }}
+          <div class="hero__stats">
+            {{ range .Site.Params.hero_stat }}
+            <div class="hero__stat">
+              <span class="hero__stat-number">{{ .number }}</span>
+              <span class="hero__stat-label">{{ .label }}</span>
+            </div>
+            {{ end }}
+          </div>
+          {{ end }}
+
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero__scroll">
+    <span>Scroll</span>
+    <i class="fa-solid fa-chevron-down"></i>
   </div>
 </section>
 <!-- end hero -->
