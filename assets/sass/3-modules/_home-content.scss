@@ -1,0 +1,621 @@
+/* =================================================================
+   Home Content Sections (Span-inspired)
+================================================================= */
+
+// Shared section spacing
+.home-services-intro,
+.home-approach,
+.home-metrics,
+.home-automation,
+.home-experience,
+.home-security,
+.home-why,
+.home-final-cta {
+  padding: 100px 0;
+  
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+}
+
+// Section badge
+.home-section-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--background-alt-color);
+  color: var(--primary-color);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+// Section title
+.home-section-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--heading-font-color);
+  margin-bottom: 20px;
+  max-width: 900px;
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+}
+
+// Section description
+.home-section-description {
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-alt-color);
+  max-width: 700px;
+  margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+}
+
+/* =================================================================
+   Services Intro Section
+================================================================= */
+
+.home-services-intro {
+  text-align: center;
+}
+
+.home-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.home-service-card {
+  background: var(--background-color);
+  border: 2px solid var(--border-color);
+  border-radius: 16px;
+  padding: 40px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  
+  &:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 102, 102, 0.1);
+    
+    .home-service-visual i {
+      transform: scale(1.1);
+      color: var(--primary-color);
+    }
+  }
+}
+
+.home-service-content {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.home-service-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--heading-font-color);
+  margin-bottom: 16px;
+}
+
+.home-service-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-alt-color);
+  margin: 0;
+}
+
+.home-service-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  
+  i {
+    font-size: 48px;
+    color: var(--text-alt-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+/* =================================================================
+   Strategic Approach Section
+================================================================= */
+
+.home-approach {
+  background: var(--background-alt-color);
+}
+
+.home-approach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+.home-approach-content {
+  .home-section-title,
+  .home-section-description {
+    max-width: 100%;
+  }
+}
+
+.home-approach-features {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.home-approach-feature {
+  &-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--heading-font-color);
+    margin-bottom: 12px;
+  }
+  
+  &-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-alt-color);
+    margin: 0;
+  }
+}
+
+.home-approach-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &-card {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #044444 100%);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 30px 80px rgba(0, 102, 102, 0.3);
+    
+    i {
+      font-size: 120px;
+      color: var(--white);
+      opacity: 0.9;
+    }
+    
+    @media (max-width: 968px) {
+      width: 100%;
+      height: 300px;
+      
+      i {
+        font-size: 80px;
+      }
+    }
+  }
+}
+
+/* =================================================================
+   Performance Metrics Section
+================================================================= */
+
+.home-metrics {
+  text-align: center;
+  
+  .home-section-title,
+  .home-section-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.home-metrics-visual {
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.home-metrics-icon {
+  width: 120px;
+  height: 120px;
+  background: var(--background-alt-color);
+  border: 3px solid var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  i {
+    font-size: 56px;
+    color: var(--primary-color);
+  }
+}
+
+.home-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.home-metric-card {
+  background: var(--background-color);
+  border: 2px solid var(--border-color);
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    border-color: var(--primary-color);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 102, 102, 0.08);
+  }
+}
+
+.home-metric-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--heading-font-color);
+  margin-bottom: 16px;
+}
+
+.home-metric-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-alt-color);
+  margin: 0;
+}
+
+/* =================================================================
+   Automation Benefits Section
+================================================================= */
+
+.home-automation {
+  background: var(--background-alt-color);
+  text-align: center;
+  
+  .home-section-title,
+  .home-section-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.home-automation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.home-automation-card {
+  background: var(--background-color);
+  border-radius: 16px;
+  padding: 40px;
+  text-align: left;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.home-automation-number {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.home-automation-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--heading-font-color);
+  margin-bottom: 16px;
+}
+
+.home-automation-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-alt-color);
+  margin: 0;
+}
+
+/* =================================================================
+   Client Experience Section
+================================================================= */
+
+.home-experience {
+  background: var(--background-color);
+}
+
+.home-experience-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+.home-experience-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  @media (max-width: 968px) {
+    order: 2;
+  }
+}
+
+.home-experience-icon {
+  width: 350px;
+  height: 350px;
+  background: linear-gradient(135deg, var(--background-alt-color) 0%, var(--background-color) 100%);
+  border: 3px solid var(--border-color);
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  i {
+    font-size: 100px;
+    color: var(--primary-color);
+  }
+  
+  @media (max-width: 968px) {
+    width: 100%;
+    height: 250px;
+    
+    i {
+      font-size: 70px;
+    }
+  }
+}
+
+.home-experience-content {
+  @media (max-width: 968px) {
+    order: 1;
+  }
+  
+  .home-section-title,
+  .home-section-description {
+    max-width: 100%;
+  }
+}
+
+.home-experience-features {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.home-experience-feature {
+  &-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--heading-font-color);
+    margin-bottom: 12px;
+  }
+  
+  &-description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-alt-color);
+    margin: 0;
+  }
+}
+
+/* =================================================================
+   Security & Reliability Section
+================================================================= */
+
+.home-security {
+  background: var(--background-alt-color);
+  text-align: center;
+}
+
+.home-security-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  @media (max-width: 568px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.home-security-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 30px 20px;
+  background: var(--background-color);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  i {
+    font-size: 32px;
+    color: var(--primary-color);
+  }
+  
+  span {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+  }
+
+}
+
+/* =================================================================
+   Why Choose Us Section
+================================================================= */
+
+.home-why {
+  background: var(--background-alt-color);
+  text-align: center;
+  
+  .home-section-title,
+  .home-section-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.home-why-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  @media (max-width: 568px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.home-why-card {
+  background: var(--background-color);
+  border: 2px solid var(--border-color);
+  border-radius: 16px;
+  padding: 40px 30px;
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.home-why-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--background-alt-color);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 24px;
+  
+  i {
+    font-size: 36px;
+    color: var(--primary-color);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.home-why-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--heading-font-color);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.home-why-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-alt-color);
+  margin: 0;
+}
+
+/* =================================================================
+   Final CTA Section
+================================================================= */
+
+.home-final-cta {
+  background: linear-gradient(135deg, var(--primary-color) 0%, #044444 100%);
+  text-align: center;
+  padding: 120px 0;
+  
+  @media (max-width: 768px) {
+    padding: 80px 0;
+  }
+}
+
+.home-final-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home-final-cta-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 40px;
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+    margin-bottom: 30px;
+  }
+}
+
+.home-final-cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  
+  .button {
+    &--primary {
+      background: var(--white);
+      color: var(--primary-color);
+      
+      &:hover {
+        background: var(--background-alt-color);
+      }
+    }
+    
+    &--secondary {
+      background: transparent;
+      border: 2px solid var(--white);
+      color: var(--white);
+      
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+}
