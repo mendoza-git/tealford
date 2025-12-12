@@ -52,31 +52,31 @@ paginate = 6
   [[menu.main.params.featureItems]]
     title = "Custom Development"
     description = "Hand-coded solutions tailored to your needs"
-    url = "/features/custom-development/"
+    url = "/solutions/custom-development/"
     icon = "fa-solid fa-laptop-code"
 
   [[menu.main.params.featureItems]]
     title = "Performance Optimization"
     description = "Lightning-fast load times and SEO-ready"
-    url = "/features/performance/"
+    url = "/solutions/performance/"
     icon = "fa-solid fa-bolt"
 
   [[menu.main.params.featureItems]]
     title = "Scalable Architecture"
     description = "Built to grow with your business"
-    url = "/features/scalability/"
+    url = "/solutions/scalability/"
     icon = "fa-solid fa-layer-group"
 
   [[menu.main.params.featureItems]]
     title = "24/7 Support"
     description = "Ongoing maintenance and dedicated support"
-    url = "/features/support/"
+    url = "/solutions/support/"
     icon = "fa-solid fa-headset"
 
   [[menu.main.params.featureItems]]
     title = "Analytics & Insights"
     description = "Data-driven decisions with comprehensive tracking"
-    url = "/features/analytics/"
+    url = "/solutions/analytics/"
     icon = "fa-solid fa-chart-pie"
 
   [[menu.main]]
@@ -182,22 +182,22 @@ paginate = 6
   # Footer Menu - Solutions Features
   [[menu.footer_features]]
     name = "Custom Development"
-    url = "/features/custom-development/"
+    url = "/solutions/custom-development/"
     weight = 1
 
   [[menu.footer_features]]
     name = "Performance Optimization"
-    url = "/features/performance/"
+    url = "/solutions/performance/"
     weight = 2
 
   [[menu.footer_features]]
     name = "Scalable Architecture"
-    url = "/features/scalability/"
+    url = "/solutions/scalability/"
     weight = 3
 
   [[menu.footer_features]]
     name = "24/7 Support"
-    url = "/features/support/"
+    url = "/solutions/support/"
     weight = 4
 
   # Footer Menu - Services

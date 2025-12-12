@@ -1,0 +1,757 @@
+{{ define "main" }}
+
+<section class="feature-hero">
+  <div class="container-big">
+    <div class="feature-hero-content">
+      <h1 class="feature-hero-title">{{ .Title }}</h1>
+      <p class="feature-hero-description">{{ .Description }}</p>
+    </div>
+  </div>
+</section>
+
+{{ if eq .Params.feature_type "custom-development" }}
+<!-- Custom Development Content -->
+<section class="feature-content">
+  <div class="container-big">
+    
+    <!-- Introduction -->
+    <div class="feature-intro">
+      <h2 class="feature-section-title">Built for Your Business, Not a Template</h2>
+      <p class="feature-section-description">Every business is unique, and your digital presence should reflect that. Our custom development approach means starting from scratch with clean, efficient code written specifically for your requirements—no bloated templates, no unnecessary plugins, just streamlined solutions that perform.</p>
+    </div>
+
+    <!-- Benefits Grid -->
+    <div class="feature-benefits-grid">
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-code"></i>
+        </div>
+        <h3 class="feature-benefit-title">Hand-Coded Excellence</h3>
+        <p class="feature-benefit-description">Every line of code is written by experienced developers who understand performance, security, and scalability. No drag-and-drop builders or cookie-cutter templates.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-puzzle-piece"></i>
+        </div>
+        <h3 class="feature-benefit-title">Perfect Fit Solutions</h3>
+        <p class="feature-benefit-description">We build exactly what you need—nothing more, nothing less. Your features, your workflow, your brand identity integrated seamlessly into every aspect.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-gauge-high"></i>
+        </div>
+        <h3 class="feature-benefit-title">Optimized Performance</h3>
+        <p class="feature-benefit-description">Custom code means zero bloat. Lightning-fast load times, optimized database queries, and efficient resource usage that keeps your site running smoothly.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3 class="feature-benefit-title">Enhanced Security</h3>
+        <p class="feature-benefit-description">Without third-party dependencies and pre-built themes, your site has fewer vulnerabilities. We implement security best practices from the ground up.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-arrows-up-down-left-right"></i>
+        </div>
+        <h3 class="feature-benefit-title">Unlimited Scalability</h3>
+        <p class="feature-benefit-description">As your business grows, your site grows with it. Custom architecture allows for seamless expansion without platform constraints or costly migrations.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-wrench"></i>
+        </div>
+        <h3 class="feature-benefit-title">Full Control</h3>
+        <p class="feature-benefit-description">Own your codebase completely. No vendor lock-in, no monthly subscriptions to page builders, no limitations on what you can achieve.</p>
+      </div>
+    </div>
+
+    <!-- Technologies -->
+    <div class="feature-technologies">
+      <h2 class="feature-section-title">Technologies We Master</h2>
+      <div class="feature-tech-grid">
+        <div class="feature-tech-item">
+          <i class="fa-brands fa-html5"></i>
+          <span>HTML5</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-brands fa-css3-alt"></i>
+          <span>CSS3/SCSS</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-brands fa-js"></i>
+          <span>JavaScript</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-brands fa-react"></i>
+          <span>React</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-brands fa-node"></i>
+          <span>Node.js</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-brands fa-python"></i>
+          <span>Python</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-brands fa-php"></i>
+          <span>PHP</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-database"></i>
+          <span>SQL/NoSQL</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Process -->
+    <div class="feature-process">
+      <h2 class="feature-section-title">Our Development Process</h2>
+      <div class="feature-process-steps">
+        <div class="feature-step">
+          <div class="feature-step-number">01</div>
+          <h3 class="feature-step-title">Discovery & Planning</h3>
+          <p class="feature-step-description">We dive deep into your business requirements, user needs, and technical specifications to create a detailed development roadmap.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">02</div>
+          <h3 class="feature-step-title">Architecture Design</h3>
+          <p class="feature-step-description">Our team designs the technical architecture, database structure, and API integrations that will power your custom solution.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">03</div>
+          <h3 class="feature-step-title">Custom Development</h3>
+          <p class="feature-step-description">Hand-coding every feature with clean, maintainable code following industry best practices and modern development standards.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">04</div>
+          <h3 class="feature-step-title">Testing & QA</h3>
+          <p class="feature-step-description">Rigorous testing across devices, browsers, and scenarios to ensure everything works flawlessly before launch.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">05</div>
+          <h3 class="feature-step-title">Deployment</h3>
+          <p class="feature-step-description">Smooth launch with proper configuration, optimization, and monitoring to ensure a successful go-live.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">06</div>
+          <h3 class="feature-step-title">Ongoing Support</h3>
+          <p class="feature-step-description">Continuous maintenance, updates, and enhancements to keep your solution running at peak performance.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="feature-cta">
+      <h2 class="feature-cta-title">Ready for a Custom Solution?</h2>
+      <p class="feature-cta-description">Let's discuss how custom development can transform your digital presence and give you the competitive edge you need.</p>
+      <a href="/contact/" class="button button--primary button--large">Start Your Project</a>
+    </div>
+
+  </div>
+</section>
+{{ end }}
+
+{{ if eq .Params.feature_type "performance" }}
+<!-- Performance Optimization Content -->
+<section class="feature-content">
+  <div class="container-big">
+    
+    <!-- Introduction -->
+    <div class="feature-intro">
+      <h2 class="feature-section-title">Speed is Your Competitive Advantage</h2>
+      <p class="feature-section-description">In today's digital landscape, every millisecond counts. A 1-second delay in page load time can reduce conversions by 7%. Our performance optimization ensures your site loads instantly, ranks higher in search results, and provides the seamless experience users expect.</p>
+    </div>
+
+    <!-- Benefits Grid -->
+    <div class="feature-benefits-grid">
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h3 class="feature-benefit-title">Lightning Load Times</h3>
+        <p class="feature-benefit-description">Sub-second page loads through advanced optimization techniques, efficient code, lazy loading, and strategic caching.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <h3 class="feature-benefit-title">SEO Performance Boost</h3>
+        <p class="feature-benefit-description">Google prioritizes fast sites. Our optimization directly improves your Core Web Vitals scores and search rankings.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-mobile-screen"></i>
+        </div>
+        <h3 class="feature-benefit-title">Mobile-First Speed</h3>
+        <p class="feature-benefit-description">Optimized specifically for mobile devices where performance matters most. Fast loading on any connection speed.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <h3 class="feature-benefit-title">Higher Conversions</h3>
+        <p class="feature-benefit-description">Faster sites keep visitors engaged and drive more conversions. Reduce bounce rates and increase sales.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-image"></i>
+        </div>
+        <h3 class="feature-benefit-title">Image Optimization</h3>
+        <p class="feature-benefit-description">Automatic image compression, next-gen formats (WebP/AVIF), and responsive images that load perfectly on any device.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-server"></i>
+        </div>
+        <h3 class="feature-benefit-title">CDN Integration</h3>
+        <p class="feature-benefit-description">Global content delivery networks ensure your site loads quickly for users anywhere in the world.</p>
+      </div>
+    </div>
+
+    <!-- Technologies -->
+    <div class="feature-technologies">
+      <h2 class="feature-section-title">Performance Technologies</h2>
+      <div class="feature-tech-grid">
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-gauge-high"></i>
+          <span>Core Web Vitals</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-compress"></i>
+          <span>Compression</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Lazy Loading</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-clock"></i>
+          <span>Caching</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-minimize"></i>
+          <span>Minification</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-network-wired"></i>
+          <span>CDN</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-image"></i>
+          <span>WebP/AVIF</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-code"></i>
+          <span>Code Splitting</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Process -->
+    <div class="feature-process">
+      <h2 class="feature-section-title">Our Optimization Process</h2>
+      <div class="feature-process-steps">
+        <div class="feature-step">
+          <div class="feature-step-number">01</div>
+          <h3 class="feature-step-title">Performance Audit</h3>
+          <p class="feature-step-description">Comprehensive analysis using Google PageSpeed, Lighthouse, and WebPageTest to identify bottlenecks.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">02</div>
+          <h3 class="feature-step-title">Code Optimization</h3>
+          <p class="feature-step-description">Minify CSS/JS, remove unused code, optimize critical rendering path, and implement efficient loading strategies.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">03</div>
+          <h3 class="feature-step-title">Asset Optimization</h3>
+          <p class="feature-step-description">Compress and convert images, optimize fonts, implement lazy loading, and configure proper caching headers.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">04</div>
+          <h3 class="feature-step-title">Server Configuration</h3>
+          <p class="feature-step-description">Enable compression, configure CDN, optimize database queries, and implement server-side caching.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">05</div>
+          <h3 class="feature-step-title">Testing & Validation</h3>
+          <p class="feature-step-description">Test across devices, connections, and locations to ensure consistent fast performance everywhere.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">06</div>
+          <h3 class="feature-step-title">Ongoing Monitoring</h3>
+          <p class="feature-step-description">Continuous performance monitoring with alerts and regular optimization to maintain peak speed.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="feature-cta">
+      <h2 class="feature-cta-title">Ready to Accelerate Your Site?</h2>
+      <p class="feature-cta-description">Let's make your website blazing fast and watch your conversions soar.</p>
+      <a href="/contact/" class="button button--primary button--large">Get Performance Audit</a>
+    </div>
+
+  </div>
+</section>
+{{ end }}
+
+{{ if eq .Params.feature_type "scalability" }}
+<!-- Scalable Architecture Content -->
+<section class="feature-content">
+  <div class="container-big">
+    
+    <!-- Introduction -->
+    <div class="feature-intro">
+      <h2 class="feature-section-title">Build Once, Scale Forever</h2>
+      <p class="feature-section-description">Your business won't stay the same size—why should your website? We architect solutions that handle growth gracefully, from 100 visitors to millions, without expensive rebuilds or performance degradation.</p>
+    </div>
+
+    <!-- Benefits Grid -->
+    <div class="feature-benefits-grid">
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-arrow-up-right-dots"></i>
+        </div>
+        <h3 class="feature-benefit-title">Traffic Scalability</h3>
+        <p class="feature-benefit-description">Handle traffic spikes effortlessly. From product launches to viral moments, your site stays fast and responsive.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-database"></i>
+        </div>
+        <h3 class="feature-benefit-title">Data Architecture</h3>
+        <p class="feature-benefit-description">Efficient database design that performs well with thousands or millions of records without slowdowns.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-puzzle-piece"></i>
+        </div>
+        <h3 class="feature-benefit-title">Modular Design</h3>
+        <p class="feature-benefit-description">Add new features and functionality without disrupting existing systems or requiring complete rewrites.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-cloud"></i>
+        </div>
+        <h3 class="feature-benefit-title">Cloud-Ready Infrastructure</h3>
+        <p class="feature-benefit-description">Built for modern cloud platforms with automatic scaling, load balancing, and distributed architecture.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-dollar-sign"></i>
+        </div>
+        <h3 class="feature-benefit-title">Cost-Effective Growth</h3>
+        <p class="feature-benefit-description">Scale efficiently without proportional cost increases. Pay for what you use, optimize resources automatically.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3 class="feature-benefit-title">Future-Proof Technology</h3>
+        <p class="feature-benefit-description">Modern architecture that adapts to new technologies and requirements without becoming obsolete.</p>
+      </div>
+    </div>
+
+    <!-- Technologies -->
+    <div class="feature-technologies">
+      <h2 class="feature-section-title">Scalability Stack</h2>
+      <div class="feature-tech-grid">
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-cloud"></i>
+          <span>Cloud Services</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-server"></i>
+          <span>Load Balancing</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-database"></i>
+          <span>Database Scaling</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-layer-group"></i>
+          <span>Microservices</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-memory"></i>
+          <span>Caching Layers</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-network-wired"></i>
+          <span>CDN</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-brands fa-docker"></i>
+          <span>Containers</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-infinity"></i>
+          <span>Auto-Scaling</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Process -->
+    <div class="feature-process">
+      <h2 class="feature-section-title">Scalability Planning</h2>
+      <div class="feature-process-steps">
+        <div class="feature-step">
+          <div class="feature-step-number">01</div>
+          <h3 class="feature-step-title">Growth Analysis</h3>
+          <p class="feature-step-description">Understand your business trajectory, traffic patterns, and future requirements to architect for tomorrow.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">02</div>
+          <h3 class="feature-step-title">Architecture Design</h3>
+          <p class="feature-step-description">Create scalable system architecture with proper separation of concerns and distributed components.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">03</div>
+          <h3 class="feature-step-title">Database Strategy</h3>
+          <p class="feature-step-description">Design efficient data models, implement caching strategies, and plan for horizontal scaling.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">04</div>
+          <h3 class="feature-step-title">Load Testing</h3>
+          <p class="feature-step-description">Stress test your infrastructure to identify bottlenecks before they impact real users.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">05</div>
+          <h3 class="feature-step-title">Deployment</h3>
+          <p class="feature-step-description">Launch with monitoring, auto-scaling, and failover systems in place for reliable growth.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">06</div>
+          <h3 class="feature-step-title">Continuous Optimization</h3>
+          <p class="feature-step-description">Monitor performance metrics and optimize architecture as your traffic and needs evolve.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="feature-cta">
+      <h2 class="feature-cta-title">Ready to Scale Without Limits?</h2>
+      <p class="feature-cta-description">Build a foundation that grows with your success, not against it.</p>
+      <a href="/contact/" class="button button--primary button--large">Plan Your Architecture</a>
+    </div>
+
+  </div>
+</section>
+{{ end }}
+
+{{ if eq .Params.feature_type "support" }}
+<!-- 24/7 Support Content -->
+<section class="feature-content">
+  <div class="container-big">
+    
+    <!-- Introduction -->
+    <div class="feature-intro">
+      <h2 class="feature-section-title">Always Here When You Need Us</h2>
+      <p class="feature-section-description">Your website never sleeps, and neither does our support. From critical issues to routine updates, we provide comprehensive ongoing maintenance and dedicated support to keep your digital presence running flawlessly 24/7/365.</p>
+    </div>
+
+    <!-- Benefits Grid -->
+    <div class="feature-benefits-grid">
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-clock"></i>
+        </div>
+        <h3 class="feature-benefit-title">24/7 Availability</h3>
+        <p class="feature-benefit-description">Round-the-clock monitoring and support. Critical issues get immediate attention, any time of day.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <h3 class="feature-benefit-title">Rapid Response</h3>
+        <p class="feature-benefit-description">Emergency response within 15 minutes. Most issues resolved before they impact your users or business.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-shield-halved"></i>
+        </div>
+        <h3 class="feature-benefit-title">Proactive Monitoring</h3>
+        <p class="feature-benefit-description">We find and fix issues before you notice them. Automated alerts and health checks keep everything running smoothly.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-arrows-rotate"></i>
+        </div>
+        <h3 class="feature-benefit-title">Regular Updates</h3>
+        <p class="feature-benefit-description">Keep your site secure and current with regular software updates, security patches, and performance improvements.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+        </div>
+        <h3 class="feature-benefit-title">Automated Backups</h3>
+        <p class="feature-benefit-description">Daily automated backups with quick restore capabilities. Your data is safe and recoverable.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <h3 class="feature-benefit-title">Dedicated Support Team</h3>
+        <p class="feature-benefit-description">Work with developers who know your site inside and out. No ticket shuffling or explaining your setup repeatedly.</p>
+      </div>
+    </div>
+
+    <!-- Technologies -->
+    <div class="feature-technologies">
+      <h2 class="feature-section-title">Support Infrastructure</h2>
+      <div class="feature-tech-grid">
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-bell"></i>
+          <span>Uptime Monitoring</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>Performance Tracking</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-shield"></i>
+          <span>Security Scanning</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-bug"></i>
+          <span>Error Logging</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-database"></i>
+          <span>Backup Systems</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-ticket"></i>
+          <span>Ticketing System</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-comments"></i>
+          <span>Live Chat</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-file-lines"></i>
+          <span>Documentation</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Process -->
+    <div class="feature-process">
+      <h2 class="feature-section-title">How We Support You</h2>
+      <div class="feature-process-steps">
+        <div class="feature-step">
+          <div class="feature-step-number">01</div>
+          <h3 class="feature-step-title">Monitoring & Prevention</h3>
+          <p class="feature-step-description">24/7 automated monitoring catches issues early. Proactive maintenance prevents problems before they start.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">02</div>
+          <h3 class="feature-step-title">Rapid Response</h3>
+          <p class="feature-step-description">Critical alerts trigger immediate action. Our team investigates and resolves issues with urgency.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">03</div>
+          <h3 class="feature-step-title">Issue Resolution</h3>
+          <p class="feature-step-description">Expert developers diagnose and fix problems efficiently, keeping you informed every step of the way.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">04</div>
+          <h3 class="feature-step-title">Updates & Maintenance</h3>
+          <p class="feature-step-description">Regular scheduled maintenance, security updates, and performance optimizations keep your site current.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">05</div>
+          <h3 class="feature-step-title">Reporting</h3>
+          <p class="feature-step-description">Monthly reports detail uptime, performance metrics, issues resolved, and improvements made.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">06</div>
+          <h3 class="feature-step-title">Continuous Improvement</h3>
+          <p class="feature-step-description">Ongoing optimization and enhancement based on usage patterns and evolving needs.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="feature-cta">
+      <h2 class="feature-cta-title">Get Peace of Mind</h2>
+      <p class="feature-cta-description">Focus on your business while we handle the technical details. Always-on support for your always-on business.</p>
+      <a href="/contact/" class="button button--primary button--large">Start Support Plan</a>
+    </div>
+
+  </div>
+</section>
+{{ end }}
+
+{{ if eq .Params.feature_type "analytics" }}
+<!-- Analytics & Insights Content -->
+<section class="feature-content">
+  <div class="container-big">
+    
+    <!-- Introduction -->
+    <div class="feature-intro">
+      <h2 class="feature-section-title">Know Your Customers, Grow Your Business</h2>
+      <p class="feature-section-description">Stop guessing and start knowing. Our analytics implementation gives you deep insights into user behavior, conversion paths, and business performance—turning data into actionable strategies that drive growth.</p>
+    </div>
+
+    <!-- Benefits Grid -->
+    <div class="feature-benefits-grid">
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-chart-line"></i>
+        </div>
+        <h3 class="feature-benefit-title">Comprehensive Tracking</h3>
+        <p class="feature-benefit-description">Track every interaction, from page views to form submissions, purchases to user journeys across your entire site.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-bullseye"></i>
+        </div>
+        <h3 class="feature-benefit-title">Conversion Optimization</h3>
+        <p class="feature-benefit-description">Identify bottlenecks, optimize conversion funnels, and maximize ROI with data-driven insights.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <h3 class="feature-benefit-title">User Behavior Analysis</h3>
+        <p class="feature-benefit-description">Understand how users navigate your site, what content engages them, and where they drop off.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-chart-pie"></i>
+        </div>
+        <h3 class="feature-benefit-title">Custom Dashboards</h3>
+        <p class="feature-benefit-description">Beautiful, intuitive dashboards showing the metrics that matter most to your business goals.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-magnifying-glass-chart"></i>
+        </div>
+        <h3 class="feature-benefit-title">SEO Performance</h3>
+        <p class="feature-benefit-description">Monitor search rankings, organic traffic, and keyword performance to optimize your visibility.</p>
+      </div>
+
+      <div class="feature-benefit-card">
+        <div class="feature-benefit-icon">
+          <i class="fa-solid fa-file-contract"></i>
+        </div>
+        <h3 class="feature-benefit-title">Actionable Reports</h3>
+        <p class="feature-benefit-description">Regular reporting with clear insights and recommendations, not just raw data dumps.</p>
+      </div>
+    </div>
+
+    <!-- Technologies -->
+    <div class="feature-technologies">
+      <h2 class="feature-section-title">Analytics Platform</h2>
+      <div class="feature-tech-grid">
+        <div class="feature-tech-item">
+          <i class="fa-brands fa-google"></i>
+          <span>Google Analytics</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-chart-simple"></i>
+          <span>Custom Events</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-filter"></i>
+          <span>Conversion Funnels</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-map"></i>
+          <span>Heat Maps</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-video"></i>
+          <span>Session Recording</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-vial"></i>
+          <span>A/B Testing</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-gauge-high"></i>
+          <span>Performance Metrics</span>
+        </div>
+        <div class="feature-tech-item">
+          <i class="fa-solid fa-link"></i>
+          <span>Attribution Tracking</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Process -->
+    <div class="feature-process">
+      <h2 class="feature-section-title">Analytics Implementation</h2>
+      <div class="feature-process-steps">
+        <div class="feature-step">
+          <div class="feature-step-number">01</div>
+          <h3 class="feature-step-title">Goals & KPIs</h3>
+          <p class="feature-step-description">Define what success looks like for your business and identify the key metrics to track.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">02</div>
+          <h3 class="feature-step-title">Tracking Setup</h3>
+          <p class="feature-step-description">Implement comprehensive tracking across your site with proper event tagging and conversion tracking.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">03</div>
+          <h3 class="feature-step-title">Dashboard Creation</h3>
+          <p class="feature-step-description">Build custom dashboards that surface the insights you need at a glance.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">04</div>
+          <h3 class="feature-step-title">Data Validation</h3>
+          <p class="feature-step-description">Ensure accuracy with thorough testing and validation of all tracking implementations.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">05</div>
+          <h3 class="feature-step-title">Analysis & Reporting</h3>
+          <p class="feature-step-description">Regular analysis of trends, patterns, and opportunities with actionable recommendations.</p>
+        </div>
+        <div class="feature-step">
+          <div class="feature-step-number">06</div>
+          <h3 class="feature-step-title">Continuous Optimization</h3>
+          <p class="feature-step-description">Use insights to continuously improve user experience, conversions, and business outcomes.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="feature-cta">
+      <h2 class="feature-cta-title">Start Making Data-Driven Decisions</h2>
+      <p class="feature-cta-description">Transform your data into strategic advantages and measurable growth.</p>
+      <a href="/contact/" class="button button--primary button--large">Implement Analytics</a>
+    </div>
+
+  </div>
+</section>
+{{ end }}
+
+{{ end }}
