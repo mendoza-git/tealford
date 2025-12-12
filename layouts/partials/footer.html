@@ -1,61 +1,112 @@
 <!-- begin footer -->
 <footer class="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col col-12">
-
-        <div class="footer__inner">
-          <div class="row">
-            <div class="col col-12 col-d-12">
-              <div class="footer__info">
-                <div class="logo-footer">
-                  <a class="logo-footer__link" href="{{ .Site.BaseURL }}">
-                    {{ if or (.Site.Params.logo) (.Site.Params.logo_dark) }}
-                    <img class="logo-footer__image" src="{{ .Site.BaseURL }}{{ .Site.Params.logo }}"
-                      alt="{{ .Site.Title }}">
-                    <img class="logo-footer__image__dark" src="{{ .Site.BaseURL }}{{ .Site.Params.logo_dark }}"
-                      alt="{{ .Site.Title }}">
-                    {{ else }}
-                      {{ .Site.Title }}
-                    {{ end }}
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col col-12 col-d-12">
-              <div class="footer__navigation">
-                <ul class="footer__navigation__list list-reset">
-                  {{ range .Site.Menus.footer }}
-                  <li class="footer__navigation__item">
-                    <a href="{{ .URL }}" class="footer__navigation__link">{{ .Name }}</a>
-                  </li>
-                  {{ end }}
-                </ul>
-              </div>
-            </div>
-            <div class="col col-12 col-d-12">
-              {{ if .Site.Params.social }}
-                {{ with .Site.Params.social }}
-                <div class="footer__social">
-                  <ul class="footer__social__list list-reset">
-                    {{ range . }}
-                    <li class="footer__social__item">
-                      <a class="footer__social__link" href="{{ .link }}" target="_blank" rel="noopener" aria-label="{{ .name }} link"><i
-                          class="{{ .icon }}"></i></a>
-                    </li>
-                    {{ end }}
-                  </ul>
-                </div>
-                {{ end }}
-              {{ end }}
-            </div>
-          </div>
+  <div class="container-big">
+    <div class="footer__main">
+      
+      <!-- Footer Brand Column -->
+      <div class="footer__column footer__column--brand">
+        <a class="footer__logo" href="{{ .Site.BaseURL }}">
+          {{ if or (.Site.Params.logo) (.Site.Params.logo_dark) }}
+          <img class="footer__logo-image" src="{{ .Site.BaseURL }}{{ .Site.Params.logo }}" alt="{{ .Site.Title }}">
+          <img class="footer__logo-image--dark" src="{{ .Site.BaseURL }}{{ .Site.Params.logo_dark }}" alt="{{ .Site.Title }}">
+          {{ else }}
+          {{ .Site.Title }}
+          {{ end }}
+        </a>
+        <p class="footer__tagline">Transform your digital presence with expert consulting</p>
+        
+        <!-- Newsletter Signup -->
+        <div class="footer__newsletter">
+          <h4 class="footer__newsletter-title">Stay up to date with Tealford</h4>
+          <form class="footer__newsletter-form" action="{{ .Site.Params.mailchimp.mailchimp_identifier }}" method="post" target="_blank">
+            <input type="email" name="EMAIL" placeholder="Your email address" class="footer__newsletter-input" required>
+            <button type="submit" class="footer__newsletter-button">
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </form>
         </div>
-
-        <div class="copyright">{{ dateFormat "2006" now }} &copy; <a href="/">{{ .Site.Title }}</a>. All Right Reserved.</div>
-
+        
+        <!-- Social Links -->
+        {{ if .Site.Params.social }}
+        <div class="footer__social">
+          <ul class="footer__social-list list-reset">
+            {{ range .Site.Params.social }}
+            <li class="footer__social-item">
+              <a class="footer__social-link" href="{{ .link }}" target="_blank" rel="noopener" aria-label="{{ .name }}">
+                <i class="{{ .icon }}"></i>
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
       </div>
+
+      <!-- Solutions Column -->
+      <div class="footer__column">
+        <h4 class="footer__column-title">Solutions</h4>
+        <ul class="footer__links list-reset">
+          {{ range .Site.Menus.footer_solutions }}
+          <li><a href="{{ .URL }}" class="footer__link">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+        
+        {{ if .Site.Menus.footer_features }}
+        <h4 class="footer__column-title footer__column-title--sub">Features</h4>
+        <ul class="footer__links list-reset">
+          {{ range .Site.Menus.footer_features }}
+          <li><a href="{{ .URL }}" class="footer__link">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+
+      <!-- Services Column -->
+      <div class="footer__column">
+        <h4 class="footer__column-title">Services</h4>
+        <ul class="footer__links list-reset">
+          {{ range .Site.Menus.footer_services }}
+          <li><a href="{{ .URL }}" class="footer__link">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <!-- Resources Column -->
+      <div class="footer__column">
+        <h4 class="footer__column-title">Resources</h4>
+        <ul class="footer__links list-reset">
+          {{ range .Site.Menus.footer_resources }}
+          <li><a href="{{ .URL }}" class="footer__link">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <!-- Company Column -->
+      <div class="footer__column">
+        <h4 class="footer__column-title">Company</h4>
+        <ul class="footer__links list-reset">
+          {{ range .Site.Menus.footer_company }}
+          <li><a href="{{ .URL }}" class="footer__link">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+        
+        {{ if .Site.Menus.footer_legal }}
+        <h4 class="footer__column-title footer__column-title--sub">Legal</h4>
+        <ul class="footer__links list-reset">
+          {{ range .Site.Menus.footer_legal }}
+          <li><a href="{{ .URL }}" class="footer__link">{{ .Name }}</a></li>
+          {{ end }}
+        </ul>
+        {{ end }}
+      </div>
+
     </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer__bottom">
+      <p class="footer__copyright">{{ dateFormat "2006" now }} &copy; {{ .Site.Title }}. All rights reserved.</p>
+    </div>
+
   </div>
 </footer>
 <!-- end footer -->

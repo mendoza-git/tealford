@@ -591,31 +591,3 @@
     margin-bottom: 30px;
   }
 }
-
-.home-final-cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  
-  .button {
-    &--primary {
-      background: var(--white);
-      color: var(--primary-color);
-      
-      &:hover {
-        background: var(--background-alt-color);
-      }
-    }
-    
-    &--secondary {
-      background: transparent;
-      border: 2px solid var(--white);
-      color: var(--white);
-      
-      &:hover {
-        background: rgba(255, 255, 255, 0.1);
-      }
-    }
-  }
-}

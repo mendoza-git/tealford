@@ -158,27 +158,136 @@ paginate = 6
     hasChildren = true
   
 
-  # Footer Menu
+  # Footer Menu - Solutions
+  [[menu.footer_solutions]]
+    name = "Web Design & Development"
+    url = "/websites/"
+    weight = 1
 
-  [[menu.footer]]
+  [[menu.footer_solutions]]
+    name = "E-Commerce Solutions"
+    url = "/ecommerce/"
+    weight = 2
+
+  [[menu.footer_solutions]]
+    name = "Social Media Strategy"
+    url = "/social/"
+    weight = 3
+
+  [[menu.footer_solutions]]
+    name = "Pricing"
+    url = "/pricing/"
+    weight = 4
+
+  # Footer Menu - Solutions Features
+  [[menu.footer_features]]
+    name = "Custom Development"
+    url = "/features/custom-development/"
+    weight = 1
+
+  [[menu.footer_features]]
+    name = "Performance Optimization"
+    url = "/features/performance/"
+    weight = 2
+
+  [[menu.footer_features]]
+    name = "Scalable Architecture"
+    url = "/features/scalability/"
+    weight = 3
+
+  [[menu.footer_features]]
+    name = "24/7 Support"
+    url = "/features/support/"
+    weight = 4
+
+  # Footer Menu - Services
+  [[menu.footer_services]]
+    name = "Digital Consulting"
+    url = "/services/consulting/"
+    weight = 1
+
+  [[menu.footer_services]]
+    name = "UI/UX Design"
+    url = "/services/design/"
+    weight = 2
+
+  [[menu.footer_services]]
+    name = "Full-Stack Development"
+    url = "/services/development/"
+    weight = 3
+
+  [[menu.footer_services]]
+    name = "Website Maintenance"
+    url = "/services/maintenance/"
+    weight = 4
+
+  [[menu.footer_services]]
+    name = "SEO & Optimization"
+    url = "/services/optimization/"
+    weight = 5
+
+  # Footer Menu - Resources
+  [[menu.footer_resources]]
+    name = "Blog"
+    url = "/projects/"
+    weight = 1
+
+  [[menu.footer_resources]]
+    name = "Case Studies"
+    url = "/case-studies/"
+    weight = 2
+
+  [[menu.footer_resources]]
+    name = "Resource Center"
+    url = "/resources/"
+    weight = 3
+
+  [[menu.footer_resources]]
+    name = "Documentation"
+    url = "/docs/"
+    weight = 4
+
+  [[menu.footer_resources]]
+    name = "Customer Support"
+    url = "/support/"
+    weight = 5
+
+  # Footer Menu - Company
+  [[menu.footer_company]]
+    name = "About Us"
+    url = "/about/"
+    weight = 1
+
+  [[menu.footer_company]]
+    name = "Careers"
+    url = "/careers/"
+    weight = 2
+
+  [[menu.footer_company]]
+    name = "Partners"
+    url = "/partners/"
+    weight = 3
+
+  [[menu.footer_company]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+  # Footer Menu - Legal
+  [[menu.footer_legal]]
     name = "Privacy Policy"
     url = "/privacy/"
     weight = 1
 
-  [[menu.footer]]
-    name = "Terms + Conditions"
+  [[menu.footer_legal]]
+    name = "Terms & Conditions"
     url = "/terms/"
     weight = 2
 
-  [[menu.footer]]
-    name = "About Us"
-    url = "/about/"
+  [[menu.footer_legal]]
+    name = "Cookie Policy"
+    url = "/cookie-policy/"
     weight = 3
-
-  [[menu.footer]]
-    name = "Contact Us"
-    url = "/contact/"
-    weight = 4
 
 
   # Call to action button
