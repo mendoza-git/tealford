@@ -21,7 +21,45 @@ document.addEventListener("DOMContentLoaded", function() {
   function menu() {
     menuToggle.classList.toggle("is-open");
     menuList.classList.toggle("is-visible");
+    document.body.classList.toggle("menu-open");
   }
+
+  // Mobile accordion menu for dropdowns
+  const mobileDropdowns = document.querySelectorAll('.nav__item.dropdown');
+  
+  mobileDropdowns.forEach(dropdown => {
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    
+    if (toggle) {
+      toggle.addEventListener('click', (e) => {
+        // Only handle on mobile
+        if (window.innerWidth <= 1024) {
+          e.preventDefault();
+          e.stopPropagation();
+          
+          // Close other dropdowns
+          mobileDropdowns.forEach(otherDropdown => {
+            if (otherDropdown !== dropdown) {
+              otherDropdown.classList.remove('is-active');
+            }
+          });
+          
+          // Toggle current dropdown
+          dropdown.classList.toggle('is-active');
+        }
+      });
+    }
+  });
+
+  // Close mobile menu when clicking outside
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth <= 1024 && 
+        menuList.classList.contains('is-visible') && 
+        !menuList.contains(e.target) && 
+        !menuToggle.contains(e.target)) {
+      menu();
+    }
+  });
 
   // Theme Switcher
   if (toggleTheme) {
