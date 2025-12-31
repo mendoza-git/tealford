@@ -25,23 +25,10 @@
     const pauseEnd = 2000; // Pause after typing
     const pauseStart = 500; // Pause before typing next
 
-    // Function to update slideshow and background based on typed text index
+    // Function to update slideshow based on typed text index
     function updateSlideshow(index) {
       slides.forEach((slide, i) => {
         slide.classList.toggle('hero__slide--active', i === index);
-        
-        // Update hero background for mobile/tablet views only
-        if (i === index && heroSection) {
-          if (window.innerWidth <= 968) {
-            const slideImg = slide.querySelector('img');
-            if (slideImg) {
-              heroSection.style.backgroundImage = `url('${slideImg.src}')`;
-            }
-          } else {
-            // Remove background image on desktop
-            heroSection.style.backgroundImage = '';
-          }
-        }
       });
       
       if (dots.length > 0) {
@@ -95,15 +82,6 @@
 
     // Start typing
     type();
-
-    // Update background on window resize
-    let resizeTimeout;
-    window.addEventListener('resize', () => {
-      clearTimeout(resizeTimeout);
-      resizeTimeout = setTimeout(() => {
-        updateSlideshow(stringIndex);
-      }, 250);
-    });
   }
 
   // Initialize when DOM is ready
