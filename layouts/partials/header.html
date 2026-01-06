@@ -222,6 +222,7 @@
           </div>
 
           <div class="nav-button">
+            {{ if .Site.Params.theme_toggle_enable }}
             {{ if or (eq .Site.Params.color_scheme "light") (eq .Site.Params.color_scheme "dark") }}
             {{ else }}
             <div class="toggle-theme">
@@ -242,6 +243,7 @@
                 <span class="toggle-text">Light</span>
               </div>
             </div>
+            {{ end }}
             {{ end }}
             {{ if .Site.Params.cta_button.enable }}
             <a href="{{ if .Site.Params.cta_button.cta_button_link }}{{ .Site.Params.cta_button.cta_button_link }}{{ else }}#{{ end }}" class="nav__link cta-button button">{{ .Site.Params.cta_button.cta_button_text }}</a>

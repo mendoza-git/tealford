@@ -302,6 +302,7 @@ paginate = 6
   logo_dark = "/images/tealford-dark-logo.png"
   description = "Gerous is a modern portfolio Hugo theme"
   color_scheme = "auto" # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
+  theme_toggle_enable = false # Set to true to display the light/dark theme toggle button
 
 
   #-------------------------------

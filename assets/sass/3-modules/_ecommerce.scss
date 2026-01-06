@@ -1,8 +1,8 @@
 /* ===============================
-   Social Media Page Styles
+   E-Commerce Page Styles
    =============================== */
 
-.social-page {
+.ecommerce-page {
   padding-top: 0;
 }
 
@@ -10,18 +10,18 @@
    Hero Section
    =============================== */
 
-.social-hero {
+.ecommerce-hero {
   padding: 120px 0 80px;
   background: linear-gradient(135deg, var(--background-color) 0%, var(--background-alt-color) 100%);
   text-align: center;
 }
 
-.social-hero-content {
+.ecommerce-hero-content {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.social-hero-title {
+.ecommerce-hero-title {
   font-family: 'Inter', sans-serif;
   font-size: 45px;
   font-weight: 600;
@@ -35,7 +35,7 @@
   }
 }
 
-.social-hero-subtitle {
+.ecommerce-hero-subtitle {
   font-family: 'Inter', sans-serif;
   font-size: 20px;
   line-height: 1.6;
@@ -47,7 +47,7 @@
   }
 }
 
-.social-hero-cta {
+.ecommerce-hero-cta {
   display: flex;
   gap: 16px;
   justify-content: center;
@@ -58,14 +58,14 @@
    Stats Section
    =============================== */
 
-.social-stats {
+.ecommerce-stats {
   padding: 60px 0;
   background: var(--background-alt-color);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
 
-.social-stats-grid {
+.ecommerce-stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 40px;
@@ -95,7 +95,7 @@
    Features Section
    =============================== */
 
-.social-features {
+.ecommerce-features {
   padding: 100px 0;
   background: var(--background-color);
 }
@@ -182,18 +182,18 @@
    Pricing Section - CDI Style
    =============================== */
 
-.social-pricing-section {
+.ecommerce-pricing-section {
   padding: 80px 0;
   background: var(--background-color);
 }
 
-.social-pricing-header {
+.ecommerce-pricing-header {
   text-align: center;
   max-width: 800px;
   margin: 0 auto 48px;
 }
 
-.social-pricing-title {
+.ecommerce-pricing-title {
   font-family: 'Inter', sans-serif;
   font-size: 38px;
   font-weight: 600;
@@ -207,7 +207,7 @@
   }
 }
 
-.social-pricing-description {
+.ecommerce-pricing-description {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   color: var(--text-alt-color);
@@ -215,7 +215,7 @@
   margin-bottom: 0;
 }
 
-.social-pricing-group {
+.ecommerce-pricing-group {
   max-width: 1000px;
   margin: 0 auto;
   border-radius: 16px;
@@ -228,30 +228,30 @@
   }
 }
 
-.social-pricing-plan {
+.ecommerce-pricing-plan {
   transition: all 0.3s ease;
 
   &:not(:last-child) {
     border-bottom: 2px solid var(--border-color);
   }
 
-  &.social-pricing-plan--featured {
-    .social-pricing-plan-header {
+  &.ecommerce-pricing-plan--featured {
+    .ecommerce-pricing-plan-header {
       background: linear-gradient(135deg, #f9f0e1 0%, #f5e6d3 50%, #fef7eb 100%);
     }
 
-    .social-pricing-plan-name,
-    .social-pricing-plan-price {
+    .ecommerce-pricing-plan-name,
+    .ecommerce-pricing-plan-price {
       color: var(--heading-font-color);
     }
 
-    .social-pricing-plan-tagline {
+    .ecommerce-pricing-plan-tagline {
       color: var(--text-alt-color);
     }
   }
 }
 
-.social-pricing-plan-header {
+.ecommerce-pricing-plan-header {
   background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #f2f2f2 100%);
   padding: 36px 48px;
 
@@ -260,7 +260,7 @@
   }
 }
 
-.social-pricing-plan-header-content {
+.ecommerce-pricing-plan-header-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -273,7 +273,7 @@
   }
 }
 
-.social-pricing-plan-name {
+.ecommerce-pricing-plan-name {
   font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 700;
@@ -282,7 +282,7 @@
   line-height: 1.2;
 }
 
-.social-pricing-plan-price {
+.ecommerce-pricing-plan-price {
   display: flex;
   align-items: baseline;
   gap: 6px;
@@ -304,7 +304,7 @@
   }
 }
 
-.social-pricing-plan-tagline {
+.ecommerce-pricing-plan-tagline {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   color: var(--text-alt-color);
@@ -316,7 +316,7 @@
   }
 }
 
-.social-pricing-plan-body {
+.ecommerce-pricing-plan-body {
   background: var(--background-color);
   padding: 36px 48px;
 
@@ -325,7 +325,7 @@
   }
 }
 
-.social-pricing-plan-features {
+.ecommerce-pricing-plan-features {
   list-style: none;
   padding: 0;
   margin: 0 0 24px 0;
@@ -356,7 +356,7 @@
   }
 }
 
-.social-pricing-plan-cta {
+.ecommerce-pricing-plan-cta {
   margin-bottom: 24px;
 
   .button {
@@ -367,7 +367,7 @@
   }
 }
 
-.social-pricing-plan-description {
+.ecommerce-pricing-plan-description {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   line-height: 1.6;
@@ -381,7 +381,7 @@
    Process Section
    =============================== */
 
-.social-process {
+.ecommerce-process {
   padding: 100px 0;
   background: var(--background-color);
 }
@@ -513,18 +513,18 @@
    CTA Section
    =============================== */
 
-.social-cta {
+.ecommerce-cta {
   padding: 100px 0;
   background: linear-gradient(135deg, var(--primary-color) 0%, #088 100%);
   text-align: center;
 }
 
-.social-cta-content {
+.ecommerce-cta-content {
   max-width: 700px;
   margin: 0 auto;
 }
 
-.social-cta-title {
+.ecommerce-cta-title {
   font-size: 36px;
   font-weight: 700;
   color: var(--white);
@@ -536,7 +536,7 @@
   }
 }
 
-.social-cta-description {
+.ecommerce-cta-description {
   font-size: 18px;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
@@ -619,18 +619,18 @@
    =============================== */
 
 @media (max-width: 768px) {
-  .social-hero {
+  .ecommerce-hero {
     padding: 80px 0 60px;
   }
 
-  .social-stats {
+  .ecommerce-stats {
     padding: 40px 0;
   }
 
-  .social-features,
-  .social-pricing-section,
-  .social-process,
-  .social-cta {
+  .ecommerce-features,
+  .ecommerce-pricing-section,
+  .ecommerce-process,
+  .ecommerce-cta {
     padding: 60px 0;
   }
 
@@ -639,7 +639,7 @@
     gap: 24px;
   }
 
-  .social-grid {
+  .ecommerce-grid {
     grid-template-columns: 1fr;
     gap: 24px;
   }
