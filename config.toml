@@ -147,15 +147,15 @@ paginate = 6
     url = "/contact/"
     icon = "fa-solid fa-envelope"
 
-  [[menu.main]]
-    name = "Pricing"
-    url = "/pricing/"
-    weight = 5
+  # [[menu.main]]
+  #   name = "Pricing"
+  #   url = "/pricing/"
+  #   weight = 5
 
-  [[menu.main]]
-    name = "Services"
-    weight = 6
-    hasChildren = true
+  # [[menu.main]]
+  #   name = "Services"
+  #   weight = 6
+  #   hasChildren = true
   
 
   # Footer Menu - Solutions

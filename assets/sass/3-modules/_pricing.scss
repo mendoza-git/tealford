@@ -22,11 +22,13 @@
 }
 
 .pricing-hero-title {
-  font-size: 48px;
-  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+  font-size: 45px;
+  font-weight: 600;
   line-height: 1.2;
   color: var(--heading-font-color);
   margin-bottom: 24px;
+  letter-spacing: -1.5px;
 
   @media (max-width: 768px) {
     font-size: 36px;
@@ -34,6 +36,7 @@
 }
 
 .pricing-hero-subtitle {
+  font-family: 'Inter', sans-serif;
   font-size: 20px;
   line-height: 1.6;
   color: var(--text-alt-color);
@@ -176,144 +179,202 @@
 }
 
 /* ===============================
-   Pricing Section
+   Pricing Section - CDI Style
    =============================== */
 
 .pricing-section {
-  padding: 100px 0;
-  background: var(--background-alt-color);
-}
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 32px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.pricing-card {
+  padding: 80px 0;
   background: var(--background-color);
+}
+
+.pricing-section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+
+.pricing-section-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--heading-font-color);
+  margin-bottom: 12px;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+}
+
+.pricing-section-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  color: var(--text-alt-color);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.pricing-group {
+  max-width: 1000px;
+  margin: 0 auto;
   border-radius: 16px;
-  border: 2px solid var(--border-color);
-  display: flex;
-  flex-direction: column;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  position: relative;
   overflow: hidden;
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
 
   &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 20px 40px rgba(0, 102, 102, 0.15);
-    border-color: var(--primary-color);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
   }
 }
 
-.pricing-card--featured {
-  border-color: var(--primary-color);
-  border-width: 3px;
+.pricing-plan {
+  transition: all 0.3s ease;
 
-  .pricing-tier {
-    color: var(--primary-color);
+  &:not(:last-child) {
+    border-bottom: 2px solid var(--border-color);
+  }
+
+  &.pricing-plan--featured {
+    .pricing-plan-header {
+      background: linear-gradient(135deg, #f9f0e1 0%, #f5e6d3 50%, #fef7eb 100%);
+    }
+
+    .pricing-plan-name,
+    .pricing-plan-price {
+      color: var(--heading-font-color);
+    }
+
+    .pricing-plan-tagline {
+      color: var(--text-alt-color);
+    }
   }
 }
 
-.pricing-badge {
-  position: absolute;
-  top: 20px;
-  right: -35px;
-  background: var(--primary-color);
-  color: var(--white);
-  padding: 6px 40px;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  transform: rotate(45deg);
-  box-shadow: 0 4px 8px rgba(0, 102, 102, 0.3);
+.pricing-plan-header {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #f2f2f2 100%);
+  padding: 36px 48px;
+
+  @media (max-width: 768px) {
+    padding: 28px 24px;
+  }
 }
 
-.pricing-card-header {
-  padding: 40px 32px 32px;
-  text-align: center;
-  border-bottom: 1px solid var(--border-color);
+.pricing-plan-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
 }
 
-.pricing-tier {
+.pricing-plan-name {
+  font-family: 'Inter', sans-serif;
   font-size: 24px;
   font-weight: 700;
   color: var(--heading-font-color);
-  margin-bottom: 16px;
+  margin: 0;
+  line-height: 1.2;
 }
 
-.pricing-amount {
-  margin-bottom: 16px;
+.pricing-plan-price {
   display: flex;
   align-items: baseline;
-  justify-content: center;
-  gap: 4px;
+  gap: 6px;
+  flex-shrink: 0;
+
+  .price {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--heading-font-color);
+    line-height: 1;
+  }
+
+  .period {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: var(--text-alt-color);
+    font-weight: 500;
+  }
 }
 
-.price {
-  font-size: 56px;
-  font-weight: 700;
-  color: var(--heading-font-color);
-  line-height: 1;
-}
-
-.period {
-  font-size: 18px;
+.pricing-plan-tagline {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
   color: var(--text-alt-color);
-  font-weight: 500;
+  margin: 8px 0 0 0;
+  line-height: 1.4;
+
+  @media (max-width: 768px) {
+    margin-top: 6px;
+  }
 }
 
-.pricing-description {
-  font-size: 15px;
-  color: var(--text-alt-color);
-  margin: 0;
+.pricing-plan-body {
+  background: var(--background-color);
+  padding: 36px 48px;
+
+  @media (max-width: 768px) {
+    padding: 28px 24px;
+  }
 }
 
-.pricing-card-body {
-  padding: 32px;
-  flex: 1;
-}
-
-.pricing-features-list {
+.pricing-plan-features {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 24px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 24px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
 
   li {
     display: flex;
     align-items: flex-start;
-    gap: 12px;
-    padding: 12px 0;
-    font-size: 15px;
-    line-height: 1.6;
+    gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
     color: var(--text-color);
-    border-bottom: 1px solid var(--border-color);
-
-    &:last-child {
-      border-bottom: none;
-    }
 
     i {
       color: var(--primary-color);
-      font-size: 16px;
+      font-size: 14px;
       margin-top: 2px;
       flex-shrink: 0;
     }
   }
 }
 
-.pricing-card-footer {
-  padding: 32px;
-  border-top: 1px solid var(--border-color);
-  text-align: center;
+.pricing-plan-cta {
+  margin-bottom: 24px;
 
   .button {
-    width: 100%;
+    padding: 12px 28px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
   }
+}
+
+.pricing-plan-description {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-alt-color);
+  margin: 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
 }
 
 /* ===============================
