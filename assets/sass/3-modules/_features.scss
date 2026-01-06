@@ -6,7 +6,7 @@
 // Hero Section
 .feature-hero {
   padding: 100px 0 80px;
-  background: linear-gradient(135deg, var(--background-color) 0%, var(--background-alt-color) 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, #088 100%);
   border-bottom: 1px solid var(--border-color);
   
   @media (max-width: 768px) {
@@ -24,7 +24,7 @@
   font-size: 48px;
   font-weight: 700;
   line-height: 1.2;
-  color: var(--heading-font-color);
+  color: var(--white);
   margin-bottom: 20px;
   
   @media (max-width: 768px) {
@@ -35,7 +35,7 @@
 .feature-hero-description {
   font-size: 20px;
   line-height: 1.6;
-  color: var(--text-alt-color);
+  color: rgba(255, 255, 255, 0.9);
   margin: 0;
   
   @media (max-width: 768px) {
