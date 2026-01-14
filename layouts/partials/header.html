@@ -90,6 +90,21 @@
                           <h3 class="mega-menu-column-title">Quick Links</h3>
                           <div class="mega-menu-links">
                             {{ range .Params.linkItems }}
+                            {{ if .comingSoon }}
+                            <span class="mega-menu-link mega-menu-link--disabled">
+                              {{ if .icon }}
+                              <div class="mega-menu-link-icon">
+                                <i class="{{ .icon }}"></i>
+                              </div>
+                              {{ end }}
+                              <div class="mega-menu-link-content">
+                                <span class="mega-menu-link-title">{{ .title }} <span class="coming-soon-badge">Coming Soon</span></span>
+                                {{ if .description }}
+                                <span class="mega-menu-link-description">{{ .description }}</span>
+                                {{ end }}
+                              </div>
+                            </span>
+                            {{ else }}
                             <a href="{{ .url }}" class="mega-menu-link">
                               {{ if .icon }}
                               <div class="mega-menu-link-icon">
@@ -103,6 +118,7 @@
                                 {{ end }}
                               </div>
                             </a>
+                            {{ end }}
                             {{ end }}
                           </div>
                         </div>

@@ -653,6 +653,58 @@
   line-height: 1.5;
 }
 
+/* Disabled Link (Coming Soon) */
+.mega-menu-link--disabled {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  
+  @media (max-width: $desktop) {
+    padding: 14px 24px 14px 40px;
+    border-radius: 0;
+    border-bottom: 1px solid var(--border-color);
+    gap: 12px;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .mega-menu-link-icon {
+    opacity: 0.6;
+  }
+
+  .mega-menu-link-title {
+    color: var(--text-alt-color);
+  }
+
+  .mega-menu-link-description {
+    opacity: 0.8;
+  }
+}
+
+/* Coming Soon Badge */
+.coming-soon-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  margin-left: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background: #ffc107;
+  color: var(--dark);
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
 /* Featured Posts (Resources menu) */
 .mega-menu-featured-posts {
   display: flex;

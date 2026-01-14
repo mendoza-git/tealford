@@ -1,0 +1,62 @@
+{{ define "main" }}
+
+<section class="resource-hero">
+  <div class="container">
+    <div class="resource-hero-content">
+      <h1 class="resource-hero-title">{{ .Title }}</h1>
+      <p class="resource-hero-description">{{ .Description }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="resource-content">
+  <div class="container">
+    <article class="resource-article">
+      {{ .Content }}
+    </article>
+
+    <!-- Contact Options Sidebar -->
+    <aside class="resource-sidebar">
+      <div class="resource-sidebar-card resource-support-hours">
+        <h3 class="resource-sidebar-title"><i class="fa-solid fa-clock"></i> Support Hours</h3>
+        <p><strong>Monday - Friday</strong><br>9:00 AM - 6:00 PM CST</p>
+        <p><strong>Emergency Support</strong><br>24/7 for maintenance plan clients</p>
+      </div>
+
+      <div class="resource-sidebar-card resource-contact-methods">
+        <h3 class="resource-sidebar-title"><i class="fa-solid fa-headset"></i> Contact Methods</h3>
+        <ul class="resource-contact-list">
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:support@tealford.com">support@tealford.com</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+12145558325">(214) 555-TEAL</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-comment"></i>
+            <span>Live Chat Available</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="resource-sidebar-card resource-cta">
+        <h3 class="resource-sidebar-title">Submit a Ticket</h3>
+        <p>Get detailed help with your specific issue.</p>
+        <a href="/contact/" class="button button--primary">Contact Form</a>
+      </div>
+
+      <div class="resource-sidebar-card">
+        <h3 class="resource-sidebar-title">More Resources</h3>
+        <ul class="resource-sidebar-links">
+          <li><a href="/resources/case-studies/">Case Studies</a></li>
+          <li><a href="/resources/documentation/">Documentation</a></li>
+          <li><a href="/projects/">Blog</a></li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+</section>
+
+{{ end }}

@@ -101,20 +101,21 @@ paginate = 6
   [[menu.main.params.linkItems]]
     title = "Case Studies"
     description = "Real-world success stories from our clients"
-    url = "/case-studies/"
+    url = "/resources/case-studies/"
     icon = "fa-solid fa-briefcase"
 
   [[menu.main.params.linkItems]]
     title = "Customer Support"
     description = "Get help and find answers to your questions"
-    url = "/support/"
+    url = "/resources/customer-support/"
     icon = "fa-solid fa-circle-question"
 
   [[menu.main.params.linkItems]]
     title = "Documentation"
     description = "Comprehensive guides and tutorials"
-    url = "/docs/"
+    url = "/resources/documentation/"
     icon = "fa-solid fa-book"
+    comingSoon = true
 
   [[menu.main]]
     name = "Company"
