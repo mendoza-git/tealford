@@ -1,5 +1,5 @@
 ---
-title: "E-Commerce Solutions"
+title: "eCommerce Solutions"
 date: 2025-12-09
 layout: "ecommerce"
 ---

@@ -135,18 +135,6 @@
   background: var(--background-alt-color);
   border-radius: 12px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 102, 102, 0.1);
-    background: var(--background-alt-color-2);
-
-    .feature-icon {
-      background: var(--primary-color);
-      color: var(--white);
-      transform: scale(1.1);
-    }
-  }
 }
 
 .feature-icon {
@@ -155,12 +143,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--background-color);
   border-radius: 12px;
-  color: var(--primary-color);
   font-size: 24px;
   margin-bottom: 20px;
   transition: all 0.3s ease;
+  transform: scale(1.1);
 }
 
 .feature-title {
@@ -437,18 +424,18 @@
   flex-direction: column;
   align-items: center;
 
-  &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 32px rgba(0, 102, 102, 0.12);
-    border-color: var(--primary-color);
-    background: var(--background-color);
+  // &:hover {
+  //   transform: translateY(-8px);
+  //   box-shadow: 0 16px 32px rgba(0, 102, 102, 0.12);
+  //   border-color: var(--primary-color);
+  //   background: var(--background-color);
 
-    .step-icon {
-      background: var(--primary-color);
-      color: var(--white);
-      transform: scale(1.1) rotate(5deg);
-    }
-  }
+  //   .step-icon {
+  //     background: var(--primary-color);
+  //     color: var(--white);
+  //     transform: scale(1.1) rotate(5deg);
+  //   }
+  // }
 }
 
 .step-icon {

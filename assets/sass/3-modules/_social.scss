@@ -134,19 +134,6 @@
   padding: 32px;
   background: var(--background-alt-color);
   border-radius: 12px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0, 102, 102, 0.1);
-    background: var(--background-alt-color-2);
-
-    .feature-icon {
-      background: var(--primary-color);
-      color: var(--white);
-      transform: scale(1.1);
-    }
-  }
 }
 
 .feature-icon {
@@ -160,7 +147,6 @@
   color: var(--primary-color);
   font-size: 24px;
   margin-bottom: 20px;
-  transition: all 0.3s ease;
 }
 
 .feature-title {
@@ -221,16 +207,9 @@
   border-radius: 16px;
   overflow: hidden;
   border: 2px solid var(--border-color);
-  transition: all 0.3s ease;
-
-  &:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-  }
 }
 
 .social-pricing-plan {
-  transition: all 0.3s ease;
-
   &:not(:last-child) {
     border-bottom: 2px solid var(--border-color);
   }
@@ -430,25 +409,11 @@
   border-radius: 16px;
   padding: 32px 24px;
   text-align: center;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   border: 2px solid var(--border-color);
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  &:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 16px 32px rgba(0, 102, 102, 0.12);
-    border-color: var(--primary-color);
-    background: var(--background-color);
-
-    .step-icon {
-      background: var(--primary-color);
-      color: var(--white);
-      transform: scale(1.1) rotate(5deg);
-    }
-  }
 }
 
 .step-icon {
@@ -462,7 +427,6 @@
   color: var(--primary-color);
   font-size: 28px;
   margin-bottom: 20px;
-  transition: all 0.3s ease;
   box-shadow: 0 4px 12px rgba(0, 102, 102, 0.1);
 }
 
@@ -481,33 +445,7 @@
   margin: 0;
 }
 
-.step-connector {
-  display: none;
-  position: absolute;
-  top: 50%;
-  right: -40px;
-  width: 40px;
-  height: 2px;
-  background: linear-gradient(to right, var(--primary-color), transparent);
-  transform: translateY(-50%);
 
-  &::after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-left: 8px solid var(--primary-color);
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
-  }
-
-  @media (min-width: 1400px) {
-    display: block;
-  }
-}
 
 /* ===============================
    CTA Section
@@ -562,16 +500,7 @@
   font-weight: 600;
   font-size: 16px;
   display: inline-block;
-  transition: all 0.3s ease;
   border: 2px solid var(--primary-color);
-
-  &:hover {
-    background: #088;
-    border-color: #088;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(0, 102, 102, 0.3);
-    color: var(--white);
-  }
 }
 
 .button--secondary {
@@ -583,15 +512,7 @@
   font-weight: 600;
   font-size: 16px;
   display: inline-block;
-  transition: all 0.3s ease;
   border: 2px solid var(--border-color);
-
-  &:hover {
-    background: var(--background-alt-color);
-    border-color: var(--primary-color);
-    color: var(--primary-color);
-    transform: translateY(-2px);
-  }
 }
 
 .button--outline {
@@ -603,15 +524,7 @@
   font-weight: 600;
   font-size: 15px;
   display: inline-block;
-  transition: all 0.3s ease;
   border: 2px solid var(--border-color);
-
-  &:hover {
-    background: var(--primary-color);
-    border-color: var(--primary-color);
-    color: var(--white);
-    transform: translateY(-2px);
-  }
 }
 
 /* ===============================

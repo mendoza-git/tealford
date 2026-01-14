@@ -31,7 +31,7 @@ paginate = 6
     icon = "fa-solid fa-code"
 
   [[menu.main.params.productItems]]
-    title = "E-Commerce Solutions"
+    title = "eCommerce Solutions"
     description = "Complete online store setup with payment integration"
     url = "/ecommerce"
     icon = "fa-solid fa-cart-shopping"
@@ -165,7 +165,7 @@ paginate = 6
     weight = 1
 
   [[menu.footer_solutions]]
-    name = "E-Commerce Solutions"
+    name = "eCommerce Solutions"
     url = "/ecommerce/"
     weight = 2
 
