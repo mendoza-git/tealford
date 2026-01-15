@@ -583,3 +583,350 @@
     }
   }
 }
+
+/* ============================================
+   Customer Support Page (Maple-inspired)
+   ============================================ */
+
+/* Container Wide */
+.container-wide {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+
+  @media only screen and (max-width: 768px) {
+    padding: 0 20px;
+  }
+}
+
+/* Support Hero Section */
+.support-hero {
+  padding: 100px 0 80px;
+  background: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
+  text-align: center;
+
+  @media only screen and (max-width: 768px) {
+    padding: 60px 0 50px;
+  }
+}
+
+.support-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.support-hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin-bottom: 16px;
+  color: var(--heading-font-color);
+
+  @media only screen and (max-width: 768px) {
+    font-size: 40px;
+    letter-spacing: -1px;
+  }
+}
+
+.support-hero-subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-alt-color);
+  margin-bottom: 20px;
+  line-height: 1.4;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 20px;
+  }
+}
+
+.support-hero-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-color);
+  max-width: 700px;
+  margin: 0 auto;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+/* Support Areas Section */
+.support-areas {
+  padding: 100px 0;
+  background: var(--background-color);
+
+  @media only screen and (max-width: 768px) {
+    padding: 60px 0;
+  }
+}
+
+.support-areas-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+}
+
+.support-areas-title {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin-bottom: 16px;
+  color: var(--heading-font-color);
+
+  @media only screen and (max-width: 768px) {
+    font-size: 32px;
+  }
+}
+
+.support-areas-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-alt-color);
+
+  @media only screen and (max-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+/* Support Areas Grid */
+.support-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+
+  @media only screen and (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* Support Area Card */
+.support-area-card {
+  background: var(--background-alt-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 32px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 768px) {
+    padding: 24px;
+  }
+}
+
+.support-area-header {
+  margin-bottom: 16px;
+}
+
+.support-area-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+  color: var(--heading-font-color);
+
+  @media only screen and (max-width: 768px) {
+    font-size: 22px;
+  }
+}
+
+.support-area-focus {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--primary-color);
+  background: rgba(0, 102, 102, 0.1);
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.support-area-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+  margin-bottom: 20px;
+
+  @media only screen and (max-width: 768px) {
+    font-size: 15px;
+  }
+}
+
+/* Support Scenarios */
+.support-scenarios {
+  margin-bottom: 24px;
+  flex-grow: 1;
+}
+
+.support-scenarios-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--heading-font-color);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.support-scenarios-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    padding: 8px 0;
+    padding-left: 24px;
+    position: relative;
+
+    &::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+      font-weight: 700;
+    }
+
+    @media only screen and (max-width: 768px) {
+      font-size: 14px;
+    }
+  }
+}
+
+/* Support Area Contact */
+.support-area-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  margin-top: auto;
+}
+
+.support-contact-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+
+  i {
+    color: var(--primary-color);
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+  }
+
+  span {
+    font-weight: 500;
+  }
+
+  &:hover {
+    background: var(--background-color);
+    color: var(--primary-color);
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+/* Additional Support Info Section */
+.support-additional {
+  padding: 80px 0;
+  background: var(--background-alt-color);
+  border-top: 1px solid var(--border-color);
+
+  @media only screen and (max-width: 768px) {
+    padding: 60px 0;
+  }
+}
+
+.support-additional-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+
+  @media only screen and (max-width: 968px) {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+.support-info-card {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 32px;
+  text-align: center;
+
+  @media only screen and (max-width: 768px) {
+    padding: 24px;
+  }
+}
+
+.support-info-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  background: var(--background-alt-color);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-color);
+  font-size: 28px;
+}
+
+.support-info-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--heading-font-color);
+  letter-spacing: -0.3px;
+}
+
+.support-info-text {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: 16px;
+
+  strong {
+    color: var(--heading-font-color);
+    font-weight: 600;
+  }
+
+  @media only screen and (max-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.support-info-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}

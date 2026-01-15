@@ -1,61 +1,60 @@
 {{ define "main" }}
 
-<section class="resource-hero">
-  <div class="container">
-    <div class="resource-hero-content">
-      <h1 class="resource-hero-title">{{ .Title }}</h1>
-      <p class="resource-hero-description">{{ .Description }}</p>
+<!-- Hero Section -->
+<section class="support-hero">
+  <div class="container-wide">
+    <div class="support-hero-content">
+      <h1 class="support-hero-title">{{ .Title }}</h1>
+      <p class="support-hero-subtitle">{{ .Params.subtitle }}</p>
+      <p class="support-hero-description">{{ .Description }}</p>
     </div>
   </div>
 </section>
 
-<section class="resource-content">
-  <div class="container">
-    <article class="resource-article">
-      {{ .Content }}
-    </article>
+<!-- Support Areas Section -->
+<section class="support-areas">
+  <div class="container-wide">
+    <div class="support-areas-header">
+      <h2 class="support-areas-title">Support Areas</h2>
+      <p class="support-areas-description">
+        Comprehensive support across every aspect of your digital presence. Choose your topic below to get started.
+      </p>
+    </div>
 
-    <!-- Contact Options Sidebar -->
-    <aside class="resource-sidebar">
-      <div class="resource-sidebar-card resource-support-hours">
-        <h3 class="resource-sidebar-title"><i class="fa-solid fa-clock"></i> Support Hours</h3>
-        <p><strong>Monday - Friday</strong><br>9:00 AM - 6:00 PM CST</p>
-        <p><strong>Emergency Support</strong><br>24/7 for maintenance plan clients</p>
-      </div>
-
-      <div class="resource-sidebar-card resource-contact-methods">
-        <h3 class="resource-sidebar-title"><i class="fa-solid fa-headset"></i> Contact Methods</h3>
-        <ul class="resource-contact-list">
-          <li>
+    <div class="support-areas-grid">
+      {{ range .Params.support_areas }}
+      <div class="support-area-card">
+        <div class="support-area-header">
+          <h3 class="support-area-title">{{ .title }}</h3>
+          <span class="support-area-focus">{{ .focus }}</span>
+        </div>
+        
+        <p class="support-area-description">{{ .description }}</p>
+        
+        {{ if .scenarios }}
+        <div class="support-scenarios">
+          <h4 class="support-scenarios-title">Common Requests:</h4>
+          <ul class="support-scenarios-list">
+            {{ range .scenarios }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+        
+        <div class="support-area-contact">
+          <a href="mailto:{{ $.Params.contact_email }}" class="support-contact-link">
             <i class="fa-solid fa-envelope"></i>
-            <a href="mailto:support@tealford.com">support@tealford.com</a>
-          </li>
-          <li>
+            <span>{{ $.Params.contact_email }}</span>
+          </a>
+          <a href="tel:{{ replace $.Params.contact_phone " " "" | replace "(" "" | replace ")" "" | replace "-" "" }}" class="support-contact-link">
             <i class="fa-solid fa-phone"></i>
-            <a href="tel:+12145558325">(214) 555-TEAL</a>
-          </li>
-          <li>
-            <i class="fa-solid fa-comment"></i>
-            <span>Live Chat Available</span>
-          </li>
-        </ul>
+            <span>{{ $.Params.contact_phone }}</span>
+          </a>
+        </div>
       </div>
-
-      <div class="resource-sidebar-card resource-cta">
-        <h3 class="resource-sidebar-title">Submit a Ticket</h3>
-        <p>Get detailed help with your specific issue.</p>
-        <a href="/contact/" class="button button--primary">Contact Form</a>
-      </div>
-
-      <div class="resource-sidebar-card">
-        <h3 class="resource-sidebar-title">More Resources</h3>
-        <ul class="resource-sidebar-links">
-          <li><a href="/resources/case-studies/">Case Studies</a></li>
-          <li><a href="/resources/documentation/">Documentation</a></li>
-          <li><a href="/projects/">Blog</a></li>
-        </ul>
-      </div>
-    </aside>
+      {{ end }}
+    </div>
   </div>
 </section>
 

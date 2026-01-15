@@ -27,7 +27,7 @@ While we finalize our documentation center, you can still get the help you need:
 
 - **Contact Support**: Our [customer support team](/resources/customer-support/) is available to answer any questions
 - **Schedule Training**: Book a personalized training session with our team
-- **Review Case Studies**: Learn from [real-world examples](/resources/case-studies/) of successful implementations
+<!-- - **Review Case Studies**: Learn from [real-world examples](/resources/case-studies/) of successful implementations -->
 
 ### Stay Updated
 

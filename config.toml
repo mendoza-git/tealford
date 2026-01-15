@@ -98,11 +98,11 @@ paginate = 6
     url = "/projects/"
     icon = "fa-solid fa-newspaper"
 
-  [[menu.main.params.linkItems]]
-    title = "Case Studies"
-    description = "Real-world success stories from our clients"
-    url = "/resources/case-studies/"
-    icon = "fa-solid fa-briefcase"
+  # [[menu.main.params.linkItems]]
+  #   title = "Case Studies"
+  #   description = "Real-world success stories from our clients"
+  #   url = "/resources/case-studies/"
+  #   icon = "fa-solid fa-briefcase"
 
   [[menu.main.params.linkItems]]
     title = "Customer Support"
@@ -233,10 +233,10 @@ paginate = 6
     url = "/projects/"
     weight = 1
 
-  [[menu.footer_resources]]
-    name = "Case Studies"
-    url = "/case-studies/"
-    weight = 2
+  # [[menu.footer_resources]]
+  #   name = "Case Studies"
+  #   url = "/case-studies/"
+  #   weight = 3
 
   [[menu.footer_resources]]
     name = "Resource Center"
