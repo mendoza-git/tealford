@@ -319,7 +319,7 @@ paginate = 6
     enable = true
     hero_badge = "Trusted by Industry Leaders"
     hero_title_static = "Solutions for "
-    hero_title_typed = ["Legal", "Construction", "Retail", "Healthcare", "Hospitality", "Real Estate"]
+    hero_title_typed = ["Entrepeneurs", "Small Business", "Enterprise"]
     hero_title_static_end = ""
     hero_subtitle = "Web & Media That Actually Works"
     hero_description = "Digital experiences crafted for professionals who demand excellence. We deliver solutions that elevate your brand and drive results."
@@ -333,34 +333,19 @@ paginate = 6
 
     # Hero Images (cycling slideshow - synchronized with typed industries)
     [[params.hero_image]]
-      path = "/images/hero/legal.jpg"
-      alt = "Legal Industry Solutions"
-      industry = "Legal"
+      path = "/images/hero/entrepeneurs.jpg"
+      alt = "Entrepeneurs Industry Solutions"
+      industry = "Entrepeneurs"
     
     [[params.hero_image]]
-      path = "/images/hero/construction.jpg"
-      alt = "Construction Industry Solutions"
-      industry = "Construction"
+      path = "/images/hero/small-business.jpg"
+      alt = "Small Business Industry Solutions"
+      industry = "Small Business"
     
     [[params.hero_image]]
-      path = "/images/hero/retail.jpg"
-      alt = "Retail Industry Solutions"
-      industry = "Retail"
-    
-    [[params.hero_image]]
-      path = "/images/hero/healthcare.jpg"
-      alt = "Healthcare Industry Solutions"
-      industry = "Healthcare"
-    
-    [[params.hero_image]]
-      path = "/images/hero/hospitality.jpg"
-      alt = "Hospitality Industry Solutions"
-      industry = "Hospitality"
-    
-    [[params.hero_image]]
-      path = "/images/hero/real-estate.jpg"
-      alt = "Real Estate Industry Solutions"
-      industry = "Real Estate"
+      path = "/images/hero/enterprise.jpg"
+      alt = "Enterprise Industry Solutions"
+      industry = "Enterprise"
 
     # Stats
     hero_stats_enable = true

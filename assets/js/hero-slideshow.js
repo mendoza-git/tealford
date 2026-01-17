@@ -47,7 +47,3 @@
     initHeroSlideshow();
   }
 })();
-  } else {
-    initHeroSlideshow();
-  }
-})();
