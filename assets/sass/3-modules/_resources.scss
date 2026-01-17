@@ -592,10 +592,10 @@
 .container-wide {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 32px;
+  padding: 75px 32px 0;
 
   @media only screen and (max-width: 768px) {
-    padding: 0 20px;
+    padding: 90px 20px 0;
   }
 }
 

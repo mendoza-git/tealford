@@ -2,12 +2,33 @@ document.addEventListener("DOMContentLoaded", function() {
   'use strict';
 
     const html = document.querySelector('html'),
+    header = document.querySelector('.header'),
     menuToggle = document.querySelector(".hamburger"),
     menuList = document.querySelector(".main-nav"),
     toggleTheme = document.querySelector(".toggle-theme"),
     splides = document.querySelector(".hero__logos"),
     featuredSlider = document.querySelector(".featured__slider__inner"),
     testimonialsSlider = document.querySelector(".testimonials__slider");
+
+
+  /* =======================================================
+  // Header Scroll Effect
+  ======================================================= */
+  if (header) {
+    let lastScroll = 0;
+    
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (currentScroll > 50) {
+        header.classList.add('header--scrolled');
+      } else {
+        header.classList.remove('header--scrolled');
+      }
+      
+      lastScroll = currentScroll;
+    });
+  }
 
 
   /* =======================================================
