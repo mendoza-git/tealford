@@ -43,13 +43,9 @@
         {{ end }}
         
         <div class="support-area-contact">
-          <a href="mailto:{{ $.Params.contact_email }}" class="support-contact-link">
+          <a href="mailto:{{ .contact_email }}" class="support-contact-link">
             <i class="fa-solid fa-envelope"></i>
-            <span>{{ $.Params.contact_email }}</span>
-          </a>
-          <a href="tel:{{ replace $.Params.contact_phone " " "" | replace "(" "" | replace ")" "" | replace "-" "" }}" class="support-contact-link">
-            <i class="fa-solid fa-phone"></i>
-            <span>{{ $.Params.contact_phone }}</span>
+            <span>{{ .contact_email }}</span>
           </a>
         </div>
       </div>
