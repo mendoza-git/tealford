@@ -10,13 +10,36 @@
    Hero Section
    =============================== */
 
+@keyframes ecommerceGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 .ecommerce-hero {
-  padding: 120px 0 80px;
-  background: linear-gradient(135deg, var(--background-color) 0%, var(--background-alt-color) 100%);
+  position: relative;
+  padding: 150px 0 80px;
   text-align: center;
+  background: linear-gradient(-45deg, 
+    #fdfcfa, 
+    #f9f7fb,
+    #f3eff8,
+    #f9f7fb,
+    #fdfcfa
+  );
+  background-size: 400% 400%;
+  animation: ecommerceGradientShift 15s ease infinite;
 }
 
 .ecommerce-hero-content {
+  position: relative;
+  z-index: 1;
   max-width: 800px;
   margin: 0 auto;
 }

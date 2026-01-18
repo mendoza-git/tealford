@@ -133,7 +133,7 @@ paginate = 6
   [[menu.main.params.companyItems]]
     title = "Careers"
     description = "Join our team and help shape the future"
-    url = "/careers/"
+    url = "/company/careers/"
     icon = "fa-solid fa-briefcase"
 
   [[menu.main.params.companyItems]]
