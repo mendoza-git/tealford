@@ -136,11 +136,11 @@ paginate = 6
     url = "/company/careers/"
     icon = "fa-solid fa-briefcase"
 
-  [[menu.main.params.companyItems]]
-    title = "Partners"
-    description = "Collaborate with us and grow together"
-    url = "/partners/"
-    icon = "fa-solid fa-handshake"
+  # [[menu.main.params.companyItems]]
+  #   title = "Partners"
+  #   description = "Collaborate with us and grow together"
+  #   url = "/partners/"
+  #   icon = "fa-solid fa-handshake"
 
   [[menu.main.params.companyItems]]
     title = "Contact Us"
@@ -162,17 +162,17 @@ paginate = 6
   # Footer Menu - Solutions
   [[menu.footer_solutions]]
     name = "Web Design & Development"
-    url = "/websites/"
+    url = "/websites"
     weight = 1
 
   [[menu.footer_solutions]]
     name = "eCommerce Solutions"
-    url = "/ecommerce/"
+    url = "/ecommerce"
     weight = 2
 
   [[menu.footer_solutions]]
     name = "Social Media Strategy"
-    url = "/social/"
+    url = "/social"
     weight = 3
 
   [[menu.footer_solutions]]
@@ -201,32 +201,6 @@ paginate = 6
     url = "/solutions/support/"
     weight = 4
 
-  # Footer Menu - Services
-  [[menu.footer_services]]
-    name = "Digital Consulting"
-    url = "/services/consulting/"
-    weight = 1
-
-  [[menu.footer_services]]
-    name = "UI/UX Design"
-    url = "/services/design/"
-    weight = 2
-
-  [[menu.footer_services]]
-    name = "Full-Stack Development"
-    url = "/services/development/"
-    weight = 3
-
-  [[menu.footer_services]]
-    name = "Website Maintenance"
-    url = "/services/maintenance/"
-    weight = 4
-
-  [[menu.footer_services]]
-    name = "SEO & Optimization"
-    url = "/services/optimization/"
-    weight = 5
-
   # Footer Menu - Resources
   [[menu.footer_resources]]
     name = "Blog"
@@ -243,14 +217,14 @@ paginate = 6
     url = "/resources/"
     weight = 3
 
-  [[menu.footer_resources]]
-    name = "Documentation"
-    url = "/docs/"
-    weight = 4
+  # [[menu.footer_resources]]
+  #   name = "Documentation"
+  #   url = "/docs/"
+  #   weight = 4
 
   [[menu.footer_resources]]
     name = "Customer Support"
-    url = "/support/"
+    url = "/resources/customer-support/"
     weight = 5
 
   # Footer Menu - Company
@@ -261,13 +235,13 @@ paginate = 6
 
   [[menu.footer_company]]
     name = "Careers"
-    url = "/careers/"
+    url = "/company/careers/"
     weight = 2
 
-  [[menu.footer_company]]
-    name = "Partners"
-    url = "/partners/"
-    weight = 3
+  # [[menu.footer_company]]
+  #   name = "Partners"
+  #   url = "/partners/"
+  #   weight = 3
 
   [[menu.footer_company]]
     name = "Contact"

@@ -1,0 +1,199 @@
+{{ define "main" }}
+
+<!-- begin about page -->
+<div class="about-page">
+  
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-hero-content">
+        <h1 class="about-hero-title">{{ .Title }}</h1>
+        {{ if .Params.subtitle }}
+        <p class="about-hero-subtitle">{{ .Params.subtitle }}</p>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  {{ if .Params.intro }}
+  <section class="about-intro">
+    <div class="container">
+      <div class="about-intro-grid">
+        <div class="about-intro-content">
+          <p class="about-intro-text">{{ .Params.intro.description }}</p>
+        </div>
+        {{ if .Params.intro.image }}
+        <div class="about-intro-image-wrapper">
+          <img src="{{ .Params.intro.image }}" alt="About" class="about-intro-image">
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Why Choose Section -->
+  {{ if .Params.why_choose }}
+  <section class="about-why-choose">
+    <div class="container">
+      <div class="about-why-choose-header">
+        <h2 class="about-why-choose-title">{{ .Params.why_choose.title }}</h2>
+        {{ if .Params.why_choose.subtitle }}
+        <p class="about-why-choose-subtitle">{{ .Params.why_choose.subtitle }}</p>
+        {{ end }}
+      </div>
+      <div class="about-why-choose-grid">
+        <!-- Tealford Card -->
+        <div class="about-why-card about-why-card--tealford">
+          <div class="about-why-card-header">
+            <div class="about-why-card-header-content">
+              <div class="about-why-card-title-row">
+                <h3 class="about-why-card-title">{{ .Params.why_choose.comparison.tealford.title }}</h3>
+                {{ if .Params.why_choose.comparison.tealford.badge }}
+                <div class="about-why-card-badge">{{ .Params.why_choose.comparison.tealford.badge }}</div>
+                {{ end }}
+              </div>
+              {{ if .Params.why_choose.comparison.tealford.description }}
+              <p class="about-why-card-description">{{ .Params.why_choose.comparison.tealford.description }}</p>
+              {{ end }}
+            </div>
+          </div>
+          <div class="about-why-card-body">
+            <ul class="about-why-card-list">
+              {{ range .Params.why_choose.comparison.tealford.points }}
+              <li class="about-why-card-item">
+                <svg class="about-why-card-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>{{ . }}</span>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Freelancer Card -->
+        <div class="about-why-card about-why-card--other">
+          <div class="about-why-card-header">
+            <div class="about-why-card-header-content">
+              <div class="about-why-card-title-row">
+                <h3 class="about-why-card-title">{{ .Params.why_choose.comparison.freelancer.title }}</h3>
+                {{ if .Params.why_choose.comparison.freelancer.badge }}
+                <div class="about-why-card-badge">{{ .Params.why_choose.comparison.freelancer.badge }}</div>
+                {{ end }}
+              </div>
+              {{ if .Params.why_choose.comparison.freelancer.description }}
+              <p class="about-why-card-description">{{ .Params.why_choose.comparison.freelancer.description }}</p>
+              {{ end }}
+            </div>
+          </div>
+          <div class="about-why-card-body">
+            <ul class="about-why-card-list">
+              {{ range .Params.why_choose.comparison.freelancer.points }}
+              <li class="about-why-card-item{{ if or (in . "Flexible") (in . "pause or cancel") }} about-why-card-item--highlight{{ end }}">
+                <svg class="about-why-card-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>{{ . }}</span>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+
+        <!-- Agency Card -->
+        <div class="about-why-card about-why-card--other">
+          <div class="about-why-card-header">
+            <div class="about-why-card-header-content">
+              <div class="about-why-card-title-row">
+                <h3 class="about-why-card-title">{{ .Params.why_choose.comparison.agency.title }}</h3>
+                {{ if .Params.why_choose.comparison.agency.badge }}
+                <div class="about-why-card-badge">{{ .Params.why_choose.comparison.agency.badge }}</div>
+                {{ end }}
+              </div>
+              {{ if .Params.why_choose.comparison.agency.description }}
+              <p class="about-why-card-description">{{ .Params.why_choose.comparison.agency.description }}</p>
+              {{ end }}
+            </div>
+          </div>
+          <div class="about-why-card-body">
+            <ul class="about-why-card-list">
+              {{ range .Params.why_choose.comparison.agency.points }}
+              <li class="about-why-card-item{{ if or (in . "Scalable") (in . "team when needed") }} about-why-card-item--highlight{{ end }}">
+                <svg class="about-why-card-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <span>{{ . }}</span>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Stats Section -->
+  {{/*  {{ if .Params.stats }}
+  <section class="about-stats">
+    <div class="container">
+      {{ if .Params.stats.title }}
+      <h2 class="about-stats-title">{{ .Params.stats.title }}</h2>
+      {{ end }}
+      <div class="about-stats-grid">
+        {{ range .Params.stats.items }}
+        <div class="about-stat-item">
+          <div class="about-stat-value">{{ .value }}</div>
+          <div class="about-stat-label">{{ .label }}</div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}  */}}
+
+  <!-- Features Section -->
+  {{/*  {{ if .Params.features }}
+  <section class="about-features">
+    <div class="container">
+      <h2 class="about-features-title">{{ .Params.features.title }}</h2>
+      <div class="about-features-grid">
+        {{ range .Params.features.items }}
+        <div class="about-feature-card">
+          <h3 class="about-feature-title">{{ .title }}</h3>
+          <p class="about-feature-description">{{ .description }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}  */}}
+
+  <!-- CTA Section -->
+  {{ if .Params.cta }}
+  <section class="about-cta">
+    <div class="container">
+      <div class="about-cta-content">
+        <h2 class="about-cta-title">{{ .Params.cta.title }}</h2>
+        {{ if .Params.cta.description }}
+        <p class="about-cta-description">{{ .Params.cta.description }}</p>
+        {{ end }}
+        {{ if .Params.cta.button }}
+        <a href="{{ .Params.cta.button.url }}" class="button button--primary button--large">
+          {{ .Params.cta.button.text }}
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+</div>
+<!-- end about page -->
+
+{{ end }}
