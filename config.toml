@@ -21,7 +21,7 @@ paginate = 6
     title = "Complete Digital Solutions"
     description = "End-to-end web and media services designed to transform your business presence online."
     url = "/solutions/"
-    image = "/images/solutions-overview.jpg"
+    image = "/images/base/solutions.jpg"
 
   # Solutions - Product Items  
   [[menu.main.params.productItems]]
@@ -89,7 +89,7 @@ paginate = 6
     title = "Knowledge Hub"
     description = "Explore our collection of insights, guides, and resources to help you succeed."
     url = "/resources/"
-    image = "/images/resources-overview.jpg"
+    image = "/images/base/resources.jpg"
 
   # Resources - Link Items
   [[menu.main.params.linkItems]]
@@ -127,7 +127,7 @@ paginate = 6
     title = "About the Company"
     description = "Learn more about our mission, values, and the team behind Tealford Consulting."
     url = "/about/"
-    image = "/images/company-overview.jpg"
+    image = "/images/base/company.jpg"
 
   # Company - Company Items
   [[menu.main.params.companyItems]]
@@ -303,7 +303,7 @@ paginate = 6
     hero_button_primary_text = "Get a Quote"
     hero_button_primary_link = "/contact/"
     hero_button_secondary_text = "View Solutions"
-    hero_button_secondary_link = "/solutions/"
+    hero_button_secondary_link = "/resources/customer-support/"
 
     # Hero Images (cycling slideshow - synchronized with typed industries)
     [[params.hero_image]]
