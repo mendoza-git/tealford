@@ -1,0 +1,75 @@
+{{ define "main" }}
+
+<!-- begin resources overview page -->
+<div class="resources-overview-page">
+  
+  <!-- Hero Section -->
+  <section class="resources-hero">
+    <div class="container">
+      <div class="resources-hero-content">
+        <h1 class="resources-hero-title">{{ .Title }}</h1>
+        {{ if .Params.subtitle }}
+        <p class="resources-hero-subtitle">{{ .Params.subtitle }}</p>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  {{ if .Params.intro }}
+  <section class="resources-intro">
+    <div class="container">
+      <div class="resources-intro-grid">
+        {{ if .Params.intro.image }}
+        <div class="resources-intro-image-wrapper">
+          <img src="{{ .Params.intro.image }}" alt="Resources" class="resources-intro-image">
+        </div>
+        {{ end }}
+        <div class="resources-intro-content">
+          <p class="resources-intro-text">{{ .Params.intro.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Features Section -->
+  {{ if .Params.features }}
+  <section class="resources-features">
+    <div class="container">
+      <h2 class="resources-features-title">{{ .Params.features.title }}</h2>
+      <div class="resources-features-grid">
+        {{ range .Params.features.items }}
+        <div class="resources-feature-card">
+          <h3 class="resources-feature-title">{{ .title }}</h3>
+          <p class="resources-feature-description">{{ .description }}</p>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- CTA Section -->
+  {{ if .Params.cta }}
+  <section class="resources-cta">
+    <div class="container">
+      <div class="resources-cta-content">
+        <h2 class="resources-cta-title">{{ .Params.cta.title }}</h2>
+        {{ if .Params.cta.description }}
+        <p class="resources-cta-description">{{ .Params.cta.description }}</p>
+        {{ end }}
+        {{ if .Params.cta.button }}
+        <a href="{{ .Params.cta.button.url }}" class="button button--primary button--large">
+          {{ .Params.cta.button.text }}
+        </a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+</div>
+<!-- end resources overview page -->
+
+{{ end }}

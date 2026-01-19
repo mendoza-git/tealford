@@ -58,7 +58,7 @@ You may:
 - Request correction or deletion of your data
 - Opt out of communications at any time
 
-To exercise these rights, contact us at [info@tealford.co](mailto:info@tealford.co).
+To exercise these rights, contact us at [info@tealfordconsulting.com](mailto:info@tealfordconsulting.com).
 
 ---
 

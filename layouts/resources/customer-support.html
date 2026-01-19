@@ -1,0 +1,57 @@
+{{ define "main" }}
+
+<!-- Hero Section -->
+<section class="support-hero">
+  <div class="container-wide">
+    <div class="support-hero-content">
+      <h1 class="support-hero-title">{{ .Title }}</h1>
+      <p class="support-hero-subtitle">{{ .Params.subtitle }}</p>
+      <p class="support-hero-description">{{ .Description }}</p>
+    </div>
+  </div>
+</section>
+
+<!-- Support Areas Section -->
+<section class="support-areas">
+  <div class="container-wide">
+    <div class="support-areas-header">
+      <h2 class="support-areas-title">Support Areas</h2>
+      <p class="support-areas-description">
+        Comprehensive support across every aspect of your digital presence. Choose your topic below to get started.
+      </p>
+    </div>
+
+    <div class="support-areas-grid">
+      {{ range .Params.support_areas }}
+      <div class="support-area-card">
+        <div class="support-area-header">
+          <h3 class="support-area-title">{{ .title }}</h3>
+          <span class="support-area-focus">{{ .focus }}</span>
+        </div>
+        
+        <p class="support-area-description">{{ .description }}</p>
+        
+        {{ if .scenarios }}
+        <div class="support-scenarios">
+          <h4 class="support-scenarios-title">Common Requests:</h4>
+          <ul class="support-scenarios-list">
+            {{ range .scenarios }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+        
+        <div class="support-area-contact">
+          <a href="mailto:{{ .contact_email }}" class="support-contact-link">
+            <i class="fa-solid fa-envelope"></i>
+            <span>{{ .contact_email }}</span>
+          </a>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

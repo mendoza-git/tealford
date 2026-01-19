@@ -1,0 +1,66 @@
+{{ define "main" }}
+
+<!-- begin careers page -->
+<div class="careers-page">
+  
+  <!-- Hero Section -->
+  <section class="careers-hero-new">
+    <div class="container">
+      <h1 class="careers-hero-headline">
+        <span class="careers-hero-line">Join</span>
+        <span class="careers-hero-line">the team.</span>
+        <span class="careers-hero-line">Shape</span>
+        <span class="careers-hero-line careers-hero-line--accent">what's next.</span>
+      </h1>
+      <p class="careers-hero-description">
+        At Tealford, we build digital solutions that drive real results. From custom websites to social media strategy, 
+        we help businesses establish, grow, and succeed online. If you're passionate about creating meaningful digital experiences 
+        and want to be part of something special, we'd love to meet you.
+      </p>
+    </div>
+  </section>
+
+  <!-- Open Positions Section -->
+  <section class="careers-positions">
+    <div class="container">
+      <div class="careers-section-label">Open Positions</div>
+      
+      <!-- No Openings State -->
+      <div class="careers-empty-state">
+        <h2 class="careers-empty-title">No Current Openings</h2>
+        <p class="careers-empty-text">
+          We don't have any open positions at the moment, but that doesn't mean we're not interested in talking. 
+          If you think you'd be a great fit for Tealford, we'd love to hear from you.
+          Send your resume to <a href="mailto:careers@tealfordconsulting.com">careers@tealfordconsulting.com</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+</div>
+<!-- end careers page -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const toggleButtons = document.querySelectorAll('.careers-position-toggle');
+  
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const card = this.closest('.careers-position-card');
+      const content = card.querySelector('.careers-position-content');
+      const isExpanded = this.getAttribute('aria-expanded') === 'true';
+      
+      this.setAttribute('aria-expanded', !isExpanded);
+      card.classList.toggle('is-expanded');
+      
+      if (!isExpanded) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = '0';
+      }
+    });
+  });
+});
+</script>
+
+{{ end }}

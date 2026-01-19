@@ -1,43 +1,86 @@
 {{ if (.Site.Params.hero.enable) }}
 <!-- begin hero -->
 <section class="hero">
-  <div class="container">
-    <div class="row">
-      <div class="col col-12">
-        <div class="hero__inner">
-          {{/*  {{ if .Site.Params.author.author_avatar }}
-          <div class="hero__avatar">
-            <img class="lazy" data-src="{{ .Site.Params.author.author_avatar }}" alt="{{ .Site.Params.author.author_name }}" width="48" height="48">
-          </div>
-          {{ end }}  */}}
-          {{ if .Site.Params.author.author_name }}
-          <span class="hero__author">{{ .Site.Params.author.author_name }}</span>
-          {{ end }}
-          {{ if .Site.Params.hero.hero_title }}
-          <div style="display: inline-flex; align-items: center; gap: 8px;">
-            <h1 class="hero__firsttitle">{{ .Site.Params.hero.hero_firsttitle }}</h1>
-            <h1 class="hero__title">{{ .Site.Params.hero.hero_title }}</h1>
-          </div>
-          {{ end }}
-          {{ if .Site.Params.hero.hero_description }}
-          <p class="hero__description">{{ .Site.Params.hero.hero_description }}</p>
-          {{ end }}
-          {{ if .Site.Params.hero_logos.enable }}
-          <div class="hero__logos splide">
-            <div class="splide__track">
-              <div class="hero__logos__inner splide__list">
-                {{ range .Site.Params.hero_logo_image }}
-                <div class="hero__logo__image splide__slide">
-                  <img src="{{ .image_url }}" alt="{{ .image_alt }}" loading="eager">
-                </div>
-                {{ end }}
-              </div>
-            </div>
+  <div class="hero__grid">
+    
+    <!-- Left Content Side -->
+    <div class="hero__content">
+      
+      <!-- Location/Badge -->
+      {{ if .Site.Params.hero.hero_badge }}
+      <div class="hero__location">
+        {{ .Site.Params.hero.hero_badge }}
+      </div>
+      {{ end }}
+
+      <!-- Main Title -->
+      {{ if .Site.Params.hero.hero_title_static }}
+      <h1 class="hero__title">
+        {{ .Site.Params.hero.hero_title_static }} 
+        <span class="hero__title-typed-wrapper">
+          <span class="hero__title-typed" data-typed-strings='{{ delimit .Site.Params.hero.hero_title_typed "," }}'></span>
+        </span>
+        {{ if .Site.Params.hero.hero_title_static_end }}
+        <span class="hero__title-static-end">{{ .Site.Params.hero.hero_title_static_end }}</span>
+        {{ end }}
+      </h1>
+      {{ end }}
+
+      <!-- Description -->
+      {{ if .Site.Params.hero.hero_description }}
+      <p class="hero__description">{{ .Site.Params.hero.hero_description }}</p>
+      {{ end }}
+
+      <!-- CTA Buttons -->
+      {{ if .Site.Params.hero.hero_buttons_enable }}
+      <div class="hero__actions">
+        {{ if .Site.Params.hero.hero_button_primary_text }}
+        <a href="{{ .Site.Params.hero.hero_button_primary_link }}" class="hero__btn hero__btn--primary">
+          {{ .Site.Params.hero.hero_button_primary_text }}
+        </a>
+        {{ end }}
+        {{ if .Site.Params.hero.hero_button_secondary_text }}
+        <a href="{{ .Site.Params.hero.hero_button_secondary_link }}" class="hero__btn hero__btn--secondary">
+          {{ .Site.Params.hero.hero_button_secondary_text }}
+        </a>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      <!-- Info Section -->
+      <div class="hero__info">
+        {{ if .Site.Params.hero.hero_stats_enable }}
+        <div class="hero__stats-grid">
+          {{ range .Site.Params.hero_stat }}
+          <div class="hero__info-item">
+            <div class="hero__info-number">{{ .number }}</div>
+            <div class="hero__info-label">{{ .label }}</div>
           </div>
           {{ end }}
         </div>
+        {{ end }}
+      </div>
+
+    </div>
+
+    <!-- Right Image Slideshow -->
+    <div class="hero__gallery">
+      <div class="hero__slideshow">
+        {{ range $index, $image := .Site.Params.hero_image }}
+        <div class="hero__slide {{ if eq $index 0 }}hero__slide--active{{ end }}" data-slide="{{ $index }}">
+          <img src="{{ $image.path }}" alt="{{ $image.alt }}" class="hero__slide-img">
+        </div>
+        {{ end }}
+      </div>
+      
+      <!-- Slideshow Controls -->
+      <div class="hero__controls">
+        {{ range $index, $image := .Site.Params.hero_image }}
+        <button class="hero__control-dot {{ if eq $index 0 }}hero__control-dot--active{{ end }}" data-slide="{{ $index }}" aria-label="Go to slide {{ add $index 1 }}"></button>
+        {{ end }}
       </div>
     </div>
+
   </div>
 </section>
 <!-- end hero -->

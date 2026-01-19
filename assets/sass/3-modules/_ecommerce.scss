@@ -1,0 +1,768 @@
+/* ===============================
+   eCommerce Page Styles
+   =============================== */
+
+.ecommerce-page {
+  padding-top: 0;
+}
+
+/* ===============================
+   Hero Section
+   =============================== */
+
+@keyframes ecommerceGradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.ecommerce-hero {
+  position: relative;
+  padding: 150px 0 80px;
+  text-align: center;
+  background: linear-gradient(-45deg, 
+    #fdfcfa, 
+    #f9f7fb,
+    #f3eff8,
+    #f9f7fb,
+    #fdfcfa
+  );
+  background-size: 400% 400%;
+  animation: ecommerceGradientShift 15s ease infinite;
+}
+
+.ecommerce-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ecommerce-hero-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--heading-font-color);
+  margin-bottom: 24px;
+  letter-spacing: -1.5px;
+
+  @media (max-width: 768px) {
+    font-size: 36px;
+  }
+}
+
+.ecommerce-hero-subtitle {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
+  color: var(--text-alt-color);
+  margin-bottom: 40px;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
+}
+
+.ecommerce-hero-cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ===============================
+   Stats Section
+   =============================== */
+
+.ecommerce-stats {
+  padding: 60px 0;
+  background: var(--background-alt-color);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ecommerce-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 8px;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 16px;
+  color: var(--text-alt-color);
+  line-height: 1.4;
+}
+
+/* ===============================
+   Features Section
+   =============================== */
+
+.ecommerce-features {
+  background: var(--background-alt-color);
+  text-align: center;
+  padding: 100px 0;
+  
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+}
+
+.features-section-badge {
+  font-family: 'Nunito Sans', sans-serif;
+  display: inline-block;
+  padding: 6px 12px;
+  background: transparent;
+  color: #737373;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: 1px dotted #d4d4d4;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #0f766e;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+}
+
+.features-section-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: var(--heading-font-color);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  max-width: 900px;
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+}
+
+.features-section-description {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-alt-color);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  @media (max-width: 568px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.feature-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 30px;
+  background: var(--background-alt-color);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 16px;
+    padding: 2px;
+    background: linear-gradient(135deg, #0f766e, #14b8a6, #0f766e, #14b8a6);
+    background-size: 300% 300%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: gradientRotate 3s ease-in-out infinite;
+  }
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #0f766e, #14b8a6, #0f766e, #14b8a6);
+  background-size: 300% 300%;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  animation: gradientRotate 3s ease-in-out infinite;
+  
+  // i {
+  //   font-size: 28px;
+  //   color: var(--white);
+  // }
+}
+
+.feature-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--heading-font-color);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.feature-description {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-alt-color);
+  margin: 0;
+}
+
+/* ===============================
+   Pricing Section - CDI Style
+   =============================== */
+
+.ecommerce-pricing-section {
+  padding: 80px 0;
+  background: var(--background-color);
+}
+
+.ecommerce-pricing-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+
+.ecommerce-pricing-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--heading-font-color);
+  margin-bottom: 12px;
+  line-height: 1.2;
+  letter-spacing: -1.5px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+}
+
+.ecommerce-pricing-description {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  color: var(--text-alt-color);
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.ecommerce-pricing-group {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+}
+
+.ecommerce-pricing-plan {
+  transition: all 0.3s ease;
+
+  &:not(:last-child) {
+    border-bottom: 2px solid var(--border-color);
+  }
+
+  &.ecommerce-pricing-plan--featured {
+    .ecommerce-pricing-plan-header {
+      background: linear-gradient(135deg, #f9f0e1 0%, #f5e6d3 50%, #fef7eb 100%);
+    }
+
+    .ecommerce-pricing-plan-name,
+    .ecommerce-pricing-plan-price {
+      color: var(--heading-font-color);
+    }
+
+    .ecommerce-pricing-plan-tagline {
+      color: var(--text-alt-color);
+    }
+  }
+}
+
+.ecommerce-pricing-plan-header {
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #f2f2f2 100%);
+  padding: 36px 48px;
+
+  @media (max-width: 768px) {
+    padding: 28px 24px;
+  }
+}
+
+.ecommerce-pricing-plan-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+}
+
+.ecommerce-pricing-plan-name {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--heading-font-color);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.ecommerce-pricing-plan-price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  flex-shrink: 0;
+
+  .price {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--heading-font-color);
+    line-height: 1;
+  }
+
+  .period {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    color: var(--text-alt-color);
+    font-weight: 500;
+  }
+}
+
+.ecommerce-pricing-plan-tagline {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  color: var(--text-alt-color);
+  margin: 8px 0 0 0;
+  line-height: 1.4;
+
+  @media (max-width: 768px) {
+    margin-top: 6px;
+  }
+}
+
+.ecommerce-pricing-plan-body {
+  background: var(--background-color);
+  padding: 36px 48px;
+
+  @media (max-width: 768px) {
+    padding: 28px 24px;
+  }
+}
+
+.ecommerce-pricing-plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 24px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--text-color);
+
+    i {
+      color: var(--primary-color);
+      font-size: 14px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.ecommerce-pricing-plan-cta {
+  margin-bottom: 24px;
+
+  .button {
+    padding: 12px 28px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+.ecommerce-pricing-plan-description {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-alt-color);
+  margin: 0;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+}
+
+/* ===============================
+   Process Section
+   =============================== */
+
+.ecommerce-process {
+  background: var(--background-alt-color);
+  text-align: center;
+  padding: 100px 0;
+  
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+}
+
+.process-section-badge {
+  font-family: 'Nunito Sans', sans-serif;
+  display: inline-block;
+  padding: 6px 12px;
+  background: transparent;
+  color: #737373;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: 1px dotted #d4d4d4;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: #0f766e;
+    border-radius: 50%;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+}
+
+.process-section-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: var(--heading-font-color);
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  max-width: 900px;
+  
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+}
+
+.process-section-description {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--text-alt-color);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  
+  @media (max-width: 768px) {
+    font-size: 15px;
+    margin-bottom: 40px;
+  }
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+  
+  @media (max-width: 968px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  @media (max-width: 568px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.process-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 30px;
+  background: var(--background-alt-color);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 16px;
+    padding: 2px;
+    background: linear-gradient(135deg, #0f766e, #14b8a6, #0f766e, #14b8a6);
+    background-size: 300% 300%;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: gradientRotate 3s ease-in-out infinite;
+  }
+}
+
+@keyframes gradientRotate {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.process-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #0f766e, #14b8a6, #0f766e, #14b8a6);
+  background-size: 300% 300%;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16px;
+  animation: gradientRotate 3s ease-in-out infinite;
+  
+  i {
+    font-size: 28px;
+    color: var(--white);
+  }
+}
+
+.process-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--heading-font-color);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.process-description {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-alt-color);
+  margin: 0;
+}
+
+/* ===============================
+   CTA Section
+   =============================== */
+
+.ecommerce-cta {
+  padding: 100px 0;
+  background: linear-gradient(135deg, var(--primary-color) 0%, #088 100%);
+  text-align: center;
+}
+
+.ecommerce-cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ecommerce-cta-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 20px;
+  line-height: 1.3;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+}
+
+.ecommerce-cta-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 32px;
+}
+
+.button--large {
+  padding: 16px 48px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ===============================
+   Button Styles
+   =============================== */
+
+.button--primary {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-color);
+
+  &:hover {
+    background: #088;
+    border-color: #088;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 102, 102, 0.3);
+    color: var(--white);
+  }
+}
+
+.button--secondary {
+  background: transparent;
+  color: var(--heading-font-color);
+  padding: 14px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 2px solid var(--border-color);
+
+  &:hover {
+    background: var(--background-alt-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+  }
+}
+
+.button--outline {
+  background: transparent;
+  color: var(--heading-font-color);
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 2px solid var(--border-color);
+
+  &:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+  }
+}
+
+/* ===============================
+   Responsive Adjustments
+   =============================== */
+
+@media (max-width: 768px) {
+  .ecommerce-hero {
+    padding: 120px 0 60px;
+  }
+
+  .ecommerce-stats {
+    padding: 40px 0;
+  }
+
+  .ecommerce-features,
+  .ecommerce-pricing-section,
+  .ecommerce-process,
+  .ecommerce-cta {
+    padding: 60px 0;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .ecommerce-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .section-header {
+    margin-bottom: 40px;
+  }
+}
+
+
+

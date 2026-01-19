@@ -3,7 +3,7 @@ title: Web3 for Small Business - Hype or Opportunity?
 date: 2024-01-10 10:01:35 +0300
 label: Web3
 image: '/images/articles/aA3/cover.jpg'
-featured:
+featured: true
 ---
 You’ve probably heard the term Web3 thrown around in tech circles, social media, or even casual conversations—often surrounded by buzzwords like blockchain, NFTs, or decentralization. For small business owners, it can all feel a little abstract or even irrelevant. After all, what does this next version of the internet have to do with running a restaurant, a boutique, or a local service business?
 

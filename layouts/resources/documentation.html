@@ -1,0 +1,67 @@
+{{ define "main" }}
+
+<section class="resource-hero {{ if .Params.in_development }}resource-hero--development{{ end }}">
+  <div class="container">
+    <div class="resource-hero-content">
+      {{ if .Params.in_development }}
+      <div class="development-badge">
+        <i class="fa-solid fa-hammer"></i>
+        <span>In Development</span>
+      </div>
+      {{ end }}
+      <h1 class="resource-hero-title">{{ .Title }}</h1>
+      <p class="resource-hero-description">{{ .Description }}</p>
+    </div>
+  </div>
+</section>
+
+{{ if .Params.in_development }}
+<section class="development-notice">
+  <div class="container">
+    <div class="development-notice-content">
+      <div class="development-notice-icon">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <div class="development-notice-text">
+        <h2>This Page is Currently Under Construction</h2>
+        <p>We're working hard to create comprehensive documentation that will serve as your complete resource center. This page will be available soon with detailed guides, tutorials, and technical references.</p>
+        <p>In the meantime, please visit our <a href="/resources/customer-support/">Customer Support</a> page for immediate assistance.</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="resource-content {{ if .Params.in_development }}resource-content--limited{{ end }}">
+  <div class="container">
+    <article class="resource-article">
+      {{ .Content }}
+    </article>
+
+    <!-- Resources Sidebar -->
+    <aside class="resource-sidebar">
+      <div class="resource-sidebar-card">
+        <h3 class="resource-sidebar-title">Available Resources</h3>
+        <ul class="resource-sidebar-links">
+          <!-- <li><a href="/resources/case-studies/">Case Studies</a></li> -->
+          <li><a href="/resources/customer-support/">Customer Support</a></li>
+          <li><a href="/projects/">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="resource-sidebar-card resource-cta">
+        <h3 class="resource-sidebar-title">Need Help Now?</h3>
+        <p>Our support team can answer your questions right away.</p>
+        <a href="/resources/customer-support/" class="button button--primary">Get Support</a>
+      </div>
+
+      <div class="resource-sidebar-card resource-notification">
+        <h3 class="resource-sidebar-title"><i class="fa-solid fa-bell"></i> Get Notified</h3>
+        <p>Want to know when our documentation goes live?</p>
+        <a href="/contact/" class="button button--secondary">Contact Us</a>
+      </div>
+    </aside>
+  </div>
+</section>
+
+{{ end }}

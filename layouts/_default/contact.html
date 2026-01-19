@@ -1,69 +1,221 @@
 {{ define "main" }}
 
-<!-- begin page -->
-<div class="container">
-
-  <article class="page">
-    <div class="page__head">
-      <div class="page__info">
-        <h1 class="page__title">{{ .Title }}</h1>
-        {{ if .Params.description }}
-        <div class="page__description">{{ .Params.description }}</div>
-        {{ end }}
+<!-- begin contact sales page -->
+<div class="contact-sales-page">
+  
+  <!-- Hero Section -->
+  <section class="contact-sales-hero">
+    <div class="container">
+      <div class="contact-sales-hero-content">
+        <h1 class="contact-sales-title">Get in Touch</h1>
+        <p class="contact-sales-subtitle">Tell us about your project and we'll help you find the right solution.</p>
       </div>
-
-      {{ if .Params.video_embed }}
-      <div class="post-video">
-        <div class="post-video__wrap">
-          <iframe src="{{ .Params.video_embed }}" loading="lazy" width="640" height="360" frameborder="0"
-            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
-      </div>
-      {{ else }}
-      {{ if .Params.image }}
-      <div class="post-image">
-        <img class="lazy" data-src="{{ .Params.Image | absURL }}" alt="{{ .Title }}">
-      </div>
-      {{ end }}
-      {{ end }}
     </div>
+  </section>
 
-    <div class="page__content">
-      <div class="form-box">
-        <div class="contact-head">
-        {{ if .Description }}
-          <div class="contact-description">{{ .Description }}</div>
-        {{ else }}
-          <div class="contact-description">{{ .Content }}</div>
-        {{ end }}
-        </div>
-        <form class="form"
-          action="{{ if .Site.Params.contact.email }}https://formspree.io/f/{{.Site.Params.contact.email}}{{ else }}#{{ end }}" method="POST">
-          <div class="form__top">
-            <div class="form__group">
-              <label class="form__label screen-reader-text" for="form-name">Your Name</label>
-              <input class="form__input" id="form-name" type="text" name="name" placeholder="Your name" required>
+  <!-- Form Section -->
+  <section class="contact-sales-form-section">
+    <div class="container">
+      <div class="contact-sales-form-wrapper">
+        
+        <form class="contact-sales-form" action="https://formspree.io/f/mreepprl" method="POST">
+          
+          <!-- Hidden field to identify this as a sales inquiry -->
+          <input type="hidden" name="_subject" value="New Sales Inquiry from Tealford Website">
+          <input type="hidden" name="_cc" value="sales@tealfordconsulting.com">
+          
+          <!-- Name Fields -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="firstName">First Name <span class="required">*</span></label>
+              <input 
+                class="form-input" 
+                id="firstName" 
+                type="text" 
+                name="firstName" 
+                placeholder="John" 
+                required>
             </div>
-            <div class="form__group">
-              <label class="form__label screen-reader-text" for="form-email">Your Email</label>
-              <input class="form__input" id="form-email" type="email" name="_replyto" placeholder="Your email" required>
+            
+            <div class="form-group">
+              <label class="form-label" for="lastName">Last Name <span class="required">*</span></label>
+              <input 
+                class="form-input" 
+                id="lastName" 
+                type="text" 
+                name="lastName" 
+                placeholder="Doe" 
+                required>
             </div>
           </div>
-          <div class="form__group">
-            <label class="form__label screen-reader-text" for="form-text">Your Message</label>
-            <textarea class="form__input" id="form-text" name="text" rows="8" placeholder="Your message" required></textarea>
+
+          <!-- Company & Email -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="company">Company</label>
+              <input 
+                class="form-input" 
+                id="company" 
+                type="text" 
+                name="company" 
+                placeholder="Your Company">
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="email">Email <span class="required">*</span></label>
+              <input 
+                class="form-input" 
+                id="email" 
+                type="email" 
+                name="email" 
+                placeholder="you@company.com" 
+                required>
+            </div>
           </div>
-          <div class="form__group">
-            <button class="button button--big" type="submit">Send Message</button>
+
+          <!-- Phone & Website -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone</label>
+              <input 
+                class="form-input" 
+                id="phone" 
+                type="tel" 
+                name="phone" 
+                placeholder="">
+            </div>
+            
+            <div class="form-group">
+              <label class="form-label" for="website">Your Website</label>
+              <input 
+                class="form-input" 
+                id="website" 
+                type="url" 
+                name="website" 
+                placeholder="https://yourwebsite.com">
+            </div>
           </div>
+
+          <!-- Solution Interest -->
+          <div class="form-group-full">
+            <label class="form-label">What solution are you interested in? <span class="required">*</span></label>
+            <div class="checkbox-group">
+              <label class="checkbox-label">
+                <input type="checkbox" name="solution[]" value="Web Design & Development">
+                <span class="checkbox-text">Web Design & Development</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="solution[]" value="eCommerce Solutions">
+                <span class="checkbox-text">eCommerce Solutions</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="solution[]" value="Digital Marketing & Social Media">
+                <span class="checkbox-text">Digital Marketing & Social Media</span>
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" name="solution[]" value="Other">
+                <span class="checkbox-text">Other</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- Budget Range -->
+          <div class="form-group-full">
+            <label class="form-label" for="budget">Estimated Budget Range</label>
+            <select class="form-select" id="budget" name="budget">
+              <option value="">Select a range</option>
+              <option value="Under $5,000">Under $5,000</option>
+              <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+              <option value="$10,000 - $25,000">$10,000 - $25,000</option>
+              <option value="$25,000 - $50,000">$25,000 - $50,000</option>
+              <option value="$50,000+">$50,000+</option>
+            </select>
+          </div>
+
+          <!-- Project Details -->
+          <div class="form-group-full">
+            <label class="form-label" for="message">Tell us about your project <span class="required">*</span></label>
+            <textarea 
+              class="form-textarea" 
+              id="message" 
+              name="message" 
+              rows="6" 
+              placeholder="What are your goals? What challenges are you facing? What's your timeline?"
+              required></textarea>
+          </div>
+
+          <!-- How did you hear about us -->
+          <div class="form-group-full">
+            <label class="form-label" for="referral">How did you hear about us?</label>
+            <select class="form-select" id="referral" name="referral">
+              <option value="">Select an option</option>
+              <option value="Google Search">Google Search</option>
+              <option value="Social Media">Social Media</option>
+              <option value="Referral">Referral</option>
+              <option value="Previous Client">Previous Client</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <!-- Submit Button -->
+          <div class="form-group-full">
+            <button class="button button--primary button--large" type="submit">Submit Inquiry</button>
+          </div>
+
         </form>
+
+        <!-- Contact Info Sidebar -->
+        <div class="contact-sales-info">
+          <div class="contact-info-card">
+            <h3 class="contact-info-title">Ready to transform your digital presence?</h3>
+            <p class="contact-info-text">Fill out the form and our team will get back to you within 24 hours.</p>
+            
+            <div class="contact-info-details">
+              <div class="contact-info-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:sales@tealfordconsulting.com">sales@tealfordconsulting.com</a>
+              </div>
+              <div class="contact-info-item">
+                <i class="fa-solid fa-clock"></i>
+                <span>Response time: Within 24 hours</span>
+              </div>
+            </div>
+
+            <div class="contact-info-features">
+              <h4 class="contact-info-subtitle">What happens next?</h4>
+              <ul class="contact-info-list">
+                <li>We'll review your project details</li>
+                <li>Schedule a discovery call</li>
+                <li>Provide a custom proposal</li>
+                <li>Start building together</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
-  </article>
+  </section>
 
 </div>
-<!-- end page -->
+<!-- end contact sales page -->
 
-{{ partial "section-subscribe.html" . }}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.querySelector('.contact-sales-form');
+  
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      const checkboxes = form.querySelectorAll('input[name="solution[]"]:checked');
+      
+      if (checkboxes.length === 0) {
+        e.preventDefault();
+        alert('Please select at least one solution you\'re interested in.');
+        return false;
+      }
+    });
+  }
+});
+</script>
 
 {{ end }}

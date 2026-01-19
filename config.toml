@@ -12,60 +12,257 @@ paginate = 6
 [menu]
 
   [[menu.main]]
-    name = "News"
-    url = "/projects/"
+    name = "Solutions"
     weight = 2
+    hasChildren = true
+
+  # Solutions - Overview Items
+  [[menu.main.params.overviewItems]]
+    title = "Complete Digital Solutions"
+    description = "End-to-end web and media services designed to transform your business presence online."
+    url = "/solutions/"
+    image = "/images/base/solutions.jpg"
+
+  # Solutions - Product Items  
+  [[menu.main.params.productItems]]
+    title = "Web Design & Development"
+    description = "Custom-coded websites built for performance and scalability"
+    url = "/websites"
+    icon = "fa-solid fa-code"
+
+  [[menu.main.params.productItems]]
+    title = "eCommerce Solutions"
+    description = "Complete online store setup with payment integration"
+    url = "/ecommerce"
+    icon = "fa-solid fa-cart-shopping"
+
+  # [[menu.main.params.productItems]]
+  #   title = "Mobile Applications"
+  #   description = "Native and cross-platform mobile app development"
+  #   url = "/solutions/mobile-apps/"
+  #   icon = "fa-solid fa-mobile-screen"
+
+  [[menu.main.params.productItems]]
+    title = "Digital Marketing"
+    description = "SEO, content strategy, and growth marketing services"
+    url = "/social/"
+    icon = "fa-solid fa-chart-line"
+
+  # Solutions - Feature Items
+  [[menu.main.params.featureItems]]
+    title = "Custom Development"
+    description = "Hand-coded solutions tailored to your needs"
+    url = "/solutions/custom-development/"
+    icon = "fa-solid fa-laptop-code"
+
+  [[menu.main.params.featureItems]]
+    title = "Performance Optimization"
+    description = "Lightning-fast load times and SEO-ready"
+    url = "/solutions/performance/"
+    icon = "fa-solid fa-bolt"
+
+  [[menu.main.params.featureItems]]
+    title = "Scalable Architecture"
+    description = "Built to grow with your business"
+    url = "/solutions/scalability/"
+    icon = "fa-solid fa-layer-group"
+
+  [[menu.main.params.featureItems]]
+    title = "24/7 Support"
+    description = "Ongoing maintenance and dedicated support"
+    url = "/solutions/support/"
+    icon = "fa-solid fa-headset"
+
+  [[menu.main.params.featureItems]]
+    title = "Analytics & Insights"
+    description = "Data-driven decisions with comprehensive tracking"
+    url = "/solutions/analytics/"
+    icon = "fa-solid fa-chart-pie"
 
   [[menu.main]]
-    name = "Services"
+    name = "Resources"
+    weight = 3
+    hasChildren = true
+
+  # Resources - Overview Items
+  [[menu.main.params.overviewItems]]
+    title = "Knowledge Hub"
+    description = "Explore our collection of insights, guides, and resources to help you succeed."
+    url = "/resources/"
+    image = "/images/base/resources.jpg"
+
+  # Resources - Link Items
+  [[menu.main.params.linkItems]]
+    title = "Blog"
+    description = "Latest insights and industry trends"
+    url = "/projects/"
+    icon = "fa-solid fa-newspaper"
+
+  # [[menu.main.params.linkItems]]
+  #   title = "Case Studies"
+  #   description = "Real-world success stories from our clients"
+  #   url = "/resources/case-studies/"
+  #   icon = "fa-solid fa-briefcase"
+
+  [[menu.main.params.linkItems]]
+    title = "Customer Support"
+    description = "Get help and find answers to your questions"
+    url = "/resources/customer-support/"
+    icon = "fa-solid fa-circle-question"
+
+  [[menu.main.params.linkItems]]
+    title = "Documentation"
+    description = "Comprehensive guides and tutorials"
+    url = "/resources/documentation/"
+    icon = "fa-solid fa-book"
+    comingSoon = true
+
+  [[menu.main]]
+    name = "Company"
     weight = 4
     hasChildren = true
 
-  [[menu.main]]
-    parent = "Services"
-    name = "Websites"
-    url = "/websites/"
-    weight = 1
+  # Company - Overview Items
+  [[menu.main.params.overviewItems]]
+    title = "About the Company"
+    description = "Learn more about our mission, values, and the team behind Tealford Consulting."
+    url = "/about/"
+    image = "/images/base/company.jpg"
 
-  [[menu.main]]
-    parent = "Services"
-    name = "Social"
-    url = "/social/"
-    weight = 2
+  # Company - Company Items
+  [[menu.main.params.companyItems]]
+    title = "Careers"
+    description = "Join our team and help shape the future"
+    url = "/company/careers/"
+    icon = "fa-solid fa-briefcase"
+
+  # [[menu.main.params.companyItems]]
+  #   title = "Partners"
+  #   description = "Collaborate with us and grow together"
+  #   url = "/partners/"
+  #   icon = "fa-solid fa-handshake"
+
+  [[menu.main.params.companyItems]]
+    title = "Contact Us"
+    description = "Get in touch with our team"
+    url = "/contact/"
+    icon = "fa-solid fa-envelope"
 
   # [[menu.main]]
-  #   parent = "Services"
-  #   name = "Marketing"
-  #   url = "/marketing/"
-  #   weight = 3
+  #   name = "Pricing"
+  #   url = "/pricing/"
+  #   weight = 5
 
-  [[menu.main]]
-  name = "About Us"
-  url = "/about/"
-  weight = 5
+  # [[menu.main]]
+  #   name = "Services"
+  #   weight = 6
+  #   hasChildren = true
   
 
-  # Footer Menu
+  # Footer Menu - Solutions
+  [[menu.footer_solutions]]
+    name = "Web Design & Development"
+    url = "/websites"
+    weight = 1
 
-  [[menu.footer]]
+  [[menu.footer_solutions]]
+    name = "eCommerce Solutions"
+    url = "/ecommerce"
+    weight = 2
+
+  [[menu.footer_solutions]]
+    name = "Social Media Strategy"
+    url = "/social"
+    weight = 3
+
+  [[menu.footer_solutions]]
+    name = "Pricing"
+    url = "/pricing/"
+    weight = 4
+
+  # Footer Menu - Solutions Features
+  [[menu.footer_features]]
+    name = "Custom Development"
+    url = "/solutions/custom-development/"
+    weight = 1
+
+  [[menu.footer_features]]
+    name = "Performance Optimization"
+    url = "/solutions/performance/"
+    weight = 2
+
+  [[menu.footer_features]]
+    name = "Scalable Architecture"
+    url = "/solutions/scalability/"
+    weight = 3
+
+  [[menu.footer_features]]
+    name = "24/7 Support"
+    url = "/solutions/support/"
+    weight = 4
+
+  # Footer Menu - Resources
+  [[menu.footer_resources]]
+    name = "Blog"
+    url = "/projects/"
+    weight = 1
+
+  # [[menu.footer_resources]]
+  #   name = "Case Studies"
+  #   url = "/case-studies/"
+  #   weight = 3
+
+  [[menu.footer_resources]]
+    name = "Resource Center"
+    url = "/resources/"
+    weight = 3
+
+  # [[menu.footer_resources]]
+  #   name = "Documentation"
+  #   url = "/docs/"
+  #   weight = 4
+
+  [[menu.footer_resources]]
+    name = "Customer Support"
+    url = "/resources/customer-support/"
+    weight = 5
+
+  # Footer Menu - Company
+  [[menu.footer_company]]
+    name = "About Us"
+    url = "/about/"
+    weight = 1
+
+  [[menu.footer_company]]
+    name = "Careers"
+    url = "/company/careers/"
+    weight = 2
+
+  # [[menu.footer_company]]
+  #   name = "Partners"
+  #   url = "/partners/"
+  #   weight = 3
+
+  [[menu.footer_company]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+  # Footer Menu - Legal
+  [[menu.footer_legal]]
     name = "Privacy Policy"
     url = "/privacy/"
     weight = 1
 
-  [[menu.footer]]
-    name = "Terms + Conditions"
+  [[menu.footer_legal]]
+    name = "Terms & Conditions"
     url = "/terms/"
     weight = 2
 
-  [[menu.footer]]
-    name = "About Us"
-    url = "/about/"
+  [[menu.footer_legal]]
+    name = "Cookie Policy"
+    url = "/cookie-policy/"
     weight = 3
-
-  [[menu.footer]]
-    name = "Contact Us"
-    url = "/contact/"
-    weight = 4
 
 
   # Call to action button
@@ -80,6 +277,7 @@ paginate = 6
   logo_dark = "/images/tealford-dark-logo.png"
   description = "Gerous is a modern portfolio Hugo theme"
   color_scheme = "auto" # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
+  theme_toggle_enable = false # Set to true to display the light/dark theme toggle button
 
 
   #-------------------------------
@@ -93,28 +291,53 @@ paginate = 6
   # Hero Settings
   [params.hero]
     enable = true
-    hero_firsttitle = "web & media"
-    hero_title = "consultants"
-    hero_description = "We help business owners and entrepreneurs build their online presence with a focus on web design, development, and digital marketing strategies."
+    hero_badge = "Trusted by Industry Leaders"
+    hero_title_static = "Solutions for "
+    hero_title_typed = ["Entrepeneurs", "Small Business", "Enterprise"]
+    hero_title_static_end = ""
+    hero_subtitle = "Web & Media That Actually Works"
+    hero_description = "Digital experiences crafted for professionals who demand excellence. We deliver solutions that elevate your brand and drive results."
+    
+    # Buttons
+    hero_buttons_enable = true
+    hero_button_primary_text = "Get a Quote"
+    hero_button_primary_link = "/contact/"
+    hero_button_secondary_text = "View Solutions"
+    hero_button_secondary_link = "/resources/customer-support/"
+
+    # Hero Images (cycling slideshow - synchronized with typed industries)
+    [[params.hero_image]]
+      path = "/images/hero/entrepeneurs.jpg"
+      alt = "Entrepeneurs Industry Solutions"
+      industry = "Entrepeneurs"
+    
+    [[params.hero_image]]
+      path = "/images/hero/small-business.jpg"
+      alt = "Small Business Industry Solutions"
+      industry = "Small Business"
+    
+    [[params.hero_image]]
+      path = "/images/hero/enterprise.jpg"
+      alt = "Enterprise Industry Solutions"
+      industry = "Enterprise"
+
+    # Stats
+    hero_stats_enable = true
+
+  [[params.hero_stat]]
+    number = "500+"
+    label = "Projects Delivered"
+
+  [[params.hero_stat]]
+    number = "98%"
+    label = "Client Satisfaction"
+
+  [[params.hero_stat]]
+    number = "10+"
+    label = "Years Experience"
 
   [params.hero_logos]
-    enable = false
-
-  [[params.hero_logo_image]]
-    image_alt = "GG Logo"
-    image_url = "images/company-logos/gg-logo.png"
-
-  [[params.hero_logo_image]]
-    image_alt = "Adobe Logo"
-    image_url = "images/company-logos/jao-logo-alt.png"
-
-  [[params.hero_logo_image]]
-    image_alt = "HP Logo"
-    image_url = "images/company-logos/nbs-logo.png"
-
-  [[params.hero_logo_image]]
-    image_alt = "Netlify Logo"
-    image_url = "images/company-logos/wr-logo-dark-md.png"
+    enable = true
 
 
   #-------------------------------

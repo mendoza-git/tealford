@@ -29,17 +29,216 @@
               {{ $pageURL:= $currentPage.Permalink | absLangURL }}
               {{ $active := eq $menuURL $pageURL }}
 
-              {{ if .HasChildren }}
-              <li class="nav__item dropdown">
+              {{ if or .HasChildren .Params.overviewItems }}
+              <li class="nav__item dropdown {{ if .Params.overviewItems }}mega-menu{{ end }}">
                 <span class="nav__link dropdown-toggle">{{ .Name }} <i class="fa-solid fa-chevron-down arrow-down"></i></span>
-                <div class="dropdown-menu">
+                
+                {{ if .Params.overviewItems }}
+                <!-- Mega Menu -->
+                <div class="mega-menu-dropdown">
+                  <div class="mega-menu-content">
+                    <div class="container-big">
+                      <div class="mega-menu-grid">
+                        
+                        <!-- Column 1: Overview -->
+                        {{ if .Params.overviewItems }}
+                        <div class="mega-menu-column mega-menu-column--overview">
+                          <h3 class="mega-menu-column-title">Overview</h3>
+                          {{ range .Params.overviewItems }}
+                          {{ if eq .url "/about/" }}
+                          <a href="{{ .url }}" class="mega-menu-overview-card mega-menu-overview-card--clickable">
+                            {{ if .image }}
+                            <div class="mega-menu-card-image">
+                              <img src="{{ .image }}" alt="{{ .title }}">
+                            </div>
+                            {{ end }}
+                            <div class="mega-menu-card-content">
+                              <h4 class="mega-menu-card-title">{{ .title }} <i class="fa-solid fa-arrow-right mega-menu-card-arrow"></i></h4>
+                              <p class="mega-menu-card-description">{{ .description }}</p>
+                            </div>
+                          </a>
+                          {{ else }}
+                          <div class="mega-menu-overview-card mega-menu-overview-card--static">
+                            {{ if .image }}
+                            <div class="mega-menu-card-image">
+                              <img src="{{ .image }}" alt="{{ .title }}">
+                            </div>
+                            {{ end }}
+                            <div class="mega-menu-card-content">
+                              <h4 class="mega-menu-card-title">{{ .title }}</h4>
+                              <p class="mega-menu-card-description">{{ .description }}</p>
+                            </div>
+                          </div>
+                          {{ end }}
+                          {{ end }}
+                        </div>
+                        {{ end }}
+
+                        <!-- Column 2: Products -->
+                        {{ if .Params.productItems }}
+                        <div class="mega-menu-column mega-menu-column--products">
+                          <h3 class="mega-menu-column-title">Products</h3>
+                          <div class="mega-menu-links">
+                            {{ range .Params.productItems }}
+                            <a href="{{ .url }}" class="mega-menu-link">
+                              {{ if .icon }}
+                              <div class="mega-menu-link-icon">
+                                <i class="{{ .icon }}"></i>
+                              </div>
+                              {{ end }}
+                              <div class="mega-menu-link-content">
+                                <span class="mega-menu-link-title">{{ .title }}</span>
+                                {{ if .description }}
+                                <span class="mega-menu-link-description">{{ .description }}</span>
+                                {{ end }}
+                              </div>
+                            </a>
+                            {{ end }}
+                          </div>
+                        </div>
+                        {{ end }}
+
+                        <!-- Column 2: Links (for Resources menu) -->
+                        {{ if .Params.linkItems }}
+                        <div class="mega-menu-column mega-menu-column--links">
+                          <h3 class="mega-menu-column-title">Quick Links</h3>
+                          <div class="mega-menu-links">
+                            {{ range .Params.linkItems }}
+                            {{ if .comingSoon }}
+                            <span class="mega-menu-link mega-menu-link--disabled">
+                              {{ if .icon }}
+                              <div class="mega-menu-link-icon">
+                                <i class="{{ .icon }}"></i>
+                              </div>
+                              {{ end }}
+                              <div class="mega-menu-link-content">
+                                <span class="mega-menu-link-title">{{ .title }} <span class="coming-soon-badge">Coming Soon</span></span>
+                                {{ if .description }}
+                                <span class="mega-menu-link-description">{{ .description }}</span>
+                                {{ end }}
+                              </div>
+                            </span>
+                            {{ else }}
+                            <a href="{{ .url }}" class="mega-menu-link">
+                              {{ if .icon }}
+                              <div class="mega-menu-link-icon">
+                                <i class="{{ .icon }}"></i>
+                              </div>
+                              {{ end }}
+                              <div class="mega-menu-link-content">
+                                <span class="mega-menu-link-title">{{ .title }}</span>
+                                {{ if .description }}
+                                <span class="mega-menu-link-description">{{ .description }}</span>
+                                {{ end }}
+                              </div>
+                            </a>
+                            {{ end }}
+                            {{ end }}
+                          </div>
+                        </div>
+                        {{ end }}
+
+                        <!-- Column 3: Features -->
+                        {{ if .Params.featureItems }}
+                        <div class="mega-menu-column mega-menu-column--features">
+                          <h3 class="mega-menu-column-title">Features</h3>
+                          <div class="mega-menu-links">
+                            {{ range .Params.featureItems }}
+                            <a href="{{ .url }}" class="mega-menu-link">
+                              {{ if .icon }}
+                              <div class="mega-menu-link-icon">
+                                <i class="{{ .icon }}"></i>
+                              </div>
+                              {{ end }}
+                              <div class="mega-menu-link-content">
+                                <span class="mega-menu-link-title">{{ .title }}</span>
+                                {{ if .description }}
+                                <span class="mega-menu-link-description">{{ .description }}</span>
+                                {{ end }}
+                              </div>
+                            </a>
+                            {{ end }}
+                          </div>
+                        </div>
+                        {{ end }}
+
+                        <!-- Column 2: Company Links (for Company menu) -->
+                        {{ if .Params.companyItems }}
+                        <div class="mega-menu-column mega-menu-column--company">
+                          <h3 class="mega-menu-column-title">Company</h3>
+                          <div class="mega-menu-links">
+                            {{ range .Params.companyItems }}
+                            <a href="{{ .url }}" class="mega-menu-link">
+                              {{ if .icon }}
+                              <div class="mega-menu-link-icon">
+                                <i class="{{ .icon }}"></i>
+                              </div>
+                              {{ end }}
+                              <div class="mega-menu-link-content">
+                                <span class="mega-menu-link-title">{{ .title }}</span>
+                                {{ if .description }}
+                                <span class="mega-menu-link-description">{{ .description }}</span>
+                                {{ end }}
+                              </div>
+                            </a>
+                            {{ end }}
+                          </div>
+                        </div>
+                        {{ end }}
+
+                        <!-- Column 3: Featured Posts (for Resources menu) -->
+                        {{ if eq .Name "Resources" }}
+                        <div class="mega-menu-column mega-menu-column--featured">
+                          <h3 class="mega-menu-column-title">Featured Articles</h3>
+                          <div class="mega-menu-featured-posts">
+                            {{ range first 3 (where (where site.RegularPages "Section" "projects") ".Params.featured" "=" true) }}
+                            <a href="{{ .RelPermalink }}" class="mega-menu-post">
+                              {{ if .Params.Image }}
+                              <div class="mega-menu-post-image">
+                                <img src="{{ .Params.Image | absURL }}" alt="{{ .Params.Title }}">
+                              </div>
+                              {{ end }}
+                              <div class="mega-menu-post-content">
+                                {{ if .Params.label }}
+                                <span class="mega-menu-post-label">{{ .Params.label }}</span>
+                                {{ end }}
+                                <h4 class="mega-menu-post-title">{{ .Params.Title }}</h4>
+                              </div>
+                            </a>
+                            {{ end }}
+                          </div>
+                        </div>
+                        {{ end }}
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {{ else }}
+                <!-- Regular Dropdown -->
+                <div class="dropdown-menu {{ if .Params.icon }}dropdown-menu--cards{{ end }}">
                   {{ range .Children }}
                   {{ $childURL := .URL | absLangURL }}
                   {{ $active := eq $childURL $pageURL }}
                   <a href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}"
-                    class="nav__link{{ if $active }} active-link{{ end }}">{{ .Name }}</a>
+                    class="nav__link{{ if $active }} active-link{{ end }}{{ if .Params.icon }} nav__link--card{{ end }}">
+                    {{ if .Params.icon }}
+                    <div class="nav__link-icon">
+                      <i class="{{ .Params.icon }}"></i>
+                    </div>
+                    <div class="nav__link-content">
+                      <div class="nav__link-title">{{ .Name }}</div>
+                      {{ if .Params.description }}
+                      <div class="nav__link-description">{{ .Params.description }}</div>
+                      {{ end }}
+                    </div>
+                    {{ else }}
+                    {{ .Name }}
+                    {{ end }}
+                  </a>
                   {{ end }}
                 </div>
+                {{ end }}
               </li>
 
               {{ else }}
@@ -53,6 +252,7 @@
           </div>
 
           <div class="nav-button">
+            {{ if .Site.Params.theme_toggle_enable }}
             {{ if or (eq .Site.Params.color_scheme "light") (eq .Site.Params.color_scheme "dark") }}
             {{ else }}
             <div class="toggle-theme">
@@ -73,6 +273,7 @@
                 <span class="toggle-text">Light</span>
               </div>
             </div>
+            {{ end }}
             {{ end }}
             {{ if .Site.Params.cta_button.enable }}
             <a href="{{ if .Site.Params.cta_button.cta_button_link }}{{ .Site.Params.cta_button.cta_button_link }}{{ else }}#{{ end }}" class="nav__link cta-button button">{{ .Site.Params.cta_button.cta_button_text }}</a>
