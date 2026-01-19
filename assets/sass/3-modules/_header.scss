@@ -502,13 +502,7 @@
   border-radius: 12px;
   overflow: hidden;
   background: var(--background-alt-color);
-  transition: all 0.3s ease;
   margin-bottom: 16px;
-
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-  }
 
   &:last-child {
     margin-bottom: 0;
@@ -522,7 +516,27 @@
     &:last-child {
       border-bottom: none;
     }
+  }
+}
+
+.mega-menu-overview-card--static {
+  cursor: default;
+}
+
+.mega-menu-overview-card--clickable {
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     
+    .mega-menu-card-arrow {
+      transform: translateX(4px);
+    }
+  }
+  
+  @media (max-width: $desktop) {
     &:hover {
       transform: none;
       box-shadow: none;
@@ -544,7 +558,7 @@
     transition: transform 0.3s ease;
   }
 
-  .mega-menu-overview-card:hover & img {
+  .mega-menu-overview-card--clickable:hover & img {
     transform: scale(1.05);
   }
   
@@ -567,6 +581,14 @@
   color: var(--heading-font-color);
   margin-bottom: 8px;
   line-height: 1.3;
+}
+
+.mega-menu-card-arrow {
+  font-size: 14px;
+  margin-left: 8px;
+  transition: transform 0.3s ease;
+  color: var(--primary-color);
+  display: inline-block;
 }
 
 .mega-menu-card-description {
