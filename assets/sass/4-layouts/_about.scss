@@ -7,33 +7,46 @@
   background: var(--background-color);
 }
 
+/*----------  Separator  ----------*/
+
+.about-separator {
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.08);
+  margin: 0;
+}
+
 /*----------  Hero Section  ----------*/
 
 .about-hero {
-  padding: 150px 0 80px;
-  background: var(--background-color);
+  padding: 130px 0 100px;
+  background: linear-gradient(135deg,var(--primary-color) 0%,#088 100%);
+  text-align: center;
 
   @media only screen and (max-width: $mobile) {
-    padding: 80px 0 60px;
+    padding: 130px 0 60px;
   }
 }
 
 .about-hero-content {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .about-hero-title {
-  font-size: 72px;
-  font-weight: 700;
-  line-height: 1.1;
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1.15;
   margin: 0 0 24px;
-  color: var(--heading-font-color);
-  letter-spacing: -0.02em;
+  color: #fff;
+  letter-spacing: -0.03em;
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 48px;
+  }
 
   @media only screen and (max-width: $mobile) {
-    font-size: 48px;
+    font-size: 36px;
   }
 }
 
@@ -42,8 +55,8 @@
   font-weight: 400;
   line-height: 1.6;
   margin: 0;
-  color: var(--text-color);
-  max-width: 700px;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 800px;
   margin: 0 auto;
 
   @media only screen and (max-width: $mobile) {
@@ -51,26 +64,183 @@
   }
 }
 
-/*----------  Intro Section  ----------*/
+/*----------  Common Section Styles  ----------*/
 
-.about-intro {
-  padding: 80px 0;
-  background: var(--background-color);
+.about-section {
+  padding: 100px 0;
 
   @media only screen and (max-width: $mobile) {
     padding: 60px 0;
   }
 }
 
-.about-intro-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 80px;
-  align-items: center;
+.about-section-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 24px;
+}
 
-  @media only screen and (max-width: $desktop) {
-    gap: 60px;
+.about-section-header {
+  margin-bottom: 60px;
+
+  @media only screen and (max-width: $mobile) {
+    margin-bottom: 40px;
   }
+}
+
+.about-section-title {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  color: var(--heading-font-color);
+  letter-spacing: -0.02em;
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 40px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 32px;
+  }
+}
+
+.about-section-description {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 32px 0 0;
+  max-width: 900px;
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 18px;
+  }
+}
+
+/*----------  Mission Section  ----------*/
+
+.about-mission {
+  text-align: center;
+
+  .about-section-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/*----------  Problems Section  ----------*/
+
+.about-problems-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+
+  @media only screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+.about-problem-card {
+  text-align: left;
+}
+
+.about-problem-stat {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--heading-font-color);
+  margin-bottom: 16px;
+  letter-spacing: -0.01em;
+}
+
+.about-problem-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+/*----------  Solutions Section  ----------*/
+
+.about-solutions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+
+  @media only screen and (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+.about-solution-card {
+  text-align: left;
+}
+
+.about-solution-image-placeholder {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: rgba(0, 0, 0, 0.05);
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+  }
+}
+
+.about-solution-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--heading-font-color);
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.about-solution-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+/*----------  Values Section  ----------*/
+
+.about-values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 48px 60px;
 
   @media only screen and (max-width: $tablet) {
     grid-template-columns: 1fr;
@@ -78,130 +248,177 @@
   }
 }
 
-.about-intro-text {
-  font-size: 24px;
-  line-height: 1.7;
-  color: var(--text-color);
+.about-value-card {
+  text-align: left;
+}
+
+.about-value-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--heading-font-color);
+  margin: 0 0 12px;
+  letter-spacing: -0.01em;
+}
+
+.about-value-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7);
   margin: 0;
-
-  @media only screen and (max-width: $mobile) {
-    font-size: 20px;
-  }
 }
 
-.about-intro-image-wrapper {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 24px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-}
+/*----------  Stats Section  ----------*/
 
-.about-intro-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/*----------  Why Choose Section  ----------*/
-
-.about-why-choose {
-  padding: 100px 0;
-  background: var(--background-color);
-
-  @media only screen and (max-width: $mobile) {
-    padding: 60px 0;
-  }
-}
-
-.about-why-choose-header {
+.about-stats {
   text-align: center;
-  max-width: 800px;
-  margin: 0 auto 60px;
+}
+
+.about-stats-title {
+  margin-bottom: 60px;
 
   @media only screen and (max-width: $mobile) {
-    margin: 0 auto 40px;
+    margin-bottom: 40px;
   }
 }
 
-.about-why-choose-title {
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0 0 8px;
-  color: var(--heading-font-color);
-  letter-spacing: -0.02em;
-
-  @media only screen and (max-width: $mobile) {
-    font-size: 36px;
-  }
-}
-
-.about-why-choose-subtitle {
-  font-size: 56px;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0;
-  color: var(--heading-font-color);
-  letter-spacing: -0.02em;
-
-  @media only screen and (max-width: $mobile) {
-    font-size: 36px;
-  }
-}
-
-.about-why-choose-grid {
+.about-stats-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  max-width: 900px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  max-width: 1000px;
   margin: 0 auto;
 
-  @media only screen and (min-width: 1600px) {
-    grid-template-columns: repeat(3, 1fr);
-    max-width: none;
-    gap: 32px;
-  }
-
   @media only screen and (max-width: $tablet) {
-    gap: 20px;
-    max-width: 600px;
-  }
-}
-
-.about-why-card {
-  background: transparent;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-
-  &--tealford {
-    // box-shadow: 0 4px 16px rgba(212, 175, 55, 0.15);
-  }
-}
-
-.about-why-card-header {
-  padding: 36px 40px;
-
-  .about-why-card--tealford & {
-    background: linear-gradient(135deg, #f9f0e1 0%, #f5e6d3 50%, #fef7eb 100%);
-  }
-
-  .about-why-card--other & {
-    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #f2f2f2 100%);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
   }
 
   @media only screen and (max-width: $mobile) {
-    padding: 28px 32px;
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 }
 
-.about-why-card-header-content {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+.about-stat-card {
+  text-align: center;
 }
+
+.about-stat-value {
+  font-size: 48px;
+  font-weight: 300;
+  color: var(--heading-font-color);
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 40px;
+  }
+}
+
+.about-stat-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.5;
+}
+
+/*----------  CTA Section  ----------*/
+
+.about-cta {
+  text-align: center;
+  padding: 100px 0 120px;
+
+  @media only screen and (max-width: $mobile) {
+    padding: 60px 0 80px;
+  }
+}
+
+.about-cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-cta-title {
+  font-size: 48px;
+  font-weight: 300;
+  line-height: 1.2;
+  margin: 0 0 24px;
+  color: var(--heading-font-color);
+  letter-spacing: -0.02em;
+
+  @media only screen and (max-width: $tablet) {
+    font-size: 40px;
+  }
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 32px;
+  }
+}
+
+.about-cta-description {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7);
+  margin: 0 0 40px;
+
+  @media only screen and (max-width: $mobile) {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+}
+
+.about-cta-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: $mobile) {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+/*----------  Button Overrides for About Page  ----------*/
+
+.about-cta .button {
+  padding: 14px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+
+  &--large {
+    padding: 16px 40px;
+    font-size: 17px;
+  }
+
+  &--primary {
+    background: var(--heading-font-color);
+    color: #fff;
+    border: 1px solid var(--heading-font-color);
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.85);
+      border-color: rgba(0, 0, 0, 0.85);
+    }
+  }
+
+  &--secondary {
+    background: transparent;
+    color: var(--heading-font-color);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.05);
+      border-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+}
+
+/*=====  End of About Page Styles  ======*/
 
 .about-why-card-title-row {
   display: flex;
@@ -680,7 +897,7 @@
 
 .about-cta-title {
   font-size: 56px;
-  font-weight: 700;
+  font-weight: 300;
   line-height: 1.2;
   margin: 0 0 24px;
   color: var(--heading-font-color);

@@ -1,80 +1,69 @@
 ---
-title: About Tealford
-subtitle: We created this service to make digital transformation easier for businesses of all sizes.
+title: Building the foundation for modern digital presence
+subtitle: We're creating solutions purpose-built for businesses navigating the digital transformation era.
 description: Tealford Consulting is a Dallas-based digital consultancy that specializes in professional web design and social media strategy for individuals, startups, and small businesses.
 layout: about
 
-intro:
-  description: "We created this service to make digital transformation easier for businesses of all sizes. Managing websites, social media, branding, and online marketing can be overwhelming — especially when you're doing it alone. Our goal is to remove that stress."
-  image: "/images/about/intro.jpg"
+mission:
+  label: "OUR MISSION"
+  title: "Make digital transformation accessible & valuable for every business"
+  description: "Today, millions of businesses struggle with outdated websites, inconsistent branding, and invisible online presence. But this digital gap is costly — lost customers, missed opportunities, and wasted budgets. We believe every business deserves to benefit from professional digital presence, regardless of their size or budget. Tealford provides the strategy, design, and development infrastructure to make that possible."
 
-why_choose:
-  title: "Why teams choose us"
-  subtitle: "for the task"
-  comparison:
-    tealford:
-      title: "Choosing Tealford"
-      badge: "Recommended"
-      description: "Get the best of both worlds with senior talent, flexibility, and scalability in one dedicated partnership."
-      points:
-        - "Senior-level designers & developers"
-        - "Embedded in your team"
-        - "Transparent, flat-rate pricing"
-        - "Fast, iterative weekly output"
-        - "Flexible - pause or cancel anytime"
-        - "Delivery starts in under 7 days"
-        - "Scalable team when needed"
-    freelancer:
-      title: "Hiring Freelancers"
-      badge: "DIY Approach"
-      description: "Flexible but requires you to manage coordination, quality, and scaling as your needs grow."
-      points:
-        - "Hard to find senior talent"
-        - "You manage all coordination"
-        - "Flexible - pause or cancel anytime"
-        - "Long search and onboarding"
-        - "Hourly rates add up quickly"
-        - "Availability and scope challenges"
-        - "Limited scalability"
-    agency:
-      title: "Traditional Agency"
-      badge: "Traditional Model"
-      description: "Scalable teams with established processes, but often comes with high costs and slower delivery."
-      points:
-        - "Junior or rotating designers"
-        - "Not embedded in your team"
-        - "Scalable team when needed"
-        - "Slow kickoff and setup"
-        - "$20k-100k+ per project"
-        - "Locked into long contracts"
-        - "Slow and rigid delivery cycles"
+problems:
+  label: "HOW WE WORK"
+  title: "The challenges we're solving"
+  items:
+    - stat: "$100B+ in lost revenue"
+      description: "Small businesses lose an estimated $100 billion annually from poorly optimized websites and social media. Traditional agencies weren't built for this market."
+    - stat: "No control, no clarity"
+      description: "Most businesses rely on DIY website builders or generic templates. They have zero say in how their brand appears online or what's working."
+    - stat: "Blind to opportunity"
+      description: "Many business owners don't even know what digital opportunities exist. Analytics are confusing and marketing feels like guesswork."
+
+solutions:
+  label: "FEATURES"
+  title: "Our solution"
+  items:
+    - title: "Strategy"
+      description: "Deep-dive consultations to understand your business goals, target audience, and competitive landscape. We map out a clear digital roadmap."
+    - title: "Design"
+      description: "Custom-coded websites and brand assets that perfectly represent your business. No templates, no compromises."
+    - title: "Growth"
+      description: "Ongoing support, content strategy, and social media management that drives real business results and measurable ROI."
+
+values:
+  label: "HOW WE WORK"
+  title: "Our Values"
+  items:
+    - title: "Client-first"
+      description: "Small businesses create the backbone of our economy. They deserve professional-grade digital services without enterprise-level costs."
+    - title: "Transparency always"
+      description: "No hidden fees, no technical jargon. Clients see exactly what's happening with their project, timeline, and budget at every step."
+    - title: "Quality obsessed"
+      description: "Fast turnaround, consistent communication, zero shortcuts on craftsmanship. Digital presence that just works and looks incredible."
+    - title: "Partnership by design"
+      description: "Your success is our success. We're not just vendors — we're invested partners in your business growth and long-term vision."
 
 stats:
-  title: "Trusted by businesses across Dallas & beyond"
+  title: "By the numbers"
   items:
-    - value: "50+"
-      label: "Businesses Helped"
-    - value: "2 days"
-      label: "Average time to consultation"
-    - value: "5+"
-      label: "Years of experience"
     - value: "100+"
       label: "Projects delivered"
-
-features:
-  title: "What Sets Us Apart"
-  items:
-    - title: "Expert Experience"
-      description: "We listen with care, creating solutions where you can express your vision freely — without judgment or pressure."
-    - title: "Real Progress with Real Results"
-      description: "From your first consultation onward, we help you uncover opportunities, build presence, and make steady, meaningful progress."
-    - title: "Your Success Matters Most"
-      description: "Investing in your digital presence isn't a luxury — it's smart business. You deserve the clarity, confidence, and growth that comes with it."
+    - value: "50+"
+      label: "Businesses helped"
+    - value: "< 7 days"
+      label: "Avg. time to start"
+    - value: "5+"
+      label: "Years of experience"
 
 cta:
-  title: "We're here when you need us."
-  description: "Have questions or just want to see how Tealford can help? Reach out anytime, we'll guide you every step of the way."
-  button:
-    text: "Get Started"
-    url: "/contact/"
+  title: "Ready to transform your digital presence?"
+  description: "Join businesses earning real results from professional websites, strategic social media, and authentic brand presence."
+  buttons:
+    - text: "Get Started"
+      url: "/contact/"
+      primary: true
+    - text: "View Our Work"
+      url: "/projects/"
+      primary: false
 ---
