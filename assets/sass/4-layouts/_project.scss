@@ -1,7 +1,7 @@
 /* Project */
 .project-head {
   max-width: 960px;
-  margin: 64px auto 40px;
+  margin: 120px auto 40px;
 
   @media (max-width: $tablet) {
     margin: 48px auto 32px;
@@ -9,6 +9,7 @@
 
   @media (max-width: $tablet) {
     margin: 32px 0;
+    padding-top: 100px;
   }
 }
 

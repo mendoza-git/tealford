@@ -99,6 +99,6 @@ If you have questions about these Terms and Conditions, please contact us at:
 
 **Tealford Consulting**  
 Dallas, TX  
-📧 info@tealfordconsulting.com  
+📧 support@tealfordconsulting.com  
 🌐 www.tealfordconsulting.com
 

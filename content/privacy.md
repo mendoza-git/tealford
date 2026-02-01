@@ -58,7 +58,7 @@ You may:
 - Request correction or deletion of your data
 - Opt out of communications at any time
 
-To exercise these rights, contact us at [info@tealfordconsulting.com](mailto:info@tealfordconsulting.com).
+To exercise these rights, contact us at [support@tealfordconsulting.com](mailto:support@tealfordconsulting.com).
 
 ---
 
@@ -80,5 +80,5 @@ If you have any questions or concerns about this Privacy Policy, please contact 
 
 **Tealford Consulting**  
 Dallas, TX  
-📧 info@tealfordconsulting.com  
+📧 support@tealfordconsulting.com  
 🌐 www.tealfordconsulting.com
