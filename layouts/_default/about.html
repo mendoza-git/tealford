@@ -15,6 +15,20 @@
     </div>
   </section>
 
+  <!-- Mission Section -->
+  {{ if .Params.mission }}
+  <section class="about-section about-mission">
+    <div class="container">
+      <div class="about-section-header">
+        <div class="about-section-label">{{ .Params.mission.label }}</div>
+        <h2 class="about-section-title">{{ .Params.mission.title }}</h2>
+      </div>
+      <p class="about-mission-description">{{ .Params.mission.description }}</p>
+    </div>
+  </section>
+  <div class="about-separator"></div>
+  {{ end }}
+
   <!-- Problems Section -->
   {{ if .Params.problems }}
   <section class="about-section about-problems">
@@ -69,6 +83,11 @@
       <div class="about-values-grid">
         {{ range .Params.values.items }}
         <div class="about-value-card">
+          {{ if .image }}
+          <div class="about-value-image">
+            <img src="{{ .image }}" alt="{{ .title }}" class="about-value-img">
+          </div>
+          {{ end }}
           <h3 class="about-value-title">{{ .title }}</h3>
           <p class="about-value-description">{{ .description }}</p>
         </div>
@@ -79,6 +98,25 @@
   <div class="about-separator"></div>
   {{ end }}
 
+  <!-- Stats Section -->
+  {{ if .Params.stats }}
+  <section class="about-section about-stats">
+    <div class="container">
+      {{ if .Params.stats.title }}
+      <h2 class="about-section-title" style="text-align: center; margin-bottom: 48px;">{{ .Params.stats.title }}</h2>
+      {{ end }}
+      <div class="about-stats-grid">
+        {{ range .Params.stats.items }}
+        <div class="about-stat-item">
+          <div class="about-stat-value">{{ .value }}</div>
+          <div class="about-stat-label">{{ .label }}</div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  <div class="about-separator"></div>
+  {{ end }}
 
   <!-- CTA Section -->
   {{ if .Params.cta }}

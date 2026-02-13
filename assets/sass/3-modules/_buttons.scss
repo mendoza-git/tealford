@@ -1,29 +1,102 @@
-/* Buttons */
+/* ===============================
+   Unified Button System
+   =============================== */
+
+/* Base Button */
 .button {
   display: inline-flex;
   align-items: center;
-  padding: 8px 24px;
+  justify-content: center;
+  padding: 14px 32px;
   font-size: 16px;
-  line-height: 2;
-  font-weight: 500;
+  line-height: 1.5;
+  font-weight: 600;
   text-decoration: none;
-  border-radius: 60px;
-  border: none;
+  border-radius: 8px;
+  border: 2px solid transparent;
   outline: none;
   color: var(--button-color);
   background: var(--button-background-color);
-  transition: $global-transition;
-  will-change: transform;
+  transition: all 0.3s ease;
   cursor: pointer;
 
   &:hover {
     color: var(--button-color-hover);
     background: var(--button-background-hover);
+    transform: translateY(-2px);
+  }
+}
+
+/* Button Variants */
+.button--primary {
+  background: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+
+  &:hover {
+    background: #088;
+    border-color: #088;
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 102, 102, 0.3);
+  }
+}
+
+.button--secondary {
+  background: transparent;
+  color: var(--heading-font-color);
+  border-color: var(--border-color);
+
+  &:hover {
+    background: var(--background-alt-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    transform: translateY(-2px);
+  }
+}
+
+.button--outline {
+  background: transparent;
+  color: var(--heading-font-color);
+  border-color: var(--border-color);
+  padding: 12px 32px;
+  font-size: 15px;
+
+  &:hover {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+  }
+}
+
+/* Button Sizes */
+.button--large {
+  padding: 16px 48px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.button--big {
+  width: 100%;
+  padding: 12px 24px;
+  justify-content: center;
+}
+
+/* Responsive Adjustments */
+@media only screen and (max-width: 768px) {
+  .button {
+    padding: 12px 24px;
+    font-size: 15px;
   }
 
-  &--big {
-    width: 100%;
-    padding: 12px 24px;
-    justify-content: center;
+  .button--large {
+    padding: 14px 32px;
+    font-size: 16px;
+  }
+
+  .button--outline {
+    padding: 10px 24px;
+    font-size: 14px;
   }
 }

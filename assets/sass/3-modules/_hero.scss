@@ -43,11 +43,17 @@
     border-radius: 6px;
     animation: fadeInUp 0.8s ease-out;
 
+      color: #ffffff;
+      background-color: #0f766e;
+      border: 1px solid #0f766e;
+      padding: 8px 14px;
+      box-shadow: 0 2px 8px rgba(15, 118, 110, 0.2);
+
     &::before {
       content: '';
       width: 6px;
       height: 6px;
-      background: #0f766e;
+      background: #ffffff;
       border-radius: 50%;
       display: block;
     }
@@ -134,10 +140,10 @@
     &--secondary {
       background: transparent;
       color: #0a0a0a;
-      border: 1px solid #e5e5e5;
+      border: 1px solid #0a0a0a;
 
       &:hover {
-        border-color: #0a0a0a;
+        background: rgba(10, 10, 10, 0.05);
       }
     }
   }
@@ -276,60 +282,6 @@
   }
 
   @media (max-width: 968px) {
-    padding: 100px 0 80px;
-
-    .hero__grid {
-      grid-template-columns: 1fr;
-      gap: 48px;
-      padding: 0 32px;
-    }
-
-    .hero__content {
-      order: 1;
-      max-width: 100%;
-      text-align: center;
-    }
-
-    .hero__location {
-      justify-content: center;
-    }
-
-    .hero__actions {
-      justify-content: center;
-    }
-
-    .hero__description {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .hero__info {
-      text-align: center;
-    }
-
-    .hero__gallery {
-      order: 2;
-    }
-
-    .hero__slideshow {
-      aspect-ratio: 16 / 10;
-      border-radius: 8px;
-    }
-
-    .hero__title {
-      font-size: 40px;
-
-      .hero__title-typed-wrapper {
-        min-width: 140px;
-      }
-    }
-
-    .hero__description {
-      font-size: 15px;
-    }
-  }
-
-  @media (max-width: 640px) {
     padding: 0;
     min-height: 100vh;
 
@@ -344,20 +296,49 @@
     .hero__content {
       position: relative;
       z-index: 2;
-      padding: 60px 24px 40px;
+      padding: 60px 32px 40px;
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.9) 100%);
+      order: 1;
+      max-width: 100%;
+      text-align: center;
     }
 
     .hero__location {
-      font-size: 10px;
-      margin-bottom: 20px;
-      color: #000000;
-      border-color: #000000;
+      justify-content: center;
+      color: #ffffff;
+      background-color: #0f766e;
+      border: 1px solid #0f766e;
+      padding: 8px 14px;
+      box-shadow: 0 2px 8px rgba(15, 118, 110, 0.2);
 
       &::before {
-        width: 5px;
-        height: 5px;
+        background: #ffffff;
       }
+    }
+
+    .hero__actions {
+      justify-content: center;
+    }
+
+    .hero__description {
+      margin-left: auto;
+      margin-right: auto;
+      color: #525252;
+    }
+
+    .hero__info {
+      text-align: center;
+    }
+
+    .hero__gallery {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      margin-top: 0;
+      order: 1;
     }
 
     .hero__slideshow {
@@ -379,26 +360,51 @@
     }
 
     .hero__title {
+      font-size: 40px;
+
+      .hero__title-typed-wrapper {
+        min-width: 140px;
+      }
+    }
+
+    .hero__description {
+      font-size: 15px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero__content {
+      padding: 60px 24px 40px;
+    }
+
+    .hero__location {
+      font-size: 10px;
+      margin-bottom: 20px;
+
+      &::before {
+        width: 5px;
+        height: 5px;
+      }
+    }
+
+    .hero__title {
       font-size: 32px;
       margin-bottom: 20px;
       line-height: 1.15;
 
       .hero__title-typed-wrapper {
         min-width: 110px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 4px;
+        text-align: center;
       }
 
       .hero__title-static-end {
         display: block;
         margin-left: 0;
         margin-top: 4px;
-      }
-
-      .hero__title-typed-wrapper {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 4px;
-        text-align: center;
       }
     }
 
@@ -436,17 +442,6 @@
 
     .hero__info-label {
       font-size: 12px;
-    }
-
-    .hero__gallery {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1;
-      margin-top: 0;
-      order: 1;
     }
   }
 }

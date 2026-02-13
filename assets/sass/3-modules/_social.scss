@@ -481,52 +481,6 @@
   margin-bottom: 32px;
 }
 
-.button--large {
-  padding: 16px 48px;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-/* ===============================
-   Button Styles
-   =============================== */
-
-.button--primary {
-  background: var(--primary-color);
-  color: var(--white);
-  padding: 14px 32px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  display: inline-block;
-  border: 2px solid var(--primary-color);
-}
-
-.button--secondary {
-  background: transparent;
-  color: var(--heading-font-color);
-  padding: 14px 32px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  display: inline-block;
-  border: 2px solid var(--border-color);
-}
-
-.button--outline {
-  background: transparent;
-  color: var(--heading-font-color);
-  padding: 12px 32px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 15px;
-  display: inline-block;
-  border: 2px solid var(--border-color);
-}
-
 /* ===============================
    Responsive Adjustments
    =============================== */

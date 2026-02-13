@@ -36,6 +36,18 @@
           dot.classList.toggle('hero__control-dot--active', i === index);
         });
       }
+
+      // Update logo on mobile for Entrepreneurs slide (index 0)
+      if (window.innerWidth <= 1024) { // Mobile/tablet breakpoint
+        const header = document.querySelector('.header.home-page');
+        if (header) {
+          if (index === 0) {
+            header.classList.add('show-dark-logo');
+          } else {
+            header.classList.remove('show-dark-logo');
+          }
+        }
+      }
     }
 
     function type() {

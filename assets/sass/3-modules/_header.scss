@@ -24,6 +24,129 @@
     flex-wrap: wrap;
     padding: 20px $base-spacing-unit;
   }
+
+  /* Dark nav variant for pages with dark hero backgrounds */
+  &.header--dark-nav:not(.home-page) {
+    /* White text on desktop only */
+    @media (min-width: $desktop + 1) {
+      .nav__link:not(.cta-button) {
+        color: #fff;
+
+        &:hover {
+          color: rgba(255, 255, 255, 0.95);
+          background-color: rgba(255, 255, 255, 0.15);
+        }
+
+        &.active-link {
+          color: #fff;
+        }
+      }
+
+      .nav__item.dropdown .dropdown-toggle {
+        color: #fff;
+        padding: 12px 16px;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: rgba(255, 255, 255, 0.95);
+          background-color: rgba(255, 255, 255, 0.15);
+        }
+      }
+
+      .nav__item.dropdown:hover .dropdown-toggle {
+        color: rgba(255, 255, 255, 0.95);
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+
+      .toggle-theme {
+        .toggle-moon,
+        .toggle-sun {
+          color: #fff;
+        }
+      }
+
+      .cta-button {
+        border-color: rgba(255, 255, 255, 0.3);
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+  }
+
+  &.header--dark-nav {
+    /* Mobile hamburger icon - only change on mobile */
+    @media (max-width: $desktop) {
+      .hamburger div,
+      .hamburger div:after,
+      .hamburger div:before {
+        background-color: #fff;
+      }
+    }
+
+    /* When scrolled, revert to normal colors */
+    &.header--scrolled {
+      .logo__image {
+        display: block;
+      }
+
+      .logo__image__dark {
+        display: none;
+      }
+
+      .nav__link:not(.cta-button) {
+        color: var(--link-color);
+
+        &:hover {
+          color: var(--primary-color);
+          background-color: var(--background-alt-color);
+        }
+
+        &.active-link {
+          color: var(--primary-color);
+        }
+      }
+
+      .nav__item.dropdown .dropdown-toggle {
+        color: var(--link-color);
+
+        &:hover {
+          color: var(--primary-color);
+          background-color: var(--background-alt-color);
+        }
+      }
+
+      .nav__item.dropdown:hover .dropdown-toggle {
+        color: var(--primary-color);
+        background-color: var(--background-alt-color);
+      }
+
+      .toggle-theme {
+        .toggle-moon,
+        .toggle-sun {
+          color: var(--heading-font-color);
+        }
+      }
+
+      .cta-button {
+        border-color: var(--border-color);
+
+        &:hover {
+          background-color: var(--background-alt-color);
+        }
+      }
+
+      @media (max-width: $desktop) {
+        .hamburger div,
+        .hamburger div:after,
+        .hamburger div:before {
+          background-color: var(--heading-font-color);
+        }
+      }
+    }
+  }
 }
 
 /* Logo */
@@ -42,6 +165,50 @@
 
 .logo__image__dark {
   display: none;
+}
+
+/* Dark logo on non-home pages with dark nav */
+.header--dark-nav:not(.home-page) {
+  .logo__image {
+    display: none;
+  }
+
+  .logo__image__dark {
+    display: block;
+  }
+
+  &.header--scrolled {
+    .logo__image {
+      display: block;
+    }
+
+    .logo__image__dark {
+      display: none;
+    }
+  }
+}
+
+/* Dark logo on home page only on mobile when Entrepreneurs slide is active */
+.header--dark-nav.home-page.show-dark-logo {
+  @media (max-width: $desktop) {
+    .logo__image {
+      display: none;
+    }
+
+    .logo__image__dark {
+      display: block;
+    }
+  }
+
+  &.header--scrolled {
+    .logo__image {
+      display: block;
+    }
+
+    .logo__image__dark {
+      display: none;
+    }
+  }
 }
 
 .dark-mode {
@@ -203,17 +370,19 @@
 
     .nav__link {
       position: relative;
-      padding: 12px 0;
+      padding: 12px 16px;
       font-size: 15px;
       line-height: 1;
       font-weight: 500;
       text-decoration: none;
       color: var(--link-color);
-      transition: color 0.2s ease;
+      transition: all 0.2s ease;
       display: flex;
+      border-radius: 8px;
 
       &:hover {
         color: var(--primary-color);
+        background-color: var(--background-alt-color);
       }
 
       &.active-link {
@@ -249,10 +418,17 @@
       .dropdown-toggle {
         display: flex;
         align-items: center;
+        padding: 12px 16px;
         text-decoration: none;
         color: var(--link-color);
         cursor: pointer;
-        transition: color 0.2s ease;
+        border-radius: 8px;
+        transition: all 0.2s ease;
+
+        &:hover {
+          color: var(--primary-color);
+          background-color: var(--background-alt-color);
+        }
       }
     }
 

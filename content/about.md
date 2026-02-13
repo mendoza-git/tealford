@@ -1,69 +1,48 @@
 ---
-title: Building the foundation for modern digital presence
-subtitle: We're creating solutions purpose-built for businesses navigating the digital transformation era.
-description: Tealford Consulting is a Dallas-based digital consultancy that specializes in professional web design and social media strategy for individuals, startups, and small businesses.
+title: Your Local Tech Partner in Dallas, Texas
+subtitle: A team of friendly consultants making technology simple, affordable, and accessible for small businesses.
+description: Tealford Consulting is a Dallas-based team of local consultants specializing in quality web design, e-commerce solutions, and straightforward tech guidance—all at prices that make sense for small businesses.
 layout: about
 
 mission:
-  label: "OUR MISSION"
-  title: "Make digital transformation accessible & valuable for every business"
-  description: "Today, millions of businesses struggle with outdated websites, inconsistent branding, and invisible online presence. But this digital gap is costly — lost customers, missed opportunities, and wasted budgets. We believe every business deserves to benefit from professional digital presence, regardless of their size or budget. Tealford provides the strategy, design, and development infrastructure to make that possible."
+  label: "WHO WE ARE"
+  title: "Local consultants who make tech feel simple"
+  description: "We're a team of Dallas-based consultants who believe technology shouldn't be complicated or expensive. Whether you need a quality website, help with social media, guidance on integrating new tools into your business, or just have a tech question—we're here with honest service. No jargon, no pressure, just local people helping local businesses grow."
 
 problems:
-  label: "HOW WE WORK"
-  title: "The challenges we're solving"
+  label: "WHY CHOOSE US"
+  title: "What makes us different"
   items:
-    - stat: "$100B+ in lost revenue"
-      description: "Small businesses lose an estimated $100 billion annually from poorly optimized websites and social media. Traditional agencies weren't built for this market."
-    - stat: "No control, no clarity"
-      description: "Most businesses rely on DIY website builders or generic templates. They have zero say in how their brand appears online or what's working."
-    - stat: "Blind to opportunity"
-      description: "Many business owners don't even know what digital opportunities exist. Analytics are confusing and marketing feels like guesswork."
-
-solutions:
-  label: "FEATURES"
-  title: "Our solution"
-  items:
-    - title: "Strategy"
-      description: "Deep-dive consultations to understand your business goals, target audience, and competitive landscape. We map out a clear digital roadmap."
-    - title: "Design"
-      description: "Custom-coded websites and brand assets that perfectly represent your business. No templates, no compromises."
-    - title: "Growth"
-      description: "Ongoing support, content strategy, and social media management that drives real business results and measurable ROI."
+    - stat: "Professional Quality"
+      description: "You get premium, hand-coded websites and tech solutions without the big agency price tag. Quality work at prices that actually fit your budget."
+    - stat: "Local & personal"
+      description: "We're right here in Dallas, Texas. We understand local businesses and offer that hospitality—friendly, straightforward, and always ready to help."
+    - stat: "Fast & independent"
+      description: "We work quickly and integrate seamlessly with your business. You stay in control while we handle the tech, so both of us can move forward efficiently."
 
 values:
-  label: "HOW WE WORK"
-  title: "Our Values"
+  label: "OUR APPROACH"
+  title: "How we work with you"
   items:
-    - title: "Client-first"
-      description: "Small businesses create the backbone of our economy. They deserve professional-grade digital services without enterprise-level costs."
-    - title: "Transparency always"
-      description: "No hidden fees, no technical jargon. Clients see exactly what's happening with their project, timeline, and budget at every step."
-    - title: "Quality obsessed"
-      description: "Fast turnaround, consistent communication, zero shortcuts on craftsmanship. Digital presence that just works and looks incredible."
-    - title: "Partnership by design"
-      description: "Your success is our success. We're not just vendors — we're invested partners in your business growth and long-term vision."
+    - title: "Refined service"
+      description: "We skip the confusing tech talk and give you straight answers. Our goal is to make technology accessible and understandable for everyone."
+      image: "/images/about/service.jpg"
+    - title: "Your growth matters"
+      description: "We're invested in helping small businesses thrive. When you succeed, we succeed. We build solutions that help you grow over the long term."
+      image: "/images/about/growth.jpg"
+    - title: "Fast, independent partnership"
+      description: "We integrate with your business as consultants who work efficiently alongside you. You maintain independence while we provide the expertise you need."
+      image: "/images/about/independent.jpg"
 
-stats:
-  title: "By the numbers"
-  items:
-    - value: "100+"
-      label: "Projects delivered"
-    - value: "50+"
-      label: "Businesses helped"
-    - value: "< 7 days"
-      label: "Avg. time to start"
-    - value: "5+"
-      label: "Years of experience"
 
 cta:
-  title: "Ready to transform your digital presence?"
-  description: "Join businesses earning real results from professional websites, strategic social media, and authentic brand presence."
+  title: "Let's talk about your business"
+  description: "Whether you need a website, tech help, or just want to chat about what's possible—schedule a free consultation. No pressure, no jargon, just honest conversation."
   buttons:
-    - text: "Get Started"
+    - text: "Get Free Consultation"
       url: "/contact/"
       primary: true
-    - text: "View Our Work"
+    - text: "See Our Work"
       url: "/projects/"
       primary: false
 ---

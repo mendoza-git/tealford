@@ -296,11 +296,11 @@ paginate = 6
     hero_title_typed = ["Entrepeneurs", "Small Business", "Enterprise"]
     hero_title_static_end = ""
     hero_subtitle = "Web & Media That Actually Works"
-    hero_description = "Digital experiences crafted for professionals who demand excellence. We deliver solutions that elevate your brand and drive results."
+    hero_description = "Premium websites, marketing and business branding. IP you keep."
     
     # Buttons
     hero_buttons_enable = true
-    hero_button_primary_text = "Get a Quote"
+    hero_button_primary_text = "Get a Free Quote"
     hero_button_primary_link = "/contact/"
     hero_button_secondary_text = "View Solutions"
     hero_button_secondary_link = "/resources/customer-support/"
