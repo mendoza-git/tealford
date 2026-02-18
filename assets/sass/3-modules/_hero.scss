@@ -138,12 +138,13 @@
     }
 
     &--secondary {
-      background: transparent;
-      color: #0a0a0a;
-      border: 1px solid #0a0a0a;
+      background: var(--button-background-color-light);
+      color: #000000;
+      border: 1px solid #066;
 
       &:hover {
-        background: rgba(10, 10, 10, 0.05);
+        background: var(--button-background-hover);
+        color: #fdfcfa;
       }
     }
   }
@@ -374,7 +375,9 @@
 
   @media (max-width: 640px) {
     .hero__content {
-      padding: 60px 24px 40px;
+      padding: 135px 24px 40px;
+      margin-top: 25px;
+      height: 100vh;
     }
 
     .hero__location {
