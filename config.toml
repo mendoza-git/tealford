@@ -395,7 +395,7 @@ paginate = 6
   #-------------------------------
   # Faq (Frequently asked questions) Settings
   [params.faq]
-    enable = true
+    enable = false
     faq_intro = "Need some answers?"
     faq_title = "Frequently asked questions"
 
@@ -438,7 +438,7 @@ paginate = 6
   #-------------------------------
   # Author Section Settings
   [params.author_section]
-    enable = true
+    enable = false
     author_section_title = "Hi there 👋 Contact us today to schedule a free consultation."
     author_section_description = "Ready to bring your vision to life? Reach out today for a free, no-obligation consultation—let’s talk about your goals, explore ideas, and see how Tealford Consulting can help you build something that truly fits."
     author_section_image = "/images/consultation.jpg"
@@ -484,7 +484,7 @@ paginate = 6
 
   # Newsletter
   [params.mailchimp]
-    enable = true
+    enable = false
     mailchimp_title = "Stay Ahead with Tealford Insights 📬"
     mailchimp_description = "Join our newsletter for expert tips, emerging tech trends, and practical strategies to keep your business sharp and your digital presence thriving."
     mailchimp_identifier = "gmail.us21.list-manage.com/subscribe/post?u=8aeb9c31a5c97a3a5f9ff2740&amp;id=0e31fd7793&amp" # Add your MailChimp form identifier. For example - gmail.us21.list-manage.com/subscribe/post?u=8aeb9c31a5c97a3a5f9ff2740&amp;id=0e31fd7793&amp

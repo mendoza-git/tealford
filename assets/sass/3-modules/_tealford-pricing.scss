@@ -1,0 +1,446 @@
+/* =================================================================
+   Ramp-Inspired Pricing Section (Shared across service pages)
+   3-column tier layout: Entrepreneurs | Small Business | Enterprise
+================================================================= */
+
+.tealford-pricing {
+  padding: 80px 0;
+  background: var(--background-color);
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+  }
+}
+
+// Section header
+.tealford-pricing__header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 56px;
+}
+
+.tealford-pricing__title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--heading-font-color);
+  margin-bottom: 16px;
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+}
+
+.tealford-pricing__subtitle {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 17px;
+  color: var(--text-alt-color);
+  line-height: 1.6;
+  margin-bottom: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// 3-column grid container
+.tealford-pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  overflow: hidden;
+
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    border-radius: 16px;
+  }
+}
+
+// Individual tier column
+.tealford-pricing__tier {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border-color);
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @media (max-width: 968px) {
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+// Entrepreneurs tier — teal gradient, white text
+.tealford-pricing__tier--entrepreneurs {
+  .tealford-pricing__tier-header {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #044444 100%);
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .tealford-pricing__tier-name {
+    color: #fff;
+  }
+
+  .tealford-pricing__tier-price {
+    color: #fff;
+
+    .tealford-pricing__period {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  .tealford-pricing__tier-tagline {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .tealford-pricing__tier-cta .button {
+    background: #fff;
+    color: var(--primary-color);
+    border-color: #fff;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  .tealford-pricing__badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+}
+
+// Small Business tier (--featured) — light silver gradient, dark text
+.tealford-pricing__tier--featured {
+  .tealford-pricing__tier-header {
+    background: linear-gradient(135deg, #c8c8c8 0%, #f4f4f4 50%, #d6d6d6 100%);
+    border-bottom-color: #c0c0c0;
+  }
+
+  .tealford-pricing__tier-name {
+    color: var(--heading-font-color);
+  }
+
+  .tealford-pricing__tier-price {
+    color: var(--heading-font-color);
+
+    .tealford-pricing__period {
+      color: var(--text-alt-color);
+    }
+  }
+
+  .tealford-pricing__tier-tagline {
+    color: var(--text-alt-color);
+  }
+
+  .tealford-pricing__tier-cta .button {
+    background: var(--primary-color);
+    color: #fff;
+    border-color: var(--primary-color);
+
+    &:hover {
+      background: #044444;
+      border-color: #044444;
+    }
+  }
+
+  .tealford-pricing__badge {
+    background: rgba(0, 0, 0, 0.08);
+    color: var(--heading-font-color);
+  }
+}
+
+// Enterprise tier — royal blue gradient, white text
+.tealford-pricing__tier--enterprise {
+  .tealford-pricing__tier-header {
+    background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #3b82f6 100%);
+    border-bottom-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .tealford-pricing__tier-name {
+    color: #fff;
+  }
+
+  .tealford-pricing__tier-price {
+    color: #fff;
+
+    .tealford-pricing__period {
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+
+  .tealford-pricing__tier-tagline {
+    color: rgba(255, 255, 255, 0.85);
+  }
+
+  .tealford-pricing__tier-cta .button {
+    background: #fff;
+    color: #2563eb;
+    border-color: #fff;
+
+    &:hover {
+      background: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  .tealford-pricing__badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+}
+
+// Tier header area
+.tealford-pricing__tier-header {
+  padding: 40px 32px 32px;
+  background: var(--background-alt-color);
+  border-bottom: 1px solid var(--border-color);
+
+  @media (max-width: 768px) {
+    padding: 32px 24px 28px;
+  }
+}
+
+.tealford-pricing__badge {
+  display: inline-block;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: var(--background-alt-color-2);
+  color: var(--text-alt-color);
+  margin-bottom: 16px;
+}
+
+.tealford-pricing__tier-name {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--heading-font-color);
+  margin-bottom: 8px;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.tealford-pricing__tier-price {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--heading-font-color);
+  margin-bottom: 8px;
+  line-height: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+
+  @media (max-width: 768px) {
+    font-size: 34px;
+  }
+}
+
+.tealford-pricing__period {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-alt-color);
+}
+
+.tealford-pricing__tier-tagline {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--text-alt-color);
+  margin-bottom: 20px;
+  max-width: 280px;
+}
+
+.tealford-pricing__tier-cta {
+  .button {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+}
+
+// Tier body (feature groups)
+.tealford-pricing__tier-body {
+  padding: 8px 32px 32px;
+  flex: 1;
+  background: var(--background-color);
+
+  @media (max-width: 768px) {
+    padding: 8px 24px 28px;
+  }
+}
+
+// Category grouping within a tier
+.tealford-pricing__category {
+  padding: 24px 0 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 24px;
+  }
+}
+
+.tealford-pricing__category-title {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-alt-color);
+  margin-bottom: 14px;
+}
+
+// Feature list
+.tealford-pricing__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--heading-font-color);
+    padding: 6px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+
+    i {
+      font-size: 12px;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    i.fa-check {
+      color: var(--primary-color);
+    }
+
+    i.fa-xmark {
+      color: var(--gray);
+    }
+  }
+}
+
+// Muted item (not included in tier)
+.tealford-pricing__list li.tealford-pricing__muted {
+  color: var(--text-alt-color);
+  opacity: 0.55;
+}
+
+// Compare features link
+.tealford-pricing__compare {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.tealford-pricing__compare-link {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    gap: 12px;
+  }
+
+  i {
+    font-size: 12px;
+    transition: transform 0.2s ease;
+  }
+}
+
+// Bottom CTA bar
+.tealford-pricing__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 48px;
+  padding: 32px 40px;
+  background: var(--background-alt-color);
+  border-radius: 16px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 16px;
+    padding: 28px 24px;
+    text-align: center;
+  }
+}
+
+.tealford-pricing__footer-text {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--heading-font-color);
+  margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 15px;
+  }
+}
+
+.tealford-pricing__footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--primary-color);
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+
+  &:hover {
+    background: #044444;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 102, 102, 0.2);
+  }
+
+  i {
+    font-size: 12px;
+    transition: transform 0.2s ease;
+  }
+
+  &:hover i {
+    transform: translateX(3px);
+  }
+}
+
+/* Maintenance / Ongoing Section Variant */
+.tealford-pricing--maintenance {
+  background: var(--background-alt-color);
+}
