@@ -49,7 +49,7 @@
 // Section title
 .home-section-title {
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   color: var(--heading-font-color);
   margin-bottom: 20px;
@@ -121,7 +121,7 @@
 
 .home-service-title {
   font-size: 24px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--heading-font-color);
   margin-bottom: 16px;
 }
@@ -182,7 +182,7 @@
 .home-approach-feature {
   &-title {
     font-size: 20px;
-    font-weight: 700;
+    font-weight: 600;
     color: var(--heading-font-color);
     margin-bottom: 12px;
   }
@@ -291,7 +291,7 @@
 
 .home-metric-title {
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--heading-font-color);
   margin-bottom: 16px;
 }
@@ -345,7 +345,7 @@
 
 .home-automation-number {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary-color);
   margin-bottom: 20px;
   letter-spacing: 1px;
@@ -353,7 +353,7 @@
 
 .home-automation-title {
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--heading-font-color);
   margin-bottom: 16px;
 }
@@ -454,7 +454,7 @@
 
 .home-experience-number {
   font-size: 72px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--primary-color);
   line-height: 1;
   display: inline-flex;
@@ -492,7 +492,7 @@
 .home-experience-title {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 32px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--heading-font-color);
   margin-bottom: 12px;
   line-height: 1.2;
@@ -666,7 +666,7 @@
 
 .home-security-title {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--heading-font-color);
   margin-bottom: 12px;
   line-height: 1.3;
@@ -738,7 +738,7 @@
 
 .home-why-title {
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--heading-font-color);
   margin-bottom: 16px;
   line-height: 1.4;
@@ -815,7 +815,7 @@
 .home-final-cta-title {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 42px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
   color: var(--white);
   margin-bottom: 16px;
@@ -866,7 +866,7 @@
 .home-services-overview-heading {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 44px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.15;
   letter-spacing: -1.5px;
   color: var(--heading-font-color);
@@ -936,6 +936,7 @@
 
     .home-services-overview-column-name {
       color: var(--white);
+      font-weight: 600;
     }
 
     .home-services-overview-column-tagline {
@@ -968,7 +969,7 @@
 .home-services-overview-column-name {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 28px;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--heading-font-color);
   margin-bottom: 12px;
   letter-spacing: -0.5px;
@@ -1035,7 +1036,7 @@
 .home-services-overview-category-title {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.8px;
   color: var(--text-alt-color);
