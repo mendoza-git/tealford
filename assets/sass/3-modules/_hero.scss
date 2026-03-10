@@ -30,33 +30,31 @@
   .hero__location {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 11px;
-    font-weight: 500;
+    font-weight: 600;
     letter-spacing: 0.5px;
     text-transform: uppercase;
-    color: #737373;
+    color: #1a1a1a;
     margin-bottom: 28px;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
-    border: 1px dotted #d4d4d4;
-    border-radius: 6px;
+    gap: 10px;
+    padding: 10px 18px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
     animation: fadeInUp 0.8s ease-out;
-
-      color: #ffffff;
-      background-color: #000000;
-      border: 1px solid #000000;
-      padding: 8px 14px;
-
-      background: linear-gradient(135deg, #434a6d 0%, #6e4040 100%);
 
     &::before {
       content: '';
-      width: 26px;
-      height: 26px;
+      width: 22px;
+      height: 22px;
       background: url('/images/icons/texas-flag.svg') no-repeat center;
       background-size: contain;
       display: block;
+      flex-shrink: 0;
     }
   }
 
@@ -309,13 +307,11 @@
 
     .hero__location {
       justify-content: center;
-      color: #ffffff;
-      background-color: #000000;
-      border: 1px solid #000000;
-      padding: 8px 14px;
-      background: linear-gradient(135deg, #434a6d 0%, #6e4040 100%);
       order: 4;
       align-self: center;
+      background: rgba(255, 255, 255, 0.85);
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
     }
 
     .hero__title {
