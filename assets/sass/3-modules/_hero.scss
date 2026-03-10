@@ -48,7 +48,7 @@
       border: 1px solid #000000;
       padding: 8px 14px;
 
-      background: linear-gradient(135deg, #00029d 0%, #001f87 100%);
+      background: linear-gradient(135deg, #434a6d 0%, #6e4040 100%);
 
     &::before {
       content: '';
@@ -100,10 +100,10 @@
 
   .hero__description {
     font-family: 'Nunito Sans', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 1.7;
-    color: #737373;
+    color: #000000;
     margin-bottom: 32px;
     max-width: 520px;
     animation: fadeInUp 0.8s ease-out 0.2s backwards;
@@ -313,7 +313,7 @@
       background-color: #000000;
       border: 1px solid #000000;
       padding: 8px 14px;
-      background: linear-gradient(135deg, #00029d 0%, #001f87 100%);
+      background: linear-gradient(135deg, #434a6d 0%, #6e4040 100%);
       order: 4;
       align-self: center;
     }
@@ -377,7 +377,8 @@
     }
 
     .hero__description {
-      font-size: 15px;
+      font-size: 18px;
+      color: #0a0a0a;
     }
   }
 
