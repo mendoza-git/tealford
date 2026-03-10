@@ -44,17 +44,18 @@
     animation: fadeInUp 0.8s ease-out;
 
       color: #ffffff;
-      background-color: #0f766e;
-      border: 1px solid #0f766e;
+      background-color: #000000;
+      border: 1px solid #000000;
       padding: 8px 14px;
-      box-shadow: 0 2px 8px rgba(15, 118, 110, 0.2);
+
+      background: linear-gradient(135deg, #00029d 0%, #001f87 100%);
 
     &::before {
       content: '';
-      width: 6px;
-      height: 6px;
-      background: #ffffff;
-      border-radius: 50%;
+      width: 26px;
+      height: 26px;
+      background: url('/images/icons/texas-flag.svg') no-repeat center;
+      background-size: contain;
       display: block;
     }
   }
@@ -302,33 +303,40 @@
       order: 1;
       max-width: 100%;
       text-align: center;
+      display: flex;
+      flex-direction: column;
     }
 
     .hero__location {
       justify-content: center;
       color: #ffffff;
-      background-color: #0f766e;
-      border: 1px solid #0f766e;
+      background-color: #000000;
+      border: 1px solid #000000;
       padding: 8px 14px;
-      box-shadow: 0 2px 8px rgba(15, 118, 110, 0.2);
-
-      &::before {
-        background: #ffffff;
-      }
+      background: linear-gradient(135deg, #00029d 0%, #001f87 100%);
+      order: 4;
+      align-self: center;
     }
 
-    .hero__actions {
-      justify-content: center;
+    .hero__title {
+      order: 1;
     }
 
     .hero__description {
+      order: 2;
       margin-left: auto;
       margin-right: auto;
       color: #525252;
     }
 
+    .hero__actions {
+      justify-content: center;
+      order: 3;
+    }
+
     .hero__info {
       text-align: center;
+      order: 5;
     }
 
     .hero__gallery {
@@ -384,8 +392,8 @@
       margin-bottom: 20px;
 
       &::before {
-        width: 5px;
-        height: 5px;
+        width: 16px;
+        height: 16px;
       }
     }
 

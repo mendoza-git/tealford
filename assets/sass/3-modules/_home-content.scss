@@ -673,7 +673,7 @@
 }
 
 .home-security-description {
-  font-size: 11px;
+  font-size: 12px;
   line-height: 1.7;
   color: var(--text-alt-color);
   margin: 0;
@@ -911,7 +911,7 @@
 // Individual column
 .home-services-overview-column {
   padding: 0;
-  border-right: 1px solid var(--border-color);
+  // border-right: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
 
@@ -929,27 +929,65 @@
   }
 }
 
-// Featured column (middle)
-.home-services-overview-column--featured {
-  .home-services-overview-column-header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, #044444 100%);
+// Per-column gradient headers
+.home-services-overview-grid {
 
-    .home-services-overview-column-name {
-      color: var(--white);
-      font-weight: 600;
+  // Column 1 — Websites: neon blue
+  > *:nth-child(1) {
+    .home-services-overview-column-header {
+      background: linear-gradient(135deg, #6b8fff 0%, #1F51FF 100%);
+
+      .home-services-overview-column-name { color: #fff; }
+      .home-services-overview-column-tagline { color: rgba(255, 255, 255, 0.88); }
+
+      .home-services-overview-column-cta {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.35);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.12);
+          border-color: rgba(255, 255, 255, 0.65);
+        }
+      }
     }
+  }
 
-    .home-services-overview-column-tagline {
-      color: rgba(255, 255, 255, 0.85);
+  // Column 2 — eCommerce: burgundy
+  > *:nth-child(2) {
+    .home-services-overview-column-header {
+      background: linear-gradient(135deg, #bf4060 0%, #800020 100%);
+
+      .home-services-overview-column-name { color: #fff; }
+      .home-services-overview-column-tagline { color: rgba(255, 255, 255, 0.88); }
+
+      .home-services-overview-column-cta {
+        color: #fff;
+        border-color: rgba(255, 255, 255, 0.35);
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.12);
+          border-color: rgba(255, 255, 255, 0.65);
+        }
+      }
     }
+  }
 
-    .home-services-overview-column-cta {
-      color: var(--white);
-      border-color: rgba(255, 255, 255, 0.35);
+  // Column 3 — Marketing: pistachio
+  > *:nth-child(3) {
+    .home-services-overview-column-header {
+      background: linear-gradient(135deg, #dff0d4 0%, #93C572 100%);
 
-      &:hover {
-        background: rgba(255, 255, 255, 0.12);
-        border-color: rgba(255, 255, 255, 0.6);
+      .home-services-overview-column-name { color: #000000; }
+      .home-services-overview-column-tagline { color: #000000; }
+
+      .home-services-overview-column-cta {
+        color: #000000;
+        border-color: rgba(28, 58, 16, 0.3);
+
+        &:hover {
+          background: rgba(28, 58, 16, 0.08);
+          border-color: rgba(28, 58, 16, 0.6);
+        }
       }
     }
   }
@@ -980,7 +1018,7 @@
   font-size: 15px;
   font-weight: 400;
   line-height: 1.6;
-  color: var(--text-alt-color);
+  color: var(--heading-font-color);
   margin-bottom: 20px;
 }
 
