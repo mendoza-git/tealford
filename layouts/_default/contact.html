@@ -24,6 +24,9 @@
           <input type="hidden" name="_subject" value="New Sales Inquiry from Tealford Website">
           <input type="hidden" name="_cc" value="sales@tealfordconsulting.com">
           
+          <!-- Honeypot field for spam detection (must stay empty) -->
+          <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
+          
           <!-- Name Fields -->
           <div class="form-row">
             <div class="form-group">
@@ -70,6 +73,8 @@
                 name="email" 
                 placeholder="you@company.com" 
                 required>
+              <!-- Duplicate for Formspree reply-to -->
+              <input type="hidden" name="_replyto" id="replyto">
             </div>
           </div>
 
@@ -203,9 +208,23 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const form = document.querySelector('.contact-sales-form');
+  const emailInput = document.getElementById('email');
+  const replytoInput = document.getElementById('replyto');
+  
+  // Sync email to _replyto field
+  if (emailInput && replytoInput) {
+    emailInput.addEventListener('input', function() {
+      replytoInput.value = this.value;
+    });
+  }
   
   if (form) {
     form.addEventListener('submit', function(e) {
+      // Sync email one more time before submit
+      if (emailInput && replytoInput) {
+        replytoInput.value = emailInput.value;
+      }
+      
       const checkboxes = form.querySelectorAll('input[name="solution[]"]:checked');
       
       if (checkboxes.length === 0) {
