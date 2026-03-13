@@ -291,7 +291,7 @@ paginate = 6
   # Hero Settings
   [params.hero]
     enable = true
-    hero_badge = "Trusted by Industry Leaders"
+    hero_badge = "Local Software Experts Ready To Help Your Business."
     hero_title_static = "Solutions for "
     hero_title_typed = ["Entrepeneurs", "Small Business", "Enterprise"]
     hero_title_static_end = ""
