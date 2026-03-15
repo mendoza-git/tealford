@@ -1,0 +1,78 @@
+/* Thank You Page */
+.thank-you-page {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+}
+
+.thank-you-hero {
+  padding: 120px 0;
+  width: 100%;
+
+  @media (max-width: $mobile) {
+    padding: 80px 0;
+  }
+}
+
+.thank-you-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.thank-you-icon {
+  margin-bottom: 32px;
+
+  i {
+    font-size: 72px;
+    color: var(--brand-color);
+
+    @media (max-width: $mobile) {
+      font-size: 56px;
+    }
+  }
+}
+
+.thank-you-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--heading-font-color);
+
+  @media (max-width: $mobile) {
+    font-size: 36px;
+  }
+}
+
+.thank-you-subtitle {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: var(--heading-font-color);
+
+  @media (max-width: $mobile) {
+    font-size: 20px;
+  }
+}
+
+.thank-you-message {
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--text-color);
+  margin-bottom: 40px;
+
+  @media (max-width: $mobile) {
+    font-size: 16px;
+  }
+}
+
+.thank-you-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .button {
+    min-width: 160px;
+  }
+}

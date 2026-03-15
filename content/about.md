@@ -1,48 +1,48 @@
 ---
-title: Your Local Tech Partner in Dallas, Texas
-subtitle: A team of friendly consultants making technology simple, affordable, and accessible for small businesses.
-description: Tealford Consulting is a Dallas-based team of local consultants specializing in quality web design, e-commerce solutions, and straightforward tech guidance—all at prices that make sense for small businesses.
+title: Strategic Technology Consulting
+subtitle: Trusted advisors delivering elegant digital solutions for discerning businesses.
+description: Tealford Consulting is a boutique technology consultancy headquartered in Dallas, offering bespoke web development, e-commerce strategy, and enterprise digital transformation services.
 layout: about
 
 mission:
   label: "WHO WE ARE"
-  title: "Local consultants who make tech feel simple"
-  description: "We're a team of Dallas-based consultants who believe technology shouldn't be complicated or expensive. Whether you need a quality website, help with social media, guidance on integrating new tools into your business, or just have a tech question—we're here with honest service. No jargon, no pressure, just local people helping local businesses grow."
+  title: "A consultancy built on excellence"
+  description: "Tealford Consulting partners with organizations seeking sophisticated technology solutions delivered with precision and discretion. We bring decades of collective expertise to every engagement, providing strategic guidance and meticulous execution across web development, digital commerce, and technology integration."
 
 problems:
   label: "WHY CHOOSE US"
-  title: "What makes us different"
+  title: "The Tealford distinction"
   items:
-    - stat: "Professional Quality"
-      description: "You get premium, hand-coded websites and tech solutions without the big agency price tag. Quality work at prices that actually fit your budget."
-    - stat: "Local & personal"
-      description: "We're right here in Dallas, Texas. We understand local businesses and offer that hospitality—friendly, straightforward, and always ready to help."
-    - stat: "Fast & independent"
-      description: "We work quickly and integrate seamlessly with your business. You stay in control while we handle the tech, so both of us can move forward efficiently."
+    - stat: "Uncompromising Quality"
+      description: "Every solution is crafted with exacting standards. Our bespoke approach ensures tailored outcomes that reflect the caliber of the organizations we serve."
+    - stat: "Trusted Partnership"
+      description: "We cultivate enduring relationships founded on integrity, transparency, and a deep commitment to client success."
+    - stat: "Discreet Excellence"
+      description: "We operate with efficiency and discretion, integrating seamlessly with your operations to deliver results without disruption."
 
 values:
   label: "OUR APPROACH"
-  title: "How we work with you"
+  title: "Principles that guide our practice"
   items:
-    - title: "Refined service"
-      description: "We skip the confusing tech talk and give you straight answers. Our goal is to make technology accessible and understandable for everyone."
+    - title: "Precision & Clarity"
+      description: "We distill complex technical matters into clear, actionable insights. Our counsel is direct, informed, and always aligned with your strategic objectives."
       image: "/images/about/service.jpg"
-    - title: "Your growth matters"
-      description: "We're invested in helping small businesses thrive. When you succeed, we succeed. We build solutions that help you grow over the long term."
+    - title: "Long-Term Value"
+      description: "We architect solutions designed for enduring performance. Every engagement is an investment in sustainable growth and competitive advantage."
       image: "/images/about/growth.jpg"
-    - title: "Fast, independent partnership"
-      description: "We integrate with your business as consultants who work efficiently alongside you. You maintain independence while we provide the expertise you need."
+    - title: "Collaborative Excellence"
+      description: "We serve as an extension of your leadership, bringing specialized expertise while respecting your vision and organizational autonomy."
       image: "/images/about/independent.jpg"
 
 
 cta:
-  title: "Let's talk about your business"
-  description: "Whether you need a website, tech help, or just want to chat about what's possible—schedule a free consultation. No pressure, no jargon, just honest conversation."
+  title: "Begin a Conversation"
+  description: "We welcome the opportunity to understand your objectives and explore how a partnership with Tealford might serve your organization. Schedule a confidential consultation at your convenience."
   buttons:
-    - text: "Get Free Consultation"
+    - text: "Request Consultation"
       url: "/contact/"
       primary: true
-    - text: "See Our Work"
+    - text: "View Our Portfolio"
       url: "/projects/"
       primary: false
 ---

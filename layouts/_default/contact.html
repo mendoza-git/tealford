@@ -23,6 +23,9 @@
           <!-- Hidden field to identify this as a sales inquiry -->
           <input type="hidden" name="_subject" value="New Sales Inquiry from Tealford Website">
           
+          <!-- Redirect to thank you page after successful submission -->
+          <input type="hidden" name="_next" value="{{ "thank-you/" | absURL }}">
+          
           <!-- Honeypot field for spam detection (must stay empty) -->
           <input type="text" name="_gotcha" style="display:none !important" tabindex="-1" autocomplete="off">
           
