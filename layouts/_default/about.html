@@ -11,116 +11,117 @@
         {{ if .Params.subtitle }}
         <p class="about-hero-subtitle">{{ .Params.subtitle }}</p>
         {{ end }}
-      </div>
-    </div>
-  </section>
-
-  <!-- Mission Section -->
-  {{ if .Params.mission }}
-  <section class="about-section about-mission">
-    <div class="container">
-      <div class="about-section-header">
-        <div class="about-section-label">{{ .Params.mission.label }}</div>
-        <h2 class="about-section-title">{{ .Params.mission.title }}</h2>
-      </div>
-      <p class="about-mission-description">{{ .Params.mission.description }}</p>
-    </div>
-  </section>
-  <div class="about-separator"></div>
-  {{ end }}
-
-  <!-- Problems Section -->
-  {{ if .Params.problems }}
-  <section class="about-section about-problems">
-    <div class="container">
-      <div class="about-section-header">
-        <div class="about-section-label">{{ .Params.problems.label }}</div>
-        <h2 class="about-section-title">{{ .Params.problems.title }}</h2>
-      </div>
-      <div class="about-problems-grid">
-        {{ range .Params.problems.items }}
-        <div class="about-problem-card">
-          <div class="about-problem-stat">{{ .stat }}</div>
-          <p class="about-problem-description">{{ .description }}</p>
+        {{ if .Params.hero_cta }}
+        <div class="about-hero-cta">
+          <a href="{{ .Params.hero_cta.url }}" class="button button--primary button--large">{{ .Params.hero_cta.text }}</a>
+        </div>
+        {{ end }}
+        {{ if .Params.partners }}
+        <div class="about-partners">
+          <span class="about-partners-label">{{ .Params.partners.label }}</span>
+          <div class="about-partners-logos">
+            {{ range .Params.partners.items }}
+            <img src="{{ .logo }}" alt="{{ .name }}" class="about-partner-logo">
+            {{ end }}
+          </div>
         </div>
         {{ end }}
       </div>
     </div>
   </section>
-  <div class="about-separator"></div>
-  {{ end }}
 
-  <!-- Solutions Section -->
-  {{ if .Params.solutions }}
-  <section class="about-section about-solutions">
+  <!-- Features Section -->
+  {{ if .Params.features }}
+  <section class="about-features">
     <div class="container">
-      <div class="about-section-header">
-        <div class="about-section-label">{{ .Params.solutions.label }}</div>
-        <h2 class="about-section-title">{{ .Params.solutions.title }}</h2>
-      </div>
-      <div class="about-solutions-grid">
-        {{ range .Params.solutions.items }}
-        <div class="about-solution-card">
-          <div class="about-solution-image-placeholder"></div>
-          <h3 class="about-solution-title">{{ .title }}</h3>
-          <p class="about-solution-description">{{ .description }}</p>
-        </div>
-        {{ end }}
-      </div>
-    </div>
-  </section>
-  <div class="about-separator"></div>
-  {{ end }}
-
-  <!-- Values Section -->
-  {{ if .Params.values }}
-  <section class="about-section about-values">
-    <div class="container">
-      <div class="about-section-header">
-        <div class="about-section-label">{{ .Params.values.label }}</div>
-        <h2 class="about-section-title">{{ .Params.values.title }}</h2>
-      </div>
-      <div class="about-values-grid">
-        {{ range .Params.values.items }}
-        <div class="about-value-card">
+      <div class="about-features-grid">
+        {{ range .Params.features.items }}
+        <div class="about-feature-card">
+          <div class="about-feature-content">
+            <h3 class="about-feature-title">{{ .title }}</h3>
+            <p class="about-feature-description">{{ .description }}</p>
+          </div>
           {{ if .image }}
-          <div class="about-value-image">
-            <img src="{{ .image }}" alt="{{ .title }}" class="about-value-img">
+          <div class="about-feature-image">
+            <img src="{{ .image }}" alt="{{ .title }}">
+          </div>
+          {{ else }}
+          <div class="about-feature-visual">
+            <div class="about-feature-placeholder"></div>
           </div>
           {{ end }}
-          <h3 class="about-value-title">{{ .title }}</h3>
-          <p class="about-value-description">{{ .description }}</p>
         </div>
         {{ end }}
       </div>
     </div>
   </section>
-  <div class="about-separator"></div>
+  {{ end }}
+
+  <!-- How We Work Section -->
+  {{ if .Params.process }}
+  <section class="about-process">
+    <div class="container">
+      <div class="about-section-header">
+        <h2 class="about-section-title">{{ .Params.process.title }}</h2>
+        {{ if .Params.process.description }}
+        <p class="about-section-description">{{ .Params.process.description }}</p>
+        {{ end }}
+      </div>
+      <div class="timeline-wrapper">
+        <div class="timeline-line"></div>
+        {{ range $index, $step := .Params.process.steps }}
+        <div class="timeline-row {{ if eq (mod $index 2) 1 }}timeline-row--right{{ end }}" data-index="{{ $index }}">
+          <div class="timeline-content">
+            <h4 class="timeline-title">{{ .title }}</h4>
+            <p class="timeline-description">{{ .description }}</p>
+          </div>
+          <div class="timeline-marker">
+            <span class="timeline-number">{{ add $index 1 }}</span>
+          </div>
+          <div class="timeline-spacer"></div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  {{ end }}
+
+  <!-- Testimonial Section -->
+  {{ if .Params.testimonial }}
+  <section class="about-testimonial">
+    <div class="container">
+      <div class="about-testimonial-content">
+        <blockquote class="about-testimonial-quote">
+          "{{ .Params.testimonial.quote }}"
+        </blockquote>
+        <div class="about-testimonial-author">
+          <span class="about-testimonial-name">{{ .Params.testimonial.author }}</span>
+          <span class="about-testimonial-role">{{ .Params.testimonial.role }}</span>
+        </div>
+      </div>
+    </div>
+  </section>
   {{ end }}
 
   <!-- Stats Section -->
-  {{ if .Params.stats }}
-  <section class="about-section about-stats">
+  {{/*  {{ if .Params.stats }}
+  <section class="about-stats">
     <div class="container">
-      {{ if .Params.stats.title }}
-      <h2 class="about-section-title" style="text-align: center; margin-bottom: 48px;">{{ .Params.stats.title }}</h2>
-      {{ end }}
       <div class="about-stats-grid">
         {{ range .Params.stats.items }}
-        <div class="about-stat-item">
+        <div class="about-stat-card">
           <div class="about-stat-value">{{ .value }}</div>
-          <div class="about-stat-label">{{ .label }}</div>
+          <p class="about-stat-label">{{ .label }}</p>
         </div>
         {{ end }}
       </div>
     </div>
   </section>
-  <div class="about-separator"></div>
-  {{ end }}
+  {{ end }}  */}}
 
   <!-- CTA Section -->
   {{ if .Params.cta }}
-  <section class="about-section about-cta">
+  <section class="about-cta">
     <div class="container">
       <div class="about-cta-content">
         <h2 class="about-cta-title">{{ .Params.cta.title }}</h2>

@@ -1,39 +1,57 @@
 ---
-title: Strategic Technology Consulting
-subtitle: Trusted advisors delivering elegant digital solutions for discerning businesses.
+title: The digital partner your business deserves
+subtitle: We combine strategic insight with technical excellence to deliver solutions that drive measurable growth—without the complexity or inflated costs.
 description: Tealford Consulting is a boutique technology consultancy headquartered in Dallas, offering bespoke web development, e-commerce strategy, and enterprise digital transformation services.
 layout: about
 
-mission:
-  label: "WHO WE ARE"
-  title: "A consultancy built on excellence"
-  description: "Tealford Consulting partners with organizations seeking sophisticated technology solutions delivered with precision and discretion. We bring decades of collective expertise to every engagement, providing strategic guidance and meticulous execution across web development, digital commerce, and technology integration."
+hero_cta:
+  text: "Schedule a Consultation"
+  url: "/contact/"
 
-problems:
-  label: "WHY CHOOSE US"
-  title: "The Tealford distinction"
+features:
   items:
-    - stat: "Uncompromising Quality"
-      description: "Every solution is crafted with exacting standards. Our bespoke approach ensures tailored outcomes that reflect the caliber of the organizations we serve."
-    - stat: "Trusted Partnership"
-      description: "We cultivate enduring relationships founded on integrity, transparency, and a deep commitment to client success."
-    - stat: "Discreet Excellence"
-      description: "We operate with efficiency and discretion, integrating seamlessly with your operations to deliver results without disruption."
+    - title: "Your technology, unified and clear"
+      description: "No more juggling multiple vendors, scattered documentation, or conflicting advice. Tealford serves as your single point of contact for all digital initiatives—providing coherent strategy and seamless execution."
+      image: "/images/about/unified.jpg"
+    - title: "Solutions that evolve with your business"
+      description: "Our engagements are designed to scale. As your organization grows, your digital infrastructure adapts accordingly—ensuring you're never constrained by yesterday's decisions."
+      image: "/images/about/evolve.jpg"
+    - title: "Most businesses underinvest in digital—you won't be one of them"
+      description: "Strategic technology investment separates market leaders from the rest. We ensure every dollar spent delivers tangible returns and positions your organization for sustained competitive advantage."
+      image: "/images/about/invest.jpg"
 
-values:
-  label: "OUR APPROACH"
-  title: "Principles that guide our practice"
+process:
+  title: "How Tealford Works"
+  description: "A refined engagement process designed for clarity and results."
+  steps:
+    - title: "Discovery"
+      description: "We begin with a confidential conversation to understand your objectives, challenges, and vision for the future."
+    - title: "Assessment"
+      description: "Our team conducts a thorough analysis of your current digital landscape, identifying opportunities and areas for improvement."
+    - title: "Strategic Recommendation"
+      description: "We present a tailored roadmap with clear priorities, timelines, and investment considerations."
+    - title: "Collaborative Planning"
+      description: "Working closely with your leadership, we refine the approach to align with your organizational priorities."
+    - title: "Precision Execution"
+      description: "Our specialists implement solutions with meticulous attention to detail and minimal disruption to your operations."
+    - title: "Quality Assurance"
+      description: "Rigorous testing and review ensure every deliverable meets our exacting standards before deployment."
+    - title: "Ongoing Partnership"
+      description: "We remain engaged beyond launch, providing support, optimization, and strategic guidance as your needs evolve."
+
+testimonial:
+  quote: "Tealford brought a level of professionalism and strategic thinking we hadn't experienced with other consultancies. They understood our business first, then delivered technology solutions that actually moved the needle. The results speak for themselves."
+  author: "Sarah Mitchell"
+  role: "Chief Operating Officer, Meridian Properties"
+
+stats:
   items:
-    - title: "Precision & Clarity"
-      description: "We distill complex technical matters into clear, actionable insights. Our counsel is direct, informed, and always aligned with your strategic objectives."
-      image: "/images/about/service.jpg"
-    - title: "Long-Term Value"
-      description: "We architect solutions designed for enduring performance. Every engagement is an investment in sustainable growth and competitive advantage."
-      image: "/images/about/growth.jpg"
-    - title: "Collaborative Excellence"
-      description: "We serve as an extension of your leadership, bringing specialized expertise while respecting your vision and organizational autonomy."
-      image: "/images/about/independent.jpg"
-
+    - value: "40%"
+      label: "Average improvement in digital performance metrics across client engagements."
+    - value: "$2.4M"
+      label: "Combined revenue growth attributed to Tealford-implemented solutions."
+    - value: "98%"
+      label: "Client retention rate reflecting enduring partnership success."
 
 cta:
   title: "Begin a Conversation"
