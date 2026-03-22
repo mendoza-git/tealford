@@ -2,15 +2,18 @@
 {{ $commonJs := resources.Get "js/common.js" }}
 {{ $heroSlideshow := resources.Get "js/hero-slideshow.js" }}
 {{ $heroTyped := resources.Get "js/hero-typed.js" }}
+{{ $timelineAnimation := resources.Get "js/timeline-animation.js" }}
 
 {{ if .Site.IsServer }}
 <script src="{{ $script.Permalink }}"></script>
 <script src="{{ $commonJs.Permalink }}"></script>
 <script src="{{ $heroSlideshow.Permalink }}"></script>
 <script src="{{ $heroTyped.Permalink }}"></script>
+<script src="{{ $timelineAnimation.Permalink }}"></script>
 {{ else }}
 <script src="{{ ($script | minify | fingerprint).RelPermalink }}"></script>
 <script src="{{ ($commonJs | minify | fingerprint).RelPermalink }}"></script>
 <script src="{{ ($heroSlideshow | minify | fingerprint).RelPermalink }}"></script>
 <script src="{{ ($heroTyped | minify | fingerprint).RelPermalink }}"></script>
+<script src="{{ ($timelineAnimation | minify | fingerprint).RelPermalink }}"></script>
 {{ end }}

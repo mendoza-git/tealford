@@ -1,5 +1,6 @@
 ---
 title: Privacy Policy
+layout: legal
 description: Tealford Consulting ("we", "our", or "us") values your privacy and is committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, and protect your information when you visit our website or use our services.
 
 ---

@@ -1,0 +1,96 @@
+{{ define "main" }}
+
+<div class="legal-page">
+  <div class="legal-container">
+    <!-- Table of Contents Sidebar -->
+    <aside class="legal-toc">
+      <div class="legal-toc-inner">
+        <h3 class="legal-toc-title">Contents</h3>
+        <nav class="legal-toc-nav">
+          {{ .Content | replaceRE `<h2[^>]*id="([^"]+)"[^>]*>([^<]+)</h2>` `<a href="#$1" class="legal-toc-link">$2</a>` | safeHTML }}
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="legal-content">
+      <header class="legal-header">
+        <h1 class="legal-title">{{ .Title }}</h1>
+        {{ if .Params.description }}
+        <p class="legal-description">{{ .Params.description }}</p>
+        {{ end }}
+      </header>
+
+      <article class="legal-article">
+        {{ .Content }}
+      </article>
+    </main>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Generate TOC from headings
+  const content = document.querySelector('.legal-article');
+  const tocNav = document.querySelector('.legal-toc-nav');
+  const headings = content.querySelectorAll('h2');
+  
+  // Clear the placeholder content and build proper TOC
+  tocNav.innerHTML = '';
+  
+  headings.forEach(function(heading, index) {
+    // Ensure heading has an ID
+    if (!heading.id) {
+      heading.id = heading.textContent.toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+    }
+    
+    const link = document.createElement('a');
+    link.href = '#' + heading.id;
+    link.className = 'legal-toc-link';
+    link.textContent = heading.textContent;
+    tocNav.appendChild(link);
+  });
+
+  // Scroll spy for active state
+  const tocLinks = document.querySelectorAll('.legal-toc-link');
+  
+  function updateActiveLink() {
+    const scrollPos = window.scrollY + 120;
+    
+    let activeIndex = 0;
+    headings.forEach(function(heading, index) {
+      if (heading.offsetTop <= scrollPos) {
+        activeIndex = index;
+      }
+    });
+    
+    tocLinks.forEach(function(link, index) {
+      link.classList.toggle('is-active', index === activeIndex);
+    });
+  }
+  
+  // Smooth scroll for TOC links
+  tocLinks.forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('href').slice(1);
+      const target = document.getElementById(targetId);
+      if (target) {
+        const offset = 100;
+        const targetPosition = target.offsetTop - offset;
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+  
+  window.addEventListener('scroll', updateActiveLink);
+  updateActiveLink();
+});
+</script>
+
+{{ end }}
