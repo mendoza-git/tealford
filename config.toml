@@ -68,12 +68,6 @@ paginate = 6
     icon = "fa-solid fa-layer-group"
 
   [[menu.main.params.featureItems]]
-    title = "24/7 Support"
-    description = "Ongoing maintenance and dedicated support"
-    url = "/solutions/support/"
-    icon = "fa-solid fa-headset"
-
-  [[menu.main.params.featureItems]]
     title = "Analytics & Insights"
     description = "Data-driven decisions with comprehensive tracking"
     url = "/solutions/analytics/"
@@ -196,11 +190,6 @@ paginate = 6
     url = "/solutions/scalability/"
     weight = 3
 
-  [[menu.footer_features]]
-    name = "24/7 Support"
-    url = "/solutions/support/"
-    weight = 4
-
   # Footer Menu - Resources
   [[menu.footer_resources]]
     name = "Blog"
@@ -275,7 +264,7 @@ paginate = 6
 [params]
   logo = "/images/tealford-logo.png" # You can add own logo. For example "/images/logo.png".
   logo_dark = "/images/tealford-dark-logo.png"
-  description = ""
+  description = "Tealford Consulting is an American technology consulting firm based in Dallas, Texas."
   color_scheme = "auto" # You can choose three modes auto, light, and dark. By default, the auto mode is set, which means the user can choose the light or dark mode themself.
   theme_toggle_enable = false # Set to true to display the light/dark theme toggle button
 
