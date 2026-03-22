@@ -1,6 +1,7 @@
 ---
 title: Terms and Conditions
-description: Welcome to Tealford Consulting. These Terms and Conditions (“Terms”) govern your access to and use of our website and services. By engaging with Tealford Consulting in any capacity, you agree to be bound by these Terms. If you do not agree, please do not use our site or services.
+layout: legal
+description: Welcome to Tealford Consulting. These Terms and Conditions ("Terms") govern your access to and use of our website and services. By engaging with Tealford Consulting in any capacity, you agree to be bound by these Terms. If you do not agree, please do not use our site or services.
 ---
 
 **Effective Date:** January 29, 2023  

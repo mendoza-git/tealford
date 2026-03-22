@@ -1,5 +1,6 @@
 ---
 title: Cookie Policy
+layout: legal
 description: This Cookie Policy explains how Tealford Consulting uses cookies and similar tracking technologies on our website. We are committed to transparency about how we collect and use data to improve your browsing experience.
 ---
 

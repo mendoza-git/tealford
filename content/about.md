@@ -12,13 +12,13 @@ features:
   items:
     - title: "Your technology, unified and clear"
       description: "No more juggling multiple vendors, scattered documentation, or conflicting advice. Tealford serves as your single point of contact for all digital initiatives—providing coherent strategy and seamless execution."
-      image: "/images/about/unified.jpg"
+      image: "/images/about/your-tech.jpg"
     - title: "Solutions that evolve with your business"
       description: "Our engagements are designed to scale. As your organization grows, your digital infrastructure adapts accordingly—ensuring you're never constrained by yesterday's decisions."
-      image: "/images/about/evolve.jpg"
+      image: "/images/about/evolving-solutions.jpg"
     - title: "Most businesses underinvest in digital—you won't be one of them"
       description: "Strategic technology investment separates market leaders from the rest. We ensure every dollar spent delivers tangible returns and positions your organization for sustained competitive advantage."
-      image: "/images/about/invest.jpg"
+      image: "/images/about/invest-tech.jpg"
 
 process:
   title: "How Tealford Works"
@@ -40,9 +40,10 @@ process:
       description: "We remain engaged beyond launch, providing support, optimization, and strategic guidance as your needs evolve."
 
 testimonial:
-  quote: "Tealford brought a level of professionalism and strategic thinking we hadn't experienced with other consultancies. They understood our business first, then delivered technology solutions that actually moved the needle. The results speak for themselves."
-  author: "Sarah Mitchell"
-  role: "Chief Operating Officer, Meridian Properties"
+  quote: "At Tealford, we are passionate about helping our clients navigate the ever evolving world of technology. We believe any business in any industry can greatly benefit from having a reliable technical partner alongside them. Making technical solutions simple is what we do best."
+  author: "Enrique Mendoza Jr."
+  linkedin: "https://www.linkedin.com/in/enrique-mendoza/"
+  role: "Product Specialist, Web + Tech"
 
 stats:
   items:
@@ -60,7 +61,4 @@ cta:
     - text: "Request Consultation"
       url: "/contact/"
       primary: true
-    - text: "View Our Portfolio"
-      url: "/projects/"
-      primary: false
 ---

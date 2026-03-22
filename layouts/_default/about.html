@@ -5,17 +5,19 @@
   
   <!-- Hero Section -->
   <section class="about-hero">
+    <!-- Logo -->
+    <div class="about-hero-logo">
+      <img src="/images/tealford-logo-white.png" alt="{{ .Site.Title }} Logo">
+    </div>
     <div class="container">
       <div class="about-hero-content">
         <h1 class="about-hero-title">{{ .Title }}</h1>
         {{ if .Params.subtitle }}
         <p class="about-hero-subtitle">{{ .Params.subtitle }}</p>
         {{ end }}
-        {{ if .Params.hero_cta }}
-        <div class="about-hero-cta">
-          <a href="{{ .Params.hero_cta.url }}" class="button button--primary button--large">{{ .Params.hero_cta.text }}</a>
+        <div class="about-hero-location">
+          <i class="fa-solid fa-location-dot"></i> Operating out of Dallas
         </div>
-        {{ end }}
         {{ if .Params.partners }}
         <div class="about-partners">
           <span class="about-partners-label">{{ .Params.partners.label }}</span>
@@ -95,7 +97,13 @@
           "{{ .Params.testimonial.quote }}"
         </blockquote>
         <div class="about-testimonial-author">
-          <span class="about-testimonial-name">{{ .Params.testimonial.author }}</span>
+          <span class="about-testimonial-name">
+            {{ if .Params.testimonial.linkedin }}
+              <a href="{{ .Params.testimonial.linkedin }}" target="_blank" rel="noopener noreferrer">{{ .Params.testimonial.author }} <i class="fa-brands fa-linkedin"></i></a>
+            {{ else }}
+              {{ .Params.testimonial.author }}
+            {{ end }}
+          </span>
           <span class="about-testimonial-role">{{ .Params.testimonial.role }}</span>
         </div>
       </div>
