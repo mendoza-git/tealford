@@ -5,8 +5,36 @@
 document.addEventListener("DOMContentLoaded", function() {
   'use strict';
 
-  const timelineWrapper = document.querySelector('.timeline-wrapper');
+  /* ----------------------------------------------------------
+   * Feature Cards — scroll-reveal with staggered entrance
+   * ---------------------------------------------------------- */
+  const featureCards = document.querySelectorAll('.about-feature-card');
+
+  if (featureCards.length) {
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const card = entry.target;
+          const index = parseInt(card.dataset.cardIndex || 0, 10);
+          setTimeout(() => {
+            card.classList.add('is-visible');
+          }, index * 120);
+          cardObserver.unobserve(card);
+        }
+      });
+    }, {
+      threshold: 0.12,
+      rootMargin: '0px 0px -60px 0px'
+    });
+
+    featureCards.forEach(card => cardObserver.observe(card));
+  }
+
+  /* ----------------------------------------------------------
+   * Timeline Rows — scroll-reveal
+   * ---------------------------------------------------------- */
   
+  const timelineWrapper = document.querySelector('.timeline-wrapper');
   if (!timelineWrapper) return;
 
   const timelineRows = document.querySelectorAll('.timeline-row');

@@ -16,7 +16,7 @@
         <p class="about-hero-subtitle">{{ .Params.subtitle }}</p>
         {{ end }}
         <div class="about-hero-location">
-          <i class="fa-solid fa-location-dot"></i> Operating out of Dallas
+          <i class="fa-solid fa-location-dot"></i> Operating out of Dallas, Texas
         </div>
         {{ if .Params.partners }}
         <div class="about-partners">
@@ -37,15 +37,32 @@
   <section class="about-features">
     <div class="container">
       <div class="about-features-grid">
-        {{ range .Params.features.items }}
-        <div class="about-feature-card">
+        {{ range $index, $item := .Params.features.items }}
+        <div class="about-feature-card" data-card-index="{{ $index }}">
           <div class="about-feature-content">
-            <h3 class="about-feature-title">{{ .title }}</h3>
-            <p class="about-feature-description">{{ .description }}</p>
+            <span class="about-feature-number">0{{ add $index 1 }}</span>
+            <h3 class="about-feature-title">{{ $item.title }}</h3>
+            {{ if $item.subtitle }}
+            <p class="about-feature-subtitle">{{ $item.subtitle }}</p>
+            {{ end }}
+            <p class="about-feature-description">{{ $item.description }}</p>
+            {{ if $item.highlights }}
+            <ul class="about-feature-highlights">
+              {{ range $item.highlights }}
+              <li class="about-feature-highlight">
+                <svg class="about-feature-highlight-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <circle cx="10" cy="10" r="10" fill="currentColor" opacity="0.12"/>
+                  <path d="M6 10l3 3 5-5" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span>{{ . }}</span>
+              </li>
+              {{ end }}
+            </ul>
+            {{ end }}
           </div>
-          {{ if .image }}
+          {{ if $item.image }}
           <div class="about-feature-image">
-            <img src="{{ .image }}" alt="{{ .title }}">
+            <img src="{{ $item.image }}" alt="{{ $item.title }}">
           </div>
           {{ else }}
           <div class="about-feature-visual">
@@ -75,6 +92,9 @@
         <div class="timeline-row {{ if eq (mod $index 2) 1 }}timeline-row--right{{ end }}" data-index="{{ $index }}">
           <div class="timeline-content">
             <h4 class="timeline-title">{{ .title }}</h4>
+            {{ if .subtitle }}
+            <p class="timeline-subtitle">{{ .subtitle }}</p>
+            {{ end }}
             <p class="timeline-description">{{ .description }}</p>
           </div>
           <div class="timeline-marker">
